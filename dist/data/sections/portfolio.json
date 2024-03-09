@@ -20,18 +20,18 @@
 
     "subcategories": [
         {
-            "id": "productivity",
+            "id": "saas",
             "locales": {
-                "en": {"title": "Productivity"},
+                "en": {"title": "SAAS"},
                 "es": {"title": "Productividad"},
                 "fr": {"title": "Productivité"},
                 "zh": {"title": "生产力"}
             }
         },
         {
-            "id": "utilities",
+            "id": "booking",
             "locales": {
-                "en": {"title": "Utilities"},
+                "en": {"title": "Bookings"},
                 "es": {"title": "Utilidades"},
                 "fr": {"title": "Utilitaires"},
                 "zh": {"title": "工具"}
@@ -49,19 +49,18 @@
     ],
 
     "items": {
-        "productivity": [
+        "saas": [
             {
-                "id": "brainpulse",
-                "title": "BrainPulse",
-                "logoUrl": "images/portfolio/project-logo-3.png",
+                "id": "cando",
+                "title": "Cando Culture",
+                "logoUrl": "images/portfolio/Candoo-logo-small.png",
                 "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
+                    {"faIcon": "fas fa-globe", "href": "https://www.candooculture.com/"}
                 ],
                 "locales": {
                     "en": {
-                        "description": "<b>BrainPulse</b> is your ultimate productivity app, helping you manage tasks, organize your schedule, and boost your focus. With its sleek and modern interface, BrainPulse offers features like task lists, reminders, goal tracking, and customizable productivity metrics. Whether you're a student, professional, or anyone looking to optimize their time and efficiency, BrainPulse is your go-to app for achieving more while maintaining work-life balance.",
-                        "tags": ["app", "productivity", "tasks", "focus"]
+                        "description": "<b>Cando Culture</b> was born of a need to drive a healthier, more positive workplace globally.Our primary goal is to positively impact millions of people by empowering owners, leaders and managers with the insight and direction necessary to make 'work' an awesome place to be!We've been there, we've done it and we know why it isn't working!Using our custom web-based application you will be able to identify people and process based problems by unlocking previously unknown information and meaningful data found deep inside your organisation.It's time you were able to back up your instincts with actual data, highlighting things like:<br/>Feeling valued<br/> Stress<br/> Work-life balance<br/>Team working<br/>Leadership<br/>Communication and so much more.",
+                        "tags": ["saas", "wellness", "tasks", "focus"]
                     },
                     "es": {
                         "description": "<b>BrainPulse</b> es tu aplicación definitiva de productividad, que te ayuda a gestionar tareas, organizar tu horario y aumentar tu concentración. Con su interfaz elegante y moderna, BrainPulse ofrece funciones como listas de tareas, recordatorios, seguimiento de objetivos y métricas de productividad personalizables. Ya seas un estudiante, un profesional o cualquier persona que busque optimizar su tiempo y eficiencia, BrainPulse es tu aplicación indispensable para lograr más sin sacrificar el equilibrio entre el trabajo y la vida personal.",
@@ -79,17 +78,16 @@
             },
 
             {
-                "id": "stackers",
-                "title": "Stackers",
-                "logoUrl": "images/portfolio/project-logo-6.png",
+                "id": "pvg",
+                "title": "Valu8er Expert Reports",
+                "logoUrl": "images/portfolio/Valu8er_White Bg_Logo.png",
                 "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
+                    {"faIcon": "fas fa-globe", "href": "https://myvalu8er.com/"}
                 ],
                 "locales": {
                     "en": {
-                        "description": "<b>Stackers</b> is your all-in-one organization and note-taking app, designed to streamline your digital life. With its seamless integration of task management, note organization, and cloud storage, Stackers helps you stay organized and productive. Create to-do lists, jot down ideas, and sync your notes across devices effortlessly. Whether you're a student, professional, or anyone seeking a clutter-free digital workspace, Stackers is here to elevate your organizational game.",
-                        "tags": ["app", "organization", "notes", "productivity"]
+                        "description": "The Mission of <b>Valu8er Expert Reports</b> is to transcend the standard of business valuations to one of true independence and mathematical precision. As noted by Valuations Guru, Aswath Damodoran, humans naturally have several inherent biases when providing valuation opinions (9 Human Biases in Valuation). Solving this, Valu8er uses A.I. and advanced algorithms to calculate 100% independent, Objective and Impartial suggested Revenue & EBITDA multiples every single time. Valu8er utilizes proprietary algorithm to provide precise suggested valuation multiples based on the concept of “relative valuation” and comparing subject companies to competitors and the industry based on the 12 Forces of Valuation. Furthermore, the algorithm is blind to whom the user is and the mandate every single time.Valu8er also eliminates the need for word documents, spreadsheets and file and employee management systems, by providing an all-for-one platform to complete business valuation reports. As a result, Valu8er saves at least 90% of time spend on valuation reports, while providing completely error free reports and beautiful visuals and charts.",
+                        "tags": ["app", "valuation", "notes", "spreadsheets","company"]
                     },
                     "es": {
                         "description": "<b>Stackers</b> es tu aplicación todo en uno para la organización y la toma de notas, diseñada para optimizar tu vida digital. Con su integración perfecta de gestión de tareas, organización de notas y almacenamiento en la nube, Stackers te ayuda a mantener la organización y la productividad. Crea listas de tareas, apunta ideas y sincroniza tus notas en todos tus dispositivos sin esfuerzo. Ya seas estudiante, profesional o cualquier persona que busque un espacio de trabajo digital sin desorden, Stackers está aquí para elevar tu juego organizativo.",
@@ -105,50 +103,16 @@
                     }
                 }
             },
-
-
             {
-                "id": "mailm8",
-                "title": "MailM8",
-                "logoUrl": "images/portfolio/project-logo-7.png",
+                "id": "ngj",
+                "title": "NGJ",
+                "logoUrl": "images/portfolio/ngj.png",
                 "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
+                    {"faIcon": "fas fa-globe", "href": "https://ngjlegal.com.au/online-forms/"}
                 ],
                 "locales": {
                     "en": {
-                        "description": "<b>MailM8</b> is your intelligent email companion, revolutionizing the way you manage and interact with your inbox. With advanced AI-powered features, <b>MailM8</b> helps you declutter your email, prioritize important messages, and compose smart replies in a breeze. Say goodbye to email overwhelm and hello to a more efficient and organized communication experience with <b>MailM8</b>.",
-                        "tags": ["app", "email", "communication", "productivity"]
-                    },
-                    "es": {
-                        "description": "<b>MailM8</b> es tu compañero de correo electrónico inteligente, revolucionando la forma en que gestionas e interactúas con tu bandeja de entrada. Con funciones avanzadas impulsadas por inteligencia artificial, <b>MailM8</b> te ayuda a organizar tu correo electrónico, priorizar mensajes importantes y componer respuestas inteligentes con facilidad. Di adiós a la abrumadora bandeja de entrada y dale la bienvenida a una experiencia de comunicación más eficiente y organizada con <b>MailM8</b>.",
-                        "tags": ["aplicación", "correo electrónico", "comunicación", "productividad"]
-                    },
-                    "fr": {
-                        "description": "<b>MailM8</b> est votre compagnon de messagerie intelligent, révolutionnant la manière dont vous gérez et interagissez avec votre boîte de réception. Avec des fonctionnalités avancées alimentées par l'IA, <b>MailM8</b> vous aide à désencombrer votre boîte de réception, à prioriser les messages importants et à composer des réponses intelligentes en un clin d'œil. Dites adieu à la surcharge de courrier électronique et bonjour à une expérience de communication plus efficace et organisée avec <b>MailM8</b>.",
-                        "tags": ["application", "courrier électronique", "communication", "productivité"]
-                    },
-                    "zh": {
-                        "description": "<b>MailM8</b> 是您的智能电子邮件伙伴，彻底改变了您管理和与收件箱互动的方式。通过先进的人工智能功能，<b>MailM8</b> 帮助您整理电子邮件，优先处理重要消息，并轻松撰写智能回复。告别电子邮件的压倒性情况，拥抱更高效和有组织的沟通体验，与 <b>MailM8</b> 一同打个招呼。",
-                        "tags": ["应用", "电子邮件", "通讯", "生产力"]
-                    }
-                }
-            }
-        ],
-
-        "utilities": [
-            {
-                "id": "smartcash",
-                "title": "SmartCash",
-                "logoUrl": "images/portfolio/project-logo-1.png",
-                "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"},
-                    {"faIcon": "fa-brands fa-windows", "href": "https://windows.com"}
-                ],
-                "locales": {
-                    "en": {
-                        "description": "<b>SmartCash</b> is your smart companion for personal finance, empowering you to take control of your money effortlessly. With its user-friendly interface, SmartCash provides real-time tracking of your expenses and income, enabling you to identify spending patterns and make informed financial decisions. Stay on top of your budget as SmartCash offers personalized recommendations to save money and achieve your financial goals without compromising your lifestyle.",
+                        "description": "The philosophy behind <b>NGJ</b> Accounting is simple - give our clients exactly what they want, at a price they are comfortable with and aware of.We are not the conventional accounting firm. We do not charge in six minute increments, talk unnecessarily complicated and technical jargon, or contact you only to remind you that your tax returns are due. What we are passionate about is helping grow your business into a successful wealth generating enterprise so that you can reap the benefits of all your hard work. To do this, business owners often require guidance from experts who are all too aware of the many uncertainties encountered along the road to developing and maintaining a successful business. That is why <b>NGJ</b> is with you every step of the way, always on call to provide timely and critical advice when needed most.We don't want people worrying about the cost of having to pick up the phone and contact their accountant. If you are a client of <b>NGJ</b> and need timely advice before making those important business decisions, we would rather provide you with a few free minutes of our time to ensure you are from the beginning, walking in the right direction down the road to success.So don't spend time stressing over often trivial taxation and general business matters. Pick up the phone for some quick advice and feel relieved that you can spend more time developing your business and doing the things you are most passionate about.",
                         "tags": ["app", "finance", "money", "budget"]
                     },
                     "es": {
@@ -164,7 +128,11 @@
                         "tags": ["应用", "财务", "金钱", "预算"]
                     }
                 }
-            },
+            }
+        ],
+      
+        "booking": [
+            
 
             {
                 "id": "snappy",

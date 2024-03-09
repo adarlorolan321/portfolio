@@ -24,12 +24,12 @@
     "items": [
         {
             "id": "experience_item_1",
-            "place": "@link{places.uxStudio}",
-            "period": ["2015/01", "2017/12"],
+            "place": "@link{places.elephant}",
+            "period": ["2022/03", "2022/06"],
             "locales": {
                 "en": {
-                    "title": "Full Stack Developer",
-                    "description": "Contributed to designing intuitive and user-friendly web application interfaces, creating engaging and seamless user experiences. Collaborated closely with cross-functional teams and stakeholders to ensure designs aligned with business goals and user needs."
+                    "title": "Web Developer Intern",
+                    "description": "Getting familiar with frontend frameworks like Vue.js or React, and understanding their basic concepts. Becoming proficient in using development tools like code editors (e.g., Visual Studio Code), browsers' developer tools, and package managers (e.g., npm)."
                 },
                 "es": {
                     "title": "Diseñador de UX",
@@ -48,12 +48,12 @@
 
         {
             "id": "experience_item_2",
-            "place": "@link{places.elephant}",
-            "period": ["2018/01", "2020/08"],
+            "place": "@link{places.innsite-front}",
+            "period": ["2022/07", "2023/07"],
             "locales": {
                 "en": {
-                    "title": "Senior UI/Full Stack Developer",
-                    "description": "Led design projects, conducted comprehensive user research, and utilized data-driven insights to enhance user experiences. Managed design teams, fostering creativity and innovation while implementing design best practices to deliver successful outcomes for various digital products."
+                    "title": "Jr Frontend Developer",
+                    "description": "Designing and implementing user interfaces that work seamlessly across different devices and screen sizes using Vue.js and CSS frameworks like Vuetify or Bootstrap. Setting up and managing routes in Vue.js using vue-router to create a single-page application (SPA) experience. Use Vuex for managing application state in large-scale Vue.js applications, ensuring data consistency and maintainability."
                 },
                 "es": {
                     "title": "Designer Senior UI/UX",
@@ -72,12 +72,12 @@
 
         {
             "id": "experience_item_3",
-            "place": "@link{places.apple}",
-            "period": ["2020/09", "2022/09"],
+            "place": "@link{places.innsite-full}",
+            "period": ["2023/08", "2024/03"],
             "locales": {
                 "en": {
-                    "title": "Lead Full Stack Developer",
-                    "description": "Drove UX initiatives by overseeing a team of designers, crafting design strategies, and spearheading cross-functional collaborations with product managers, engineers, and executives. Focused on creating user-centric designs that aligned with business objectives and resulted in enhanced user satisfaction."
+                    "title": "Full Stack Developer",
+                    "description": "Improving the performance of web applications by implementing best practices, such as lazy loading, code splitting, and caching.standard and deliver high quality codes Developing well-designed and documented APIs using Laravel's built-in features, such as routing, controllers, and middleware. Writing unit tests, integration tests, and end-to-end tests to ensure the reliability and functionality of web applications."
                 },
                 "es": {
                     "title": "Designer UX Principal",
@@ -90,30 +90,6 @@
                 "zh": {
                     "title": "首席用户体验设计师",
                     "description": "通过监督设计团队、制定设计战略，并与产品经理、工程师和高管共同推动跨职能合作，推动了用户体验的创新。专注于创建符合业务目标的以用户为中心的设计，从而实现了增强的用户满意度。"
-                }
-            }
-        },
-
-        {
-            "id": "experience_item_4",
-            "place": "@link{places.coursera}",
-            "period": ["2022/10", "now"],
-            "locales": {
-                "en": {
-                    "title": "UX Design Full-Time Professor",
-                    "description": "Leveraged my expertise in UX design to educate and inspire students in the art of user-centered design principles. Conducted user studies, analyzed data, and guided students in applying theoretical knowledge to practical projects, empowering the next generation of Full Stack Developers."
-                },
-                "es": {
-                    "title": "Profesor de Tiempo Completo en UX Design",
-                    "description": "Utilicé mi experiencia en diseño UX para educar e inspirar a los estudiantes en el arte de los principios de diseño centrado en el usuario. Realicé estudios de usuarios, analicé datos y orienté a los estudiantes en la aplicación de conocimientos teóricos a proyectos prácticos, empoderando a la próxima generación de diseñadores UX."
-                },
-                "fr": {
-                    "title": "Professeur à temps plein en UX Design",
-                    "description": "J'ai mis à profit mon expertise en conception UX pour éduquer et inspirer les étudiants dans l'art des principes de conception centrés sur l'utilisateur. J'ai réalisé des études utilisateur, analysé des données et guidé les étudiants dans l'application des connaissances théoriques à des projets pratiques, donnant ainsi les moyens à la prochaine génération de concepteurs UX."
-                },
-                "zh": {
-                    "title": "全职用户体验设计教授",
-                    "description": "利用我的用户体验设计专业知识，教育和激励学生学习以用户为中心的设计原则。进行用户研究，分析数据，并指导学生将理论知识应用于实际项目，培养下一代用户体验设计师。"
                 }
             }
         }

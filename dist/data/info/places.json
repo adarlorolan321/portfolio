@@ -1,9 +1,23 @@
 {
-    "adobe": {
-        "logoUrl": "images/places/logo-adobe.png",
+    "elephant": {
+        "logoUrl": "images/places/logo-eitb.jpg",
         "faIcon": "fa fa-house-laptop",
         "locales": {
-            "en": {"name": "Adobe Inc."}
+            "en": {"name": "Elephant in the Boardroom"}
+        }
+    },
+    "innsite-front": {
+        "logoUrl": "images/places/logo-innsite.jpg",
+        "faIcon": "fa fa-house-laptop",
+        "locales": {
+            "en": {"name": "iNNsite"}
+        }
+    },
+    "innsite-full": {
+        "logoUrl": "images/places/logo-innsite.jpg",
+        "faIcon": "fa fa-house-laptop",
+        "locales": {
+            "en": {"name": "iNNsite"}
         }
     },
 

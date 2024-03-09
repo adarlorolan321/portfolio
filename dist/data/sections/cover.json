@@ -3,11 +3,7 @@
         "en": {
             "welcome": "Welcome to my <span class='text-primary'>Resume!</span>",
             "welcomeShort": "Welcome!",
-            "bio": "Experienced software developer with over 2 years of hands-on
-experience building web applications and backend systems. Proficient in
-crafting clean, understandable code that facilitates easy maintenance
-and debugging. Skilled in collaborating with teams of all sizes on various
-projects and adaptable to both remote and office work environments."
+            "bio": "Experienced software developer with over 2 years of hands-on experience building web applications and backend systems. Proficient in crafting clean, understandable code that facilitates easy maintenance and debugging. Skilled in collaborating with teams of all sizes on various projects and adaptable to both remote and office work environments."
         },
 
         "es": {
