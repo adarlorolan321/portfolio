@@ -63,13 +63,7 @@
             "faIcon": "fa-solid fa-folder-open"
         },
 
-        {
-            "id": "achievements",
-            "categoryId": "showcase",
-            "component": "ThreadsSection",
-            "jsonPath": "data/sections/achievements.json",
-            "faIcon": "fa-solid fa-award"
-        },
+        
 
         {
             "id": "hobbies",

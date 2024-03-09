@@ -53,32 +53,21 @@
                 "fr": {"title": "Langues"},
                 "zh": {"title": "语言"}
             }
-        },
-
-        {
-            "id": "extra",
-            "type": "grid",
-            "progress": null,
-            "faIcon": "fa fa-marker",
-            "locales": {
-                "en": {"title": "Bonus Skills"},
-                "es": {"title": "Habilidades Adicionales"},
-                "fr": {"title": "Plus Habiletés"},
-                "zh": {"title": "附加技能"}
-            }
         }
+
+       
     ],
 
     "items": {
         "abilities": [
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-paint-roller",
+                "faIcon": "fas fa-brands fa-laravel",
                 "value": null,
                 "locales": {
                     "en": {
-                        "title": "Design Principles",
-                        "description": "Highly skilled at crafting visually appealing designs using fundamental principles of color theory, typography, layout composition, and balance to captivate viewers and convey messages effectively."
+                        "title": "Laravel Development",
+                        "description": "Proficient in building robust web applications using Laravel framework. Experience with Laravel's Eloquent ORM for database interactions. Skilled in implementing authentication, authorization, and role-based access control."
                     },
                     "es": {
                         "title": "Principios de Diseño",
@@ -97,12 +86,12 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-mobile-alt",
+                "faIcon": "fas fa-brands fa-vuejs",
                 "value": null,
                 "locales": {
                     "en": {
-                        "title": "Responsive Layouts",
-                        "description": "Proficient in crafting adaptable layouts for diverse devices, ensuring optimal user experience by seamlessly adjusting design elements and content to different screen sizes."
+                        "title": "Vue.js Development",
+                        "description": "Strong proficiency in Vue.js and the Vue 3 Composition API. Experience with state management using Vuex.Knowledge of Vue Router for building dynamic, single-page applications."
                     },
                     "es": {
                         "title": "Diseños Responsivos",
@@ -120,12 +109,12 @@
             },
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-check-double",
+                "faIcon": "fas fa-database",
                 "value": null,
                 "locales": {
                     "en": {
-                        "title": "Usability Testing",
-                        "description": "Enhancing user experiences through comprehensive usability testing, ensuring optimal functionality and user satisfaction."
+                        "title": "Database Management",
+                        "description": "Experience with relational databases such as MySQL or PostgreSQL. Ability to design and optimize database schemas.Familiarity with database migrations and seeding in Laravel."
                     },
                     "es": {
                         "title": "Pruebas de Usabilidad",
@@ -144,12 +133,12 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-vector-square",
+                "faIcon": "fas fa-desktop",
                 "value": null,
                 "locales": {
                     "en": {
-                        "title": "Wireframing",
-                        "description": "Skilled in creating detailed wireframes to visualize and plan user interfaces, effectively laying the foundation for intuitive design."
+                        "title": "Frontend Technologies",
+                        "description": "Proficient in HTML5, CSS3, and modern JavaScript ES6+. Experience with frontend frameworks/libraries like Vuetify for UI design. Knowledge of responsive design principles and mobile-first development."
                     },
                     "es": {
                         "title": "Creación de Wireframes",
@@ -168,12 +157,12 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-expand-arrows-alt",
+                "faIcon": "fas fa-window-restore",
                 "value": null,
                 "locales": {
                     "en": {
-                        "title": "Interaction Design",
-                        "description": "Proficient in creating intuitive and seamless interactions for user-friendly experiences, harmonizing aesthetics and usability."
+                        "title": "API Development",
+                        "description": "Experience in building RESTful APIs with Laravel."
                     },
                     "es": {
                         "title": "Diseño de Interacción",
@@ -192,12 +181,129 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-laptop-code",
+                "faIcon": "fas fa-brands fa-git-alt",
                 "value": null,
                 "locales": {
                     "en": {
-                        "title": "Prototyping",
-                        "description": "Skilled in translating concepts into interactive prototypes for testing and refinement, ensuring functional and engaging end products."
+                        "title": "Version Control",
+                        "description": "Proficient with Git for version control, branching, and merging code."
+                    },
+                    "es": {
+                        "title": "Prototipado",
+                        "description": "Habilidad para traducir conceptos en prototipos interactivos para pruebas y perfeccionamiento."
+                    },
+                    "fr": {
+                        "title": "Prototypage",
+                        "description": "Compétent dans la traduction de concepts en prototypes interactifs pour des tests et affinages."
+                    },
+                    "zh": {
+                        "title": "原型设计",
+                        "description": "熟练将概念转化为交互式原型，以进行测试和完善。"
+                    }
+                }
+            },
+
+            {
+                "imageIconUrl": null,
+                "faIcon": "fas fa-microscope",
+                "value": null,
+                "locales": {
+                    "en": {
+                        "title": "Testing and Debugging",
+                        "description": "Ability to write unit and feature tests using PHPUnit and Jest. Skilled in debugging and troubleshooting code issues."
+                    },
+                    "es": {
+                        "title": "Prototipado",
+                        "description": "Habilidad para traducir conceptos en prototipos interactivos para pruebas y perfeccionamiento."
+                    },
+                    "fr": {
+                        "title": "Prototypage",
+                        "description": "Compétent dans la traduction de concepts en prototypes interactifs pour des tests et affinages."
+                    },
+                    "zh": {
+                        "title": "原型设计",
+                        "description": "熟练将概念转化为交互式原型，以进行测试和完善。"
+                    }
+                }
+            },
+
+            {
+                "imageIconUrl": null,
+                "faIcon": "fas fa-arrows-split-up-and-left",
+                "value": null,
+                "locales": {
+                    "en": {
+                        "title": "Agile Methodologies",
+                        "description": "Experience working in Agile development environments, following Scrum or Kanban methodologies."
+                    },
+                    "es": {
+                        "title": "Prototipado",
+                        "description": "Habilidad para traducir conceptos en prototipos interactivos para pruebas y perfeccionamiento."
+                    },
+                    "fr": {
+                        "title": "Prototypage",
+                        "description": "Compétent dans la traduction de concepts en prototypes interactifs pour des tests et affinages."
+                    },
+                    "zh": {
+                        "title": "原型设计",
+                        "description": "熟练将概念转化为交互式原型，以进行测试和完善。"
+                    }
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fas fa-code-compare",
+                "value": null,
+                "locales": {
+                    "en": {
+                        "title": "Communication and Collaboration",
+                        "description": "Strong communication skills to work effectively with team members and stakeholders. Ability to collaborate on projects using tools like Git, GitHub, or GitLab."
+                    },
+                    "es": {
+                        "title": "Prototipado",
+                        "description": "Habilidad para traducir conceptos en prototipos interactivos para pruebas y perfeccionamiento."
+                    },
+                    "fr": {
+                        "title": "Prototypage",
+                        "description": "Compétent dans la traduction de concepts en prototypes interactifs pour des tests et affinages."
+                    },
+                    "zh": {
+                        "title": "原型设计",
+                        "description": "熟练将概念转化为交互式原型，以进行测试和完善。"
+                    }
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fas fa-lightbulb",
+                "value": null,
+                "locales": {
+                    "en": {
+                        "title": "Problem-Solving Skills",
+                        "description": "Excellent problem-solving abilities to identify and resolve technical issues efficiently. Capacity to adapt to new technologies and learn new concepts quickly."
+                    },
+                    "es": {
+                        "title": "Prototipado",
+                        "description": "Habilidad para traducir conceptos en prototipos interactivos para pruebas y perfeccionamiento."
+                    },
+                    "fr": {
+                        "title": "Prototypage",
+                        "description": "Compétent dans la traduction de concepts en prototypes interactifs pour des tests et affinages."
+                    },
+                    "zh": {
+                        "title": "原型设计",
+                        "description": "熟练将概念转化为交互式原型，以进行测试和完善。"
+                    }
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fas fa-list-check",
+                "value": null,
+                "locales": {
+                    "en": {
+                        "title": "Project Management",
+                        "description": "Ability to manage project timelines, prioritize tasks, and deliver high-quality results on schedule."
                     },
                     "es": {
                         "title": "Prototipado",
@@ -267,7 +373,7 @@
             {
                 "imageIconUrl": null,
                 "faIcon": "fab fa-vuejs",
-                "value": 100,
+                "value": 90,
                 "locales": {
                     "en": {"title": "Vue 3", "description": "Experience Time: 2 years"},
                     "es": {"title": "Vue 3", "description": "Experiencia: 2 años"},
@@ -278,65 +384,41 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fab fa-react",
-                "value": 75,
+                "faIcon": "fab fa-brands fa-laravel",
+                "value": 90,
                 "locales": {
-                    "en": {"title": "React", "description": "Nanodegree in React development (Udacity)<br>Experience time: 1 year"},
-                    "es": {"title": "React", "description": "Nanodegree de desarrollo React (Udacity)<br>Experiencia: 1 año"},
-                    "fr": {"title": "React", "description": "Nanodegré en développement React (Udacity)<br>Expérience : 1 an"},
-                    "zh": {"title": "React", "description": "React开发纳米学位毕业生（优达学城）<br>经验时长：1年"}
+                    "en": {"title": "Laravel", "description": "Experience time: 2 year"},
+                    "es": {"title": "Laravel", "description": "Nanodegree de desarrollo Laravel (Udacity)<br>Experiencia: 1 año"},
+                    "fr": {"title": "Laravel", "description": "Nanodegré en développement Laravel (Udacity)<br>Expérience : 1 an"},
+                    "zh": {"title": "Laravel", "description": "Laravel开发纳米学位毕业生（优达学城）<br>经验时长：1年"}
                 }
             }
         ],
 
         "languages": [
             {
-                "imageIconUrl": "images/flags/en.png",
-                "faIcon": null,
-                "value": 100,
-                "locales": {
-                    "en": {"title": "English", "description": "Native speaker with excellent communication and writing skills."},
-                    "es": {"title": "Inglés", "description": "Hablante nativo con excelentes habilidades de comunicación y escritura."},
-                    "fr": {"title": "Anglais", "description": "Locuteur natif avec d'excellentes compétences en communication et en écriture."},
-                    "zh": {"title": "英语", "description": "母语人士，具有出色的沟通和写作能力。"}
-                }
-            },
-
-            {
-                "imageIconUrl": "images/flags/es.png",
+                "imageIconUrl": "images/flags/phflag.jpg",
                 "faIcon": null,
                 "value": 90,
                 "locales": {
-                    "en": {"title": "Spanish", "description": "Fluent in both spoken and written Spanish; confident in professional communication."},
+                    "en": {"title": "Filipino", "description": "Native speaker with excellent communication and writing skills."},
                     "es": {"title": "Español", "description": "Fluido en español hablado y escrito; seguro en la comunicación profesional."},
                     "fr": {"title": "Espagnol", "description": "Courant à la fois à l'oral et à l'écrit en espagnol ; confiant dans la communication professionnelle."},
                     "zh": {"title": "西班牙语", "description": "流利的西班牙语口语和书写能力；自信地进行专业沟通。"}
                 }
             },
-
             {
-                "imageIconUrl": "images/flags/vn.png",
+                "imageIconUrl": "images/flags/en.png",
                 "faIcon": null,
-                "value": 40,
+                "value": 100,
                 "locales": {
-                    "en": {"title": "Vietnamese", "description": "Intermediate proficiency in Vietnamese language; can hold conversations and understand written text."},
-                    "es": {"title": "Vietnamita", "description": "Competencia intermedia en el idioma vietnamita; puede mantener conversaciones y comprender texto escrito."},
-                    "fr": {"title": "Vietnamien", "description": "Compétence intermédiaire en vietnamien ; peut tenir des conversations et comprendre un texte écrit."},
-                    "zh": {"title": "越南语", "description": "具有中等水平的越南语能力；能进行对话并理解书面文字。"}
-                }
-            },
-
-            {
-                "imageIconUrl": "images/flags/pt.png",
-                "faIcon": null,
-                "value": 10,
-                "locales": {
-                    "en": {"title": "Brazilian Portuguese", "description": "Basic understanding of Brazilian Portuguese; learning and improving."},
-                    "es": {"title": "Portugués Brasileño", "description": "Comprensión básica del portugués brasileño; aprendiendo y mejorando."},
-                    "fr": {"title": "Portugais Brésilien", "description": "Compréhension de base du portugais brésilien ; en cours d'apprentissage et d'amélioration."},
-                    "zh": {"title": "巴西葡萄牙语", "description": "对巴西葡萄牙语有基本的理解；正在学习和改进。"}
+                    "en": {"title": "English", "description": "Fluent in both spoken and written English; confident in professional communication."},
+                    "es": {"title": "Inglés", "description": "Hablante nativo con excelentes habilidades de comunicación y escritura."},
+                    "fr": {"title": "Anglais", "description": "Locuteur natif avec d'excellentes compétences en communication et en écriture."},
+                    "zh": {"title": "英语", "description": "母语人士，具有出色的沟通和写作能力。"}
                 }
             }
+           
         ],
 
         "extra": [

@@ -19,7 +19,7 @@
         <!-- Footer -->
         <div class="nav-sidebar-footer" v-if="profileData">
             <!-- Language Picker -->
-            <LanguagePicker />
+            <!-- <LanguagePicker /> -->
 
             <!-- Credits -->
             <div class="nav-sidebar-footer-credits text-2 mt-3 mb-3">

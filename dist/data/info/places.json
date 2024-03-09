@@ -51,10 +51,10 @@
     },
 
     "paris": {
-        "logoUrl": "images/places/logo-paris-university.png",
+        "logoUrl": "images/places/logo-mindoro-state.png",
         "faIcon": "fas fa-university",
         "locales": {
-            "en": {"name": "University of Paris"},
+            "en": {"name": "Mindoro State University"},
             "es": {"name": "Universidad de París"},
             "fr": {"name": "Université de Paris"},
             "zh": {"name": "巴黎大学"}
