@@ -4,8 +4,7 @@
  */
 export function useConstants() {
     /** @const **/
-    const BASE_PATH = process.env.BASE_URL || '/'
-
+    const BASE_PATH = process.env.VUE_APP_BASE_URL || '/'
     /** @const **/
     const BOOTSTRAP_BREAKPOINTS = {
         xs: 0,
