@@ -1,4 +1,4 @@
-# [Vue Resume Template](https://ryanbalieiro.github.io/vue-resume-template/) by Ryan Balieiro
+# [Vue Resume Template](https://ryanbalieiro.github.io/portfolio/) by Ryan Balieiro
 
 This theme offers a simple and clean design tailored for creating user-friendly website resumes or CV landing pages. It's built using Vue 3.0 (Composition API) and Bootstrap 5, presenting a cohesive one-page layout that blends functionality and aesthetics.
 
@@ -16,7 +16,7 @@ Key features:
 
 ## Preview
 
-Check out a live version of the template **[here](https://ryanbalieiro.github.io/vue-resume-template/).**
+Check out a live version of the template **[here](https://ryanbalieiro.github.io/portfolio/).**
 
 ### 1. Desktop Screenshots
 
@@ -30,7 +30,7 @@ Check out a live version of the template **[here](https://ryanbalieiro.github.io
 
 1. Clone the repo:
 ```
-git clone https://github.com/ryanbalieiro/vue-resume-template
+git clone https://github.com/ryanbalieiro/portfolio
 ```
 
 2. Navigate to the root directory of the project and install all dependencies with npm:
@@ -202,12 +202,12 @@ Open the `vite.config.js` file and set the base directory for your application. 
 
 ```js
 export default defineConfig({
-  base: '/vue-resume-template',
+  base: '/portfolio',
   plugins: [vue()],
 })
 ```
 
-In simple terms, if you consider GitHub hosting the GitHub Pages site for this repo at the URL `https://ryanbalieiro.github.io/vue-resume-template/`, the correct base directory to set is `/vue-resume-template`. This ensures that the application's resources are correctly loaded and linked when accessed from this URL.
+In simple terms, if you consider GitHub hosting the GitHub Pages site for this repo at the URL `https://ryanbalieiro.github.io/portfolio/`, the correct base directory to set is `/portfolio`. This ensures that the application's resources are correctly loaded and linked when accessed from this URL.
 
 To compile your project for production, execute:
 
