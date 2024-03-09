@@ -4,7 +4,7 @@
  */
 export function useConstants() {
     /** @const **/
-    const BASE_PATH = '/dist'
+    const BASE_PATH = '/'
     /** @const **/
     const BOOTSTRAP_BREAKPOINTS = {
         xs: 0,
