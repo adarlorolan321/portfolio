@@ -51,9 +51,9 @@ export function useData() {
      * @return {Promise<void>}
      */
     const fetchEssentials = async () => {
-        const jSections = await _loadJson(constants.BASE_PATH + '/data/sections.json')
-        const jSettings = await _loadJson(constants.BASE_PATH + '/data/settings.json')
-        const jStrings = await _loadJson(constants.BASE_PATH + '/data/strings.json')
+        const jSections = await _loadJson('https://portfolio-rolan.netlify.app/data/sections.json')
+        const jSettings = await _loadJson('https://portfolio-rolan.netlify.app/data/settings.json')
+        const jStrings = await _loadJson('https://portfolio-rolan.netlify.app/data/strings.json')
 
         _jsonData.sections = jSections['sections']
         _jsonData.categories = jSections['categories']
