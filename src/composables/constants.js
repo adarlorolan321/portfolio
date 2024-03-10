@@ -4,7 +4,7 @@
  */
 export function useConstants() {
     /** @const **/
-    const BASE_PATH = '/'
+    const BASE_PATH = 'https://portfolio-rolan.netlify.app'
     /** @const **/
     const BOOTSTRAP_BREAKPOINTS = {
         xs: 0,
