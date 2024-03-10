@@ -9,7 +9,7 @@
             <!-- Item -->
             <div class="gallery-item" @click="_onItemClicked(item)">
                 <!-- Logo -->
-                <div class="gallery-thumb-wrapper">
+                <div class="gallery-thumb-wrapper image-contain">
                     <ImageView :src="item.data['logoUrl']"
                                :alt="item.data['locales']['name']"
                                class="gallery-thumb"/>
@@ -82,6 +82,14 @@ watch(() => props.selectedCategoryId, () => {
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
 
+.image-contain{
+    padding: 10px;
+    background-color: lightgray;
+    img{
+    object-fit: contain;
+
+    }
+}
 .gallery-grid {
     --logo-size: min(clamp(140px, 20vh, 170px), clamp(80px, 10.5vw, 170px));
     @include media-breakpoint-down(lg) {

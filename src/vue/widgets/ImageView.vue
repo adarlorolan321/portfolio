@@ -129,12 +129,9 @@ defineExpose({
 .image-view {
     display: inline-block;
     overflow: hidden;
-    background-color: lightgray;
-    padding: 10px;
 }
 
 .image-view-img {
-    object-fit: contain;
     width: 100%;
     height: 100%;
     vertical-align: top;
