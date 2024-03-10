@@ -46,7 +46,7 @@
                             </div>
 
                             <!-- Links SubSection -->
-                            <div class="modal-subsection">
+                            <div class="modal-subsection" >
                                 <!-- Title -->
                                 <h5 class="d-inline-block fw-bold">
                                     <i class="fa fa-external-link me-2" />
@@ -54,11 +54,17 @@
                                 </h5>
 
                                 <!-- Content -->
-                                <p v-html="data.getString('whereToFindDescription').replace('${project}', `<strong>${props.project['title']}</strong>`)"
+                                <p  v-html="data.getString('whereToFindDescription').replace('${project}', `<strong>${props.project['title']}</strong>`)"
                                    class="text-3 text-light-7"/>
-
+                                   
                                 <!-- Social Links -->
-                                <SocialLinks :items="props.project['links']"/>
+
+                               
+                                <SocialLinks v-if="props.project['links'].length > 0" :items="props.project['links']"/>
+                                    <h5 class="d-inline-block fw-bold" v-else>
+                                  
+                                  <span class="ms-1">Coming Soon ..</span>
+                              </h5>
                             </div>
                         </div>
                     </div>

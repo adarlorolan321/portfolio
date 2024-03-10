@@ -128,6 +128,33 @@
                         "tags": ["应用", "财务", "金钱", "预算"]
                     }
                 }
+            },
+            {
+                "id": "snappy",
+                "title": "LocalStalls",
+                "logoUrl": "images/portfolio/ls.png",
+                "links": [
+                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
+                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
+                ],
+                "locales": {
+                    "en": {
+                        "description": "<b>Snappy</b> is your ultimate photography app, empowering you to capture and edit stunning images effortlessly. With its intuitive interface, Snappy provides a wide range of powerful tools and filters to enhance your photos and bring out your creativity. Whether you're a professional photographer or just a hobbyist, Snappy offers features like manual controls, advanced editing options, and AI-powered enhancements to take your photography to the next level.",
+                        "tags": ["app", "photography", "camera"]
+                    },
+                    "es": {
+                        "description": "<b>Snappy</b> es tu aplicación definitiva de fotografía, que te permite capturar y editar imágenes impresionantes sin esfuerzo. Con su interfaz intuitiva, Snappy ofrece una amplia gama de herramientas y filtros poderosos para mejorar tus fotos y potenciar tu creatividad. Ya seas un fotógrafo profesional o simplemente un aficionado, Snappy ofrece funciones como controles manuales, opciones de edición avanzadas y mejoras impulsadas por inteligencia artificial para llevar tu fotografía al siguiente nivel.",
+                        "tags": ["aplicación", "fotografía", "cámara"]
+                    },
+                    "fr": {
+                        "description": "<b>Snappy</b> est votre application ultime de photographie, vous permettant de capturer et d'éditer des images époustouflantes sans effort. Avec son interface intuitive, Snappy propose une large gamme d'outils puissants et de filtres pour améliorer vos photos et stimuler votre créativité. Que vous soyez un photographe professionnel ou simplement un amateur, Snappy offre des fonctionnalités telles que les commandes manuelles, les options d'édition avancées et les améliorations alimentées par l'IA pour pousser votre photographie à un niveau supérieur.",
+                        "tags": ["application", "photographie"]
+                    },
+                    "zh": {
+                        "description": "<b>Snappy</b> 是您的终极摄影应用，可轻松捕捉和编辑令人惊叹的图像。借助其直观的界面，Snappy 提供了各种强大的工具和滤镜，可增强您的照片并释放您的创造力。无论您是专业摄影师还是业余爱好者，Snappy 都提供诸如手动控制、高级编辑选项和基于人工智能的增强功能，将您的摄影推向新的高度。",
+                        "tags": ["应用", "摄影", "相机"]
+                    }
+                }
             }
         ],
       

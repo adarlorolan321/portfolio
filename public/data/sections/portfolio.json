@@ -129,23 +129,20 @@
                     }
                 }
             }
+            
         ],
       
         "booking": [
-            
-
             {
-                "id": "snappy",
-                "title": "Snappy",
-                "logoUrl": "images/portfolio/project-logo-2.png",
+                "id": "localstalls",
+                "title": "LocalStalls",
+                "logoUrl": "images/portfolio/localstalls.png",
                 "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
                 ],
                 "locales": {
                     "en": {
-                        "description": "<b>Snappy</b> is your ultimate photography app, empowering you to capture and edit stunning images effortlessly. With its intuitive interface, Snappy provides a wide range of powerful tools and filters to enhance your photos and bring out your creativity. Whether you're a professional photographer or just a hobbyist, Snappy offers features like manual controls, advanced editing options, and AI-powered enhancements to take your photography to the next level.",
-                        "tags": ["app", "photography", "camera"]
+                        "description": "<b>LocalStalls</b> is a comprehensive market booking system designed to facilitate stall reservations for vendors at various local markets. The platform offers a user-friendly interface for both vendors and market organizers, streamlining the booking process and enhancing market management. With features like stall availability tracking, online booking, and payment processing, LocalStalls aims to modernize and simplify the way local markets operate, ultimately boosting community engagement and supporting local businesses.",
+                        "tags": ["app", "market", "booking","places"]
                     },
                     "es": {
                         "description": "<b>Snappy</b> es tu aplicación definitiva de fotografía, que te permite capturar y editar imágenes impresionantes sin esfuerzo. Con su interfaz intuitiva, Snappy ofrece una amplia gama de herramientas y filtros poderosos para mejorar tus fotos y potenciar tu creatividad. Ya seas un fotógrafo profesional o simplemente un aficionado, Snappy ofrece funciones como controles manuales, opciones de edición avanzadas y mejoras impulsadas por inteligencia artificial para llevar tu fotografía al siguiente nivel.",
@@ -160,93 +157,40 @@
                         "tags": ["应用", "摄影", "相机"]
                     }
                 }
-            },
+            },  
 
             {
-                "id": "sweetscoops",
-                "title": "Sweet Scoops",
-                "logoUrl": "images/portfolio/project-logo-5.png",
+                "id": "guestbook",
+                "title": "Guestbook",
+                "logoUrl": "images/portfolio/guestbook.png",
                 "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
+                 
                 ],
                 "locales": {
                     "en": {
-                        "description": "Indulge in the world of delectable desserts with <b>Sweet Scoops</b>! This app is a dessert lover's paradise, offering a wide range of mouthwatering recipes, step-by-step instructions, and videos for creating your favorite sweets. From creamy ice creams to irresistible pastries, <b>Sweet Scoops</b> has you covered for all your dessert cravings. Unleash your inner pastry chef and treat yourself to a delightful dessert experience.",
-                        "tags": ["app", "food", "desserts", "recipes"]
+                        "description": "<b>Guestbook</b>  serves as a sophisticated hotel booking system tailored to meet the needs of travelers and hoteliers alike. Offering an intuitive interface, it enables guests to effortlessly browse and reserve accommodations based on their preferences and requirements. Meanwhile, hotel administrators benefit from streamlined management tools for handling bookings, room availability, and guest communication. With its seamless integration of booking functionalities and administrative features, Guestbook enhances the overall booking experience for both guests and hotel staff, ensuring efficient operations and satisfied customers.",
+                        "tags": ["app", "hotel", "booking"]
                     },
                     "es": {
-                        "description": "¡Déjate llevar al mundo de los postres deliciosos con <b>Sweet Scoops</b>! Esta aplicación es el paraíso de los amantes de los postres, ofreciendo una amplia gama de recetas deliciosas, instrucciones paso a paso y videos para crear tus dulces favoritos. Desde cremosos helados hasta irresistibles pasteles, <b>Sweet Scoops</b> tiene todo lo que necesitas para satisfacer tus antojos de postres. Libera al chef de repostería que llevas dentro y date un caprichoso y delicioso experiencia de postre.",
-                        "tags": ["aplicación", "comida", "postres", "recetas"]
+                        "description": "<b>Snappy</b> es tu aplicación definitiva de fotografía, que te permite capturar y editar imágenes impresionantes sin esfuerzo. Con su interfaz intuitiva, Snappy ofrece una amplia gama de herramientas y filtros poderosos para mejorar tus fotos y potenciar tu creatividad. Ya seas un fotógrafo profesional o simplemente un aficionado, Snappy ofrece funciones como controles manuales, opciones de edición avanzadas y mejoras impulsadas por inteligencia artificial para llevar tu fotografía al siguiente nivel.",
+                        "tags": ["aplicación", "fotografía", "cámara"]
                     },
                     "fr": {
-                        "description": "Indulgez-vous dans le monde des desserts délectables avec <b>Sweet Scoops</b> ! Cette application est le paradis des amateurs de desserts, offrant une large gamme de recettes alléchantes, d'instructions étape par étape et de vidéos pour créer vos douceurs préférées. Des glaces crémeuses aux pâtisseries irrésistibles, <b>Sweet Scoops</b> vous couvre pour toutes vos envies de dessert. Libérez le chef pâtissier qui sommeille en vous et offrez-vous une délicieuse expérience de dessert.",
-                        "tags": ["application", "nourriture", "desserts", "recettes"]
+                        "description": "<b>Snappy</b> est votre application ultime de photographie, vous permettant de capturer et d'éditer des images époustouflantes sans effort. Avec son interface intuitive, Snappy propose une large gamme d'outils puissants et de filtres pour améliorer vos photos et stimuler votre créativité. Que vous soyez un photographe professionnel ou simplement un amateur, Snappy offre des fonctionnalités telles que les commandes manuelles, les options d'édition avancées et les améliorations alimentées par l'IA pour pousser votre photographie à un niveau supérieur.",
+                        "tags": ["application", "photographie"]
                     },
                     "zh": {
-                        "description": "在<b>Sweet Scoops</b> 的美味甜品世界中尽情享受吧！这款应用是甜品爱好者的天堂，提供各种美味食谱、逐步说明和视频，帮助您制作您最喜爱的甜点。从奶油冰淇淋到诱人的糕点，<b>Sweet Scoops</b> 应有尽有，满足您对甜点的所有渴望。释放您内心的糕点大厨，让自己享受美味的甜点体验。",
-                        "tags": ["应用", "食物", "甜点", "食谱"]
+                        "description": "<b>Snappy</b> 是您的终极摄影应用，可轻松捕捉和编辑令人惊叹的图像。借助其直观的界面，Snappy 提供了各种强大的工具和滤镜，可增强您的照片并释放您的创造力。无论您是专业摄影师还是业余爱好者，Snappy 都提供诸如手动控制、高级编辑选项和基于人工智能的增强功能，将您的摄影推向新的高度。",
+                        "tags": ["应用", "摄影", "相机"]
                     }
                 }
             }
+
+            
         ],
 
         "social": [
-            {
-                "id": "findagoalie",
-                "title": "Find a Goalie",
-                "logoUrl": "images/portfolio/project-logo-4.png",
-                "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
-                ],
-                "locales": {
-                    "en": {
-                        "description": "<b>Find a Goalie</b> is your go-to app for finding and connecting with goaltenders in your area. Whether you're organizing a pickup hockey game or need a goalie for your team's practice session, this app makes it easy to search for available goaltenders, view their profiles, and send direct messages for collaboration. Get the pads on and let <b>Find a Goalie</b> help you keep the net covered!",
-                        "tags": ["app", "sports", "hockey", "goalie"]
-                    },
-                    "es": {
-                        "description": "<b>Find a Goalie</b> es tu aplicación de referencia para encontrar y conectarte con porteros en tu área. Ya sea que estés organizando un partido de hockey improvisado o necesites un portero para la sesión de práctica de tu equipo, esta aplicación facilita la búsqueda de porteros disponibles, ver sus perfiles y enviar mensajes directos para colaborar. ¡Ponte los pads y deja que <b>Find a Goalie</b> te ayude a mantener la portería cubierta!",
-                        "tags": ["aplicación", "deporte", "hockey", "portero"]
-                    },
-                    "fr": {
-                        "description": "<b>Find a Goalie</b> est votre application incontournable pour trouver et entrer en contact avec des gardiens de but de votre région. Que vous organisiez un match de hockey improvisé ou ayez besoin d'un gardien pour la séance d'entraînement de votre équipe, cette application facilite la recherche de gardiens de but disponibles, la consultation de leurs profils et l'envoi de messages directs pour la collaboration. Enfilez les pads et laissez <b>Find a Goalie</b> vous aider à garder le filet protégé !",
-                        "tags": ["application", "sport", "hockey", "gardien de but"]
-                    },
-                    "zh": {
-                        "description": "<b>Find a Goalie</b> 是您在本地区寻找并与守门员建立联系的首选应用。无论您是组织一场随意曲棍球比赛还是需要一名守门员参加您团队的训练课程，该应用都能轻松搜索可用的守门员、查看他们的个人资料并发送直接消息以便合作。穿上防护设备，让 <b>Find a Goalie</b> 帮助您守住球网！",
-                        "tags": ["应用", "运动", "曲棍球", "守门员"]
-                    }
-                }
-            },
-
-            {
-                "id": "rockverse",
-                "title": "RockVerse",
-                "logoUrl": "images/portfolio/project-logo-9.png",
-                "links": [
-                    {"faIcon": "fa-brands fa-apple", "href": "https://apple.com"},
-                    {"faIcon": "fa-brands fa-google-play", "href": "https://googleplay.com"}
-                ],
-                "locales": {
-                    "en": {
-                        "description": "Step into the electrifying world of rock music with <b>RockVerse</b>! This app is a haven for rock enthusiasts, offering a vast collection of classic and modern rock tracks, curated playlists, and behind-the-scenes content. Whether you're a die-hard fan or just discovering the genre, <b>RockVerse</b> brings you closer to the heart and soul of rock and roll. Crank up the volume and let the rock 'n' roll spirit run wild!",
-                        "tags": ["app", "music", "rock", "entertainment"]
-                    },
-                    "es": {
-                        "description": "¡Adéntrate en el electrizante mundo de la música rock con <b>RockVerse</b>! Esta aplicación es un refugio para los entusiastas del rock, ofreciendo una amplia colección de canciones de rock clásicas y modernas, listas de reproducción seleccionadas y contenido detrás de escena. Ya seas un fanático acérrimo o estés descubriendo el género, <b>RockVerse</b> te acerca al corazón y alma del rock and roll. ¡Sube el volumen y deja que el espíritu del rock 'n' roll se desate!",
-                        "tags": ["aplicación", "música", "rock", "entretenimiento"]
-                    },
-                    "fr": {
-                        "description": "Plongez dans le monde électrisant de la musique rock avec <b>RockVerse</b> ! Cette application est un paradis pour les amateurs de rock, offrant une vaste collection de pistes rock classiques et modernes, des listes de lecture sélectionnées et du contenu en coulisses. Que vous soyez un fan inconditionnel ou que vous découvriez simplement le genre, <b>RockVerse</b> vous rapproche du cœur et de l'âme du rock 'n' roll. Montez le volume et laissez l'esprit du rock 'n' roll s'exprimer !",
-                        "tags": ["application", "musique", "rock", "divertissement"]
-                    },
-                    "zh": {
-                        "description": "踏入摇滚音乐的电动世界，感受 <b>RockVerse</b>！这款应用是摇滚音乐爱好者的天堂，提供大量经典和现代摇滚音轨，策划的播放列表以及幕后内容。无论您是铁杆粉丝还是刚刚发现这个音乐流派，<b>RockVerse</b> 都会让您更贴近摇滚乐的核心与灵魂。放大音量，释放摇滚精神！",
-                        "tags": ["应用", "音乐", "摇滚", "娱乐"]
-                    }
-                }
-            }
+          
         ]
     }
 }
