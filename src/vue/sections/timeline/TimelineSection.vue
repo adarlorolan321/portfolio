@@ -81,10 +81,19 @@ const orderedItems = computed(() => {
  * @param {Object} item
  * @return {[{faIcon: string, label: string}]}
  * @private
- */
-const _formatItemDate = (item) => {
+ */const _formatItemDate = (item) => {
     const period = item['period']
+    console.log(period)
+
     const from = utils.localizeDate(period[0], language.getSelectedLanguage()['id'])
+
+    if (period[1] == 'present') {
+        return [{
+            faIcon: 'fa fa-calendar-check',
+            label: from + ' <span class="me-1 ms-1">➔</span> ' + 'Present'
+        }]
+    }
+
     const to = utils.localizeDate(period[1], language.getSelectedLanguage()['id'])
 
     return [{
@@ -92,6 +101,7 @@ const _formatItemDate = (item) => {
         label: from + ' <span class="me-1 ms-1">➔</span> ' + to
     }]
 }
+
 </script>
 
 <style lang="scss" scoped>

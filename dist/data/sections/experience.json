@@ -73,7 +73,7 @@
         {
             "id": "experience_item_3",
             "place": "@link{places.innsite-full}",
-            "period": ["2023/08", "2024/03"],
+            "period": ["2023/08", "present"],
             "locales": {
                 "en": {
                     "title": "Full Stack Developer",

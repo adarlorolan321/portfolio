@@ -66,7 +66,29 @@
                                   <span class="ms-1">Coming Soon ..</span>
                               </h5>
                             </div>
+
+                           
                         </div>
+                         <!-- Images Section -->
+                         <div class="modal-subsection">
+                                <!-- Title -->
+                                <h5 class="fw-bold">
+                                    <i class="fa fa-images me-2"/>
+                                    <span class="ms-1">Quick Look</span>
+                                </h5>
+
+                                <!-- Content -->
+                                <div class="row mt-3">
+                                     
+                                    <div v-for="(image, index) in props.project['images']" :key="index" class="col-6 col-lg-4 mb-3">
+                                        <ImageView  :src="image.src"
+                                        :alt="image.alt"
+                                        
+                                        :spinner-enabled="true"
+                                        class="img-fluid my-auto my-lg-0 mb-3"/>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
