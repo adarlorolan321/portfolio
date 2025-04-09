@@ -38,12 +38,12 @@
             }
         },
         {
-            "id": "social",
+            "id": "management",
             "locales": {
-                "en": {"title": "Social"},
-                "es": {"title": "Social"},
-                "fr": {"title": "Social"},
-                "zh": {"title": "社交"}
+                "en": {"title": "Management"},
+                "es": {"title": "Gestion"},
+                "fr": {"title": "Gestion"},
+                "zh": {"title": "管理"}
             }
         }
     ],
@@ -80,7 +80,7 @@
             {
                 "id": "pvg",
                 "title": "Valu8er Expert Reports",
-                "logoUrl": "images/portfolio/Valu8er_White Bg_Logo.png",
+                "logoUrl": "images/portfolio/pvg-logo.png.png",
                 "links": [
                     {"faIcon": "fas fa-globe", "href": "https://myvalu8er.com/"}
                 ],
@@ -218,7 +218,7 @@
             }
         ],
 
-        "social": [
+        "management": [
             {
                 "id": "findagoalie",
                 "title": "Find a Goalie",

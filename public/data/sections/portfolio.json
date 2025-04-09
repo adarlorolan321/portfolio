@@ -38,12 +38,12 @@
             }
         },
         {
-            "id": "social",
+            "id": "management",
             "locales": {
-                "en": {"title": "Social"},
-                "es": {"title": "Social"},
-                "fr": {"title": "Social"},
-                "zh": {"title": "社交"}
+                "en": {"title": "Management"},
+                "es": {"title": "Gestion"},
+                "fr": {"title": "Gestion"},
+                "zh": {"title": "管理"}
             }
         }
     ],
@@ -51,7 +51,7 @@
     "items": {
         "saas": [
             {
-                "id": "cando",
+                "id": "kmt",
                 "title": "Know My Tow",
                 "logoUrl": "images/portfolio/KMT.svg",
                 "links": [
@@ -89,10 +89,11 @@
             {
                 "id": "pvg",
                 "title": "Valu8er Expert Reports",
-                "logoUrl": "images/portfolio/Valu8er_White Bg_Logo.png",
+                "logoUrl": "images/portfolio/pvg-logo.png",
                 "links": [
                     {"faIcon": "fas fa-globe", "href": "https://myvalu8er.com/"}
                 ],
+                
                 "locales": {
                     "en": {
                         "description": "The Mission of <b>Valu8er Expert Reports</b> is to transcend the standard of business valuations to one of true independence and mathematical precision. As noted by Valuations Guru, Aswath Damodoran, humans naturally have several inherent biases when providing valuation opinions (9 Human Biases in Valuation). Solving this, Valu8er uses A.I. and advanced algorithms to calculate 100% independent, Objective and Impartial suggested Revenue & EBITDA multiples every single time. Valu8er utilizes proprietary algorithm to provide precise suggested valuation multiples based on the concept of “relative valuation” and comparing subject companies to competitors and the industry based on the 12 Forces of Valuation. Furthermore, the algorithm is blind to whom the user is and the mandate every single time.Valu8er also eliminates the need for word documents, spreadsheets and file and employee management systems, by providing an all-for-one platform to complete business valuation reports. As a result, Valu8er saves at least 90% of time spend on valuation reports, while providing completely error free reports and beautiful visuals and charts.",
@@ -147,6 +148,13 @@
                 "title": "LocalStalls",
                 "logoUrl": "images/portfolio/localstalls.png",
                 "links": [
+                    {"faIcon": "fas fa-globe", "href": "https://localstalls.com/en"}
+                ],
+                "images": [
+                    {"src": "images/screenshots/localstalls/4.png", "alt": "Know My Tow"},
+                    {"src": "images/screenshots/localstalls/1.png", "alt": "Know My Tow"},
+                    {"src": "images/screenshots/localstalls/2.png", "alt": "Know My Tow"},
+                    {"src": "images/screenshots/localstalls/3.png", "alt": "Know My Tow"}
                 ],
                 "locales": {
                     "en": {
@@ -198,8 +206,45 @@
             
         ],
 
-        "social": [
-          
+        "management": [
+            {
+                "id": "buildmax",
+                "title": "buildmax",
+                "logoUrl": "images/portfolio/buildmax.png",
+                "links": [
+                   
+                ],
+                "images": [
+                    {"src": "images/screenshots/buildmax/1.png", "alt": "Buildmax"},
+                    {"src": "images/screenshots/buildmax/2.png", "alt": "Buildmax"},
+                    {"src": "images/screenshots/buildmax/3.png", "alt": "Buildmax"},
+                    {"src": "images/screenshots/buildmax/4.png", "alt": "Buildmax"},
+                    {"src": "images/screenshots/buildmax/5.png", "alt": "Buildmax"},
+                    {"src": "images/screenshots/buildmax/6.png", "alt": "Buildmax"},
+                    {"src": "images/screenshots/buildmax/7.png", "alt": "Buildmax"},
+                    {"src": "images/screenshots/buildmax/8.png", "alt": "Buildmax"}
+                ],
+                "locales": {
+                    "en": {
+                        "description": "Coming soon ....",
+                        "tags": ["app", "finance", "money", "ordering", "shipping"]
+                    },
+                    "es": {
+                        "description": "<b>SmartCash</b> es tu compañero inteligente para las finanzas personales, permitiéndote tomar el control de tu dinero sin esfuerzo. Con su interfaz fácil de usar, SmartCash proporciona un seguimiento en tiempo real de tus gastos e ingresos, lo que te permite identificar patrones de gasto y tomar decisiones financieras informadas. Mantente al tanto de tu presupuesto, ya que SmartCash ofrece recomendaciones personalizadas para ahorrar dinero y alcanzar tus objetivos financieros sin comprometer tu estilo de vida.",
+                        "tags": ["aplicación", "finanzas", "dinero"]
+                    },
+                    "fr": {
+                        "description": "<b>SmartCash</b> est votre compagnon intelligent pour les finances personnelles, vous permettant de prendre le contrôle de votre argent sans effort. Avec son interface conviviale, SmartCash offre un suivi en temps réel de vos dépenses et de vos revenus, vous permettant d'identifier les habitudes de dépenses et de prendre des décisions financières éclairées. Restez maître de votre budget, car SmartCash propose des recommandations personnalisées pour économiser de l'argent et atteindre vos objectifs financiers sans compromettre votre style de vie.",
+                        "tags": ["application", "finance", "argent"]
+                    },
+                    "zh": {
+                        "description": "<b>SmartCash</b> 是您在个人财务方面的智能伴侣，使您轻松掌控您的资金。凭借其用户友好的界面，SmartCash 实时跟踪您的支出和收入，使您能够识别支出模式并做出明智的财务决策。通过提供个性化建议来节省金钱并实现您的财务目标，SmartCash 使您的预算始终保持在掌握之中。",
+                        "tags": ["应用", "财务", "金钱", "预算"]
+                    }
+                }
+            }
         ]
+
+        
     }
 }

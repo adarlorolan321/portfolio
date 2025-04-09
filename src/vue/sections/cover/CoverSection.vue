@@ -13,7 +13,7 @@
         <p class="cover-description lead text-normal mb-4 mb-md-5"
            v-html="props.sectionData.content['locales']['bio']"/>
 
-        <!-- Social Links -->
+        <!-- Management Links -->
         <SocialLinks :items="props.sectionData.content['items']['socialCircles']"/>
     </SectionTemplate>
 </template>

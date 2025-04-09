@@ -84,7 +84,7 @@ watch(() => props.selectedCategoryId, () => {
 
 .image-contain{
     padding: 10px;
-    background-color: lightgray;
+    background-color: white;
     img{
     object-fit: contain;
 
@@ -124,7 +124,7 @@ watch(() => props.selectedCategoryId, () => {
         position: absolute;
         top: 0;
         opacity: 0;
-
+        left: 0;
         display: flex;
         align-items: center;
         justify-content: center;

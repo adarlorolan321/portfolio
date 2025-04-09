@@ -1,11 +1,11 @@
 <template>
-    <div class="social-links">
-        <!-- Social Button -->
-        <a v-for="item in props.items" class="btn btn-social" target="_blank"
+    <div class="management-links">
+        <!-- Management Button -->
+        <a v-for="item in props.items" class="btn btn-management" target="_blank"
            :href="item['href']"
            :aria-label="item['faIcon']">
 
-            <!-- Social Button Icon -->
+            <!-- Management Button Icon -->
             <i :class="item['faIcon']"/>
         </a>
     </div>
@@ -25,7 +25,7 @@ const props = defineProps({
 
 $sizes: (xxxl: 1.45rem, xl: 1.4rem, lg: 1.25rem, md: 1.1rem);
 
-.btn-social {
+.btn-management {
     display: inline-flex;
     justify-content: center;
     align-items: center;
