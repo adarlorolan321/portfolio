@@ -51,6 +51,11 @@ import {useLayout} from "../../../composables/layout.js"
 import {computed, onMounted, ref} from "vue"
 import {useNavigation} from "../../../composables/navigation.js"
 import Alert from "../../widgets/Alert.vue"
+import emailjs from 'emailjs-com'
+
+const SERVICE_ID = 'service_eiwzhyk'
+const TEMPLATE_ID = 'template_7kihy99'
+const USER_ID = 'g_hC3AOPmFdwXxEhA'
 
 const data = useData()
 const layout = useLayout()
@@ -137,16 +142,21 @@ const _sendMessage = () => {
     feedbackView.showActivitySpinner(data.getString("sendingMessage") + "...")
     submitAttempts++
 
-    /** The message sending logic goes here... **/
-    setTimeout(() => {
-        if(submitAttempts % 2 !== 0) {
+    const templateParams = {
+        name: document.getElementById('form-name').value,
+        email: document.getElementById('form-email').value,
+        subject: document.getElementById('form-subject').value,
+        message: document.getElementById('form-message').value,
+    }
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
+        .then(() => {
             _onMessageSent()
-        }
-        else {
+        })
+        .catch((error) => {
+            console.error("EmailJS error:", error)
             _onMessageError()
-        }
-    }, 1000)
-    /** ************************************** **/
+        })
 }
 
 /**
