@@ -4,52 +4,46 @@
             "title": "<span class='text-primary'>Educational</span> Background",
             "description": "A glimpse into my academic trajectory and accomplishments."
         },
-
         "es": {
             "title": "Antecedentes <span class='text-primary'>Educativos</span>",
             "description": "Un vistazo a mi trayectoria académica y logros."
         },
-
         "fr": {
             "title": "Parcours <span class='text-primary'>Éducatif</span>",
             "description": "Un aperçu de mon parcours académique et de mes réalisations."
         },
-
         "zh": {
             "title": "<span class='text-primary'>教育</span> 背景",
             "description": "一瞥我的学术轨迹和成就。"
         }
     },
-
     "items": [
-     
-
         {
             "id": "bachelors",
             "place": "@link{places.paris}",
-            "period": ["2018/06", "2020/08"],
-
+            "period": [
+                "2018/06",
+                "2020/08"
+            ],
             "locales": {
-                "en": {
-                    "title": "Bachelor of Science in Information Technology",
-                    "description": "Obtained a Bachelor of Science in Information Technology, specializing in the development and management of information systems. Acquired a comprehensive understanding of programming languages, database management, network administration, and cybersecurity. Developed practical skills in designing and implementing IT solutions to address complex business challenges. Completed coursework in web development, software engineering, and data analytics, preparing for a successful career in the dynamic field of information technology."
-                },
+    "en": {
+        "title": "Bachelor of Science in Information Technology",
+        "description": "I obtained a Bachelor of Science in Information Technology, specializing in the development and management of information systems. I gained a comprehensive understanding of programming languages, database management, network administration, and cybersecurity. I developed practical skills in designing and implementing IT solutions to solve complex business challenges. I completed coursework in web development, software engineering, and data analytics, preparing for a successful career in the dynamic field of information technology."
+    },
+    "es": {
+        "title": "Licenciatura en Tecnología de la Información",
+        "description": "Obtuve una Licenciatura en Tecnología de la Información, especializándome en el desarrollo y gestión de sistemas de información. Adquirí un conocimiento integral de lenguajes de programación, gestión de bases de datos, administración de redes y ciberseguridad. Desarrollé habilidades prácticas en el diseño e implementación de soluciones informáticas para resolver desafíos empresariales complejos. Completé cursos en desarrollo web, ingeniería de software y análisis de datos, preparándome para una carrera exitosa en el dinámico campo de la tecnología de la información."
+    },
+    "fr": {
+        "title": "Licence en Technologie de l'Information",
+        "description": "J'ai obtenu une Licence en Technologie de l'Information, me spécialisant dans le développement et la gestion des systèmes d'information. J'ai acquis une compréhension approfondie des langages de programmation, de la gestion des bases de données, de l'administration des réseaux et de la cybersécurité. J'ai développé des compétences pratiques dans la conception et la mise en œuvre de solutions informatiques pour résoudre des défis commerciaux complexes. J'ai suivi des cours en développement web, en génie logiciel et en analyse de données, me préparant à une carrière réussie dans le domaine dynamique des technologies de l'information."
+    },
+    "zh": {
+        "title": "信息技术学士学位",
+        "description": "获得了信息技术学士学位，专注于信息系统的开发与管理。全面了解了编程语言、数据库管理、网络管理和网络安全。培养了设计和实施IT解决方案的实践能力，以应对复杂的商业挑战。完成了包括Web开发、软件工程和数据分析在内的课程，为在信息技术这一动态领域的成功职业生涯做好了准备。"
+    }
+}
 
-                "es": {
-                    "title": "Maestría en Interacción Humano-Computadora",
-                    "description": "Completó un programa intensivo centrado en los principios de diseño centrado en el usuario, pruebas de usabilidad y diseño de interacción. Desarrolló habilidades en la creación de wireframes, prototipado y metodologías de investigación de usuarios."
-                },
-
-                "fr": {
-                    "title": "Master en Interaction Humain-Ordinateur",
-                    "description": "A achevé un programme intensif axé sur les principes de conception centrés sur l'utilisateur, les tests de convivialité et la conception d'interaction. Développé des compétences en wireframing, en prototypage et en méthodologies de recherche utilisateur."
-                },
-
-                "zh": {
-                    "title": "人机交互硕士学位",
-                    "description": "完成了一项专注于以用户为中心的设计原则、可用性测试和交互设计的密集课程。培养了线框图、原型制作和用户研究方法方面的技能。"
-                }
-            }
         }
     ]
 }

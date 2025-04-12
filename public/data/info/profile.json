@@ -2,25 +2,22 @@
     "name": "Rolan Adarlo",
     "profilePictureUrl": "images/pictures/avatar.jpg",
 
-    "locales": {
+   "locales": {
         "en": {
             "credits": "",
             "role": "Full Stack Developer"
         },
-
         "es": {
             "credits": "Hecho por <strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "Designer de UX"
+            "role": "Desarrollador Full Stack"
         },
-
         "fr": {
             "credits": "Conçu par <strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "Designer UX"
+            "role": "Développeur Full Stack"
         },
-
         "zh": {
             "credits": "设计：<strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "用户体验设计师"
+            "role": "全栈开发人员"
         }
     },
 

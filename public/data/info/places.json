@@ -3,91 +3,82 @@
         "logoUrl": "images/places/logo-eitb.jpg",
         "faIcon": "fa fa-house-laptop",
         "locales": {
-            "en": {"name": "Elephant in the Boardroom"}
+            "en": {
+                "name": "Elephant in the Boardroom"
+            }
         }
     },
     "innsite-front": {
         "logoUrl": "images/places/logo-innsite.jpg",
         "faIcon": "fa fa-house-laptop",
         "locales": {
-            "en": {"name": "iNNsite"}
+            "en": {
+                "name": "iNNsite"
+            }
         }
     },
     "innsite-full": {
         "logoUrl": "images/places/logo-innsite.jpg",
         "faIcon": "fa fa-house-laptop",
         "locales": {
-            "en": {"name": "iNNsite"}
+            "en": {
+                "name": "iNNsite"
+            }
         }
     },
-
     "apple": {
         "logoUrl": "images/places/logo-apple.png",
         "faIcon": "fab fa-apple",
         "locales": {
-            "en": {"name": "Apple Inc."}
+            "en": {
+                "name": "Apple Inc."
+            }
         }
     },
-
     "coursera": {
         "logoUrl": "images/places/logo-coursera.png",
         "faIcon": "fa fa-house-laptop",
         "locales": {
-            "en": {"name": "Coursera"}
+            "en": {
+                "name": "Coursera"
+            }
         }
     },
-
     "forbes": {
         "logoUrl": null,
         "faIcon": "fa-solid fa-newspaper",
         "locales": {
-            "en": {"name": "Forbes"}
+            "en": {
+                "name": "Forbes"
+            }
         }
     },
-
     "google": {
         "logoUrl": null,
         "faIcon": "fab fa-google",
         "locales": {
-            "en": {"name": "Google"}
+            "en": {
+                "name": "Google"
+            }
         }
     },
-
-    "harvard": {
-        "logoUrl": "images/places/logo-harvard.png",
-        "faIcon": "fas fa-university",
-        "locales": {
-            "en": {"name": "Harvard University"},
-            "es": {"name": "Universidad de Harvard"},
-            "fr": {"name": "Université Harvard"},
-            "zh": {"name": "哈佛大学"}
-        }
-    },
-
     "paris": {
         "logoUrl": "images/places/logo-mindoro-state.png",
         "faIcon": "fas fa-university",
         "locales": {
-            "en": {"name": "Mindoro State University"},
-            "es": {"name": "Universidad de París"},
-            "fr": {"name": "Université de Paris"},
-            "zh": {"name": "巴黎大学"}
-        }
-    },
-
-    "udacity": {
-        "logoUrl": "images/places/logo-udacity.png",
-        "faIcon": "fa fa-house-laptop",
-        "locales": {
-            "en": {"name": "Udacity"}
-        }
-    },
-
-    "uxStudio": {
-        "logoUrl": "images/places/logo-ux-studio.png",
-        "faIcon": "fas fa-paint-brush",
-        "locales": {
-            "en": {"name": "UX Masters Studio"}
+            "en": {
+                "name": "Mindoro State University"
+            },
+            "es": {
+                "name": "Universidad Estatal de Mindoro"
+            },
+            "fr": {
+                "name": "Université d'État de Mindoro"
+            },
+            "zh": {
+                "name": "明多罗州立大学"
+            }
         }
     }
+   
 }

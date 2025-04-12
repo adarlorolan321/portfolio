@@ -1,30 +1,26 @@
 {
-    "locales": {
+   "locales": {
         "en": {
             "welcome": "Welcome to my <span class='text-primary'>Resume!</span>",
             "welcomeShort": "Welcome!",
-            "bio": "Experienced software developer with over 2 years of hands-on experience building web applications and backend systems. Proficient in crafting clean, understandable code that facilitates easy maintenance and debugging. Skilled in collaborating with teams of all sizes on various projects and adaptable to both remote and office work environments."
+            "bio": "Experienced software developer with over 3 years of hands-on experience building web applications and backend systems. Proficient in crafting clean, understandable code that facilitates easy maintenance and debugging. Skilled in collaborating with teams of all sizes on various projects and adaptable to both remote and office work environments."
         },
-
         "es": {
             "welcome": "¡Bienvenido(a) a mi <span class='text-primary'>CV!</span>",
-            "welcomeShort": "¡Saludos!",
-            "bio": "Con 8 años de experiencia como diseñador de UX, destaco en la creación de interfaces centradas en el usuario. Mi pasión por el diseño empático me impulsa a crear experiencias digitales encantadoras e innovadoras. Colaboremos juntos para crear algo extraordinario."
+            "welcomeShort": "¡Bienvenido(a)!",
+            "bio": "Desarrollador de software con más de 3 años de experiencia práctica en la creación de aplicaciones web y sistemas backend. Proficiente en la elaboración de código limpio y comprensible que facilita el mantenimiento y depuración. Hábil en la colaboración con equipos de todos los tamaños en diversos proyectos y adaptable tanto al trabajo remoto como presencial."
         },
-
         "fr": {
             "welcome": "Bienvenue sur mon <span class='text-primary'>CV</span>!",
             "welcomeShort": "Bienvenue!",
-            "bio": "Avec 8 ans en tant que designer UX, j'excele dans les interfaces centrées sur l'utilisateur. Ma passion pour le design empathique me pousse à créer des expériences numériques délicieuses et innovantes. Collaborons ensemble pour créer quelque chose d'extraordinaire."
+            "bio": "Développeur logiciel expérimenté avec plus de 3 ans d'expérience pratique dans la création d'applications web et de systèmes backend. Compétent dans la rédaction de code propre et compréhensible, facilitant la maintenance et le débogage. Habile à collaborer avec des équipes de toutes tailles sur divers projets et adaptable au travail à distance comme au travail en bureau."
         },
-
         "zh": {
             "welcome": "欢迎来到我的<span class='text-primary'>简历</span>！",
             "welcomeShort": "欢迎!",
-            "bio": "作为一名有着8年UX设计经验的设计师，我擅长以用户为中心的界面设计。我对于共情设计的热情驱使着我创造出令人愉悦且创新的数字体验。让我们一起合作，打造出非凡的作品吧。"
+            "bio": "作为一名经验丰富的软件开发人员，我拥有超过3年的实际经验，专注于构建Web应用程序和后端系统。擅长编写干净、易懂的代码，以便于维护和调试。能够与各类团队协作，适应远程和办公室工作环境，参与各类项目。"
         }
     },
-
     "items": {
         "socialCircles": [
             "@link{profile.contact.instagram}",
@@ -32,7 +28,6 @@
             "@link{profile.contact.linkedin}",
             "@link{profile.contact.github}"
         ],
-
         "contactListItems": [
             "@link{profile.contact.address}",
             "@link{profile.contact.email}",

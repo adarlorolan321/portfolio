@@ -1,29 +1,24 @@
 {
     "name": "Rolan Adarlo",
     "profilePictureUrl": "images/pictures/avatar.jpg",
-
     "locales": {
         "en": {
             "credits": "",
             "role": "Full Stack Developer"
         },
-
         "es": {
             "credits": "Hecho por <strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "Designer de UX"
+            "role": "Desarrollador Full Stack"
         },
-
         "fr": {
             "credits": "Conçu par <strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "Designer UX"
+            "role": "Développeur Full Stack"
         },
-
         "zh": {
             "credits": "设计：<strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "用户体验设计师"
+            "role": "全栈开发人员"
         }
     },
-
     "contact": {
         "address": {
             "id": "address",
@@ -32,7 +27,6 @@
             "faIcon": "fa-solid fa-city",
             "href": null
         },
-
         "email": {
             "id": "email",
             "value": "adarlorolan14@gmail.com",
@@ -40,7 +34,6 @@
             "faIcon": "fa-solid fa-envelope",
             "href": "mailto:adarlorolan14@gmail.com"
         },
-
         "facebook": {
             "id": "facebook",
             "value": "Rolan Adarlo",
@@ -48,7 +41,6 @@
             "faIcon": "fa-brands fa-facebook",
             "href": "https://www.facebook.com/rolan.adarlo.5/"
         },
-
         "github": {
             "id": "github",
             "value": "@rolan.adarlo.official",
@@ -56,7 +48,6 @@
             "faIcon": "fa-brands fa-github",
             "href": "https://github.com/adarlorolan321"
         },
-
         "instagram": {
             "id": "instagram",
             "value": "@rolan.adarlo.official",
@@ -64,7 +55,6 @@
             "faIcon": "fa-brands fa-instagram",
             "href": "https://instagram.com"
         },
-
         "linkedin": {
             "id": "linkedin",
             "value": "@rolan.adarlo.official",
@@ -72,7 +62,6 @@
             "faIcon": "fa-brands fa-linkedin",
             "href": "https://www.linkedin.com/in/rolan-adarlo"
         },
-
         "phone": {
             "id": "phone",
             "value": "+639109147510",

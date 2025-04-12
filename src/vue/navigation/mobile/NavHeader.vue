@@ -2,7 +2,7 @@
     <div class="nav-header">
         <!-- Language Picker -->
         <div class="language-picker-container">
-            <!-- <LanguagePicker /> -->
+            <LanguagePicker />
         </div>
 
         <!-- Main Content -->

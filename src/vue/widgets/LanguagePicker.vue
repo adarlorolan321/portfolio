@@ -1,5 +1,6 @@
 <template>
     <div v-if="language.supportsMultipleLanguages()" class="language-picker">
+        
         <!-- Bootstrap Dropdown -->
         <div class="dropdown">
             <!-- Dropdown Toggle Button -->

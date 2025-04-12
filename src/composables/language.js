@@ -67,7 +67,7 @@ export function useLanguage() {
      * @return {Object[]}
      */
     const getAvailableLanguages = () => {
-        return _languageData.supportedLanguages.filter(language => language['id'] !== _languageData.selectedLanguage['id'])
+        return _languageData.supportedLanguages
     }
 
     /**

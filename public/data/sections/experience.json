@@ -4,92 +4,95 @@
             "title": "<span class='text-primary'>Professional</span> Experience",
             "description": "A look into my work experience and career journey."
         },
-
         "es": {
             "title": "<span class='text-primary'>Experiencia</span> Profesional",
             "description": "Un vistazo a mi experiencia laboral y trayectoria profesional."
         },
-
         "fr": {
             "title": "Expérience <span class='text-primary'>Professionnelle</span>",
             "description": "Un aperçu de mon expérience professionnelle et de mon parcours de carrière."
         },
-
         "zh": {
             "title": "<span class='text-primary'>专业</span> 经验",
             "description": "了解我的工作经验和职业之旅。"
         }
     },
-
     "items": [
         {
             "id": "experience_item_1",
             "place": "@link{places.elephant}",
-            "period": ["2022/03", "2022/06"],
+            "period": [
+                "2022/03",
+                "2022/06"
+            ],
             "locales": {
                 "en": {
                     "title": "Web Developer Intern",
                     "description": "Getting familiar with frontend frameworks like Vue.js or React, and understanding their basic concepts. Becoming proficient in using development tools like code editors (e.g., Visual Studio Code), browsers' developer tools, and package managers (e.g., npm)."
                 },
                 "es": {
-                    "title": "Diseñador de UX",
-                    "description": "Contribuí al diseño de interfaces de aplicaciones web intuitivas y amigables para el usuario, creando experiencias de usuario atractivas y fluidas. Colaboré estrechamente con equipos multifuncionales e interesados para asegurarme de que los diseños se alinearan con los objetivos comerciales y las necesidades de los usuarios."
+                    "title": "Pasante de Desarrollo Web",
+                    "description": "Familiarizándome con frameworks frontend como Vue.js o React y entendiendo sus conceptos básicos. Haciéndome competente en el uso de herramientas de desarrollo como editores de código (por ejemplo, Visual Studio Code), herramientas de desarrollo de navegadores y gestores de paquetes (por ejemplo, npm)."
                 },
                 "fr": {
-                    "title": "Designer UX",
-                    "description": "Contribué à la conception d'interfaces d'applications web intuitives et conviviales, créant ainsi des expériences utilisateur engageantes et fluides. Collaboré étroitement avec des équipes pluridisciplinaires et des parties prenantes pour garantir que les designs soient alignés sur les objectifs commerciaux et les besoins des utilisateurs."
+                    "title": "Stagiaire Développeur Web",
+                    "description": "Se familiariser avec les frameworks frontend comme Vue.js ou React, et comprendre leurs concepts de base. Devenir compétent dans l'utilisation d'outils de développement tels que les éditeurs de code (par exemple, Visual Studio Code), les outils de développement des navigateurs et les gestionnaires de paquets (par exemple, npm)."
                 },
                 "zh": {
-                    "title": "用户体验设计师",
-                    "description": "为设计直观、用户友好的网络应用界面作出了贡献，创建了引人入胜且无缝的用户体验。与跨职能团队和利益相关者密切合作，确保设计与业务目标和用户需求相一致。"
+                    "title": "Web开发实习生",
+                    "description": "熟悉像Vue.js或React这样的前端框架，理解其基本概念。熟练使用开发工具，如代码编辑器（例如，Visual Studio Code）、浏览器开发者工具和包管理器（例如，npm）。"
                 }
             }
         },
-
         {
             "id": "experience_item_2",
             "place": "@link{places.innsite-front}",
-            "period": ["2022/07", "2023/07"],
+            "period": [
+                "2022/07",
+                "2023/07"
+            ],
             "locales": {
                 "en": {
                     "title": "Jr Frontend Developer",
                     "description": "Designing and implementing user interfaces that work seamlessly across different devices and screen sizes using Vue.js and CSS frameworks like Vuetify or Bootstrap. Setting up and managing routes in Vue.js using vue-router to create a single-page application (SPA) experience. Use Vuex for managing application state in large-scale Vue.js applications, ensuring data consistency and maintainability."
                 },
                 "es": {
-                    "title": "Designer Senior UI/UX",
-                    "description": "Lideré proyectos de diseño, realicé investigaciones exhaustivas sobre usuarios y utilicé información basada en datos para mejorar las experiencias de usuario. Gestioné equipos de diseño, fomentando la creatividad y la innovación al tiempo que implementaba las mejores prácticas de diseño para obtener resultados exitosos en diversos productos digitales."
+                    "title": "Desarrollador Frontend Jr",
+                    "description": "Diseñando e implementando interfaces de usuario que funcionan sin problemas en diferentes dispositivos y tamaños de pantalla utilizando Vue.js y frameworks CSS como Vuetify o Bootstrap. Configurando y gestionando rutas en Vue.js utilizando vue-router para crear una experiencia de aplicación de una sola página (SPA). Usando Vuex para gestionar el estado de la aplicación en aplicaciones Vue.js a gran escala, asegurando la consistencia y mantenibilidad de los datos."
                 },
                 "fr": {
-                    "title": "Designer UI/UX Senior",
-                    "description": "A piloté les initiatives UX en supervisant une équipe de concepteurs, en élaborant des stratégies de conception et en dirigeant des collaborations interfonctionnelles avec les responsables de produits, les ingénieurs et les cadres. Axé sur la création de designs centrés sur l'utilisateur alignés sur les objectifs commerciaux et aboutissant à une satisfaction accrue des utilisateurs."
+                    "title": "Développeur Frontend Jr",
+                    "description": "Conception et mise en œuvre d'interfaces utilisateur fonctionnant sans problème sur différents appareils et tailles d'écran en utilisant Vue.js et des frameworks CSS comme Vuetify ou Bootstrap. Configuration et gestion des routes dans Vue.js à l'aide de vue-router pour créer une expérience d'application à une seule page (SPA). Utilisation de Vuex pour gérer l'état de l'application dans des applications Vue.js à grande échelle, garantissant la cohérence des données et la maintenabilité."
                 },
                 "zh": {
-                    "title": "高级UI/UX设计师",
-                    "description": "领导设计项目，进行全面的用户研究，利用数据驱动的见解提升用户体验。管理设计团队，培养创意和创新，同时实施设计最佳实践，为各种数字产品交付成功的结果。"
+                    "title": "初级前端开发工程师",
+                    "description": "设计和实现无缝适应不同设备和屏幕尺寸的用户界面，使用Vue.js和CSS框架，如Vuetify或Bootstrap。使用vue-router设置和管理Vue.js中的路由，创建单页应用（SPA）体验。在大型Vue.js应用中使用Vuex管理应用状态，确保数据一致性和可维护性。"
                 }
             }
         },
-
         {
             "id": "experience_item_3",
             "place": "@link{places.innsite-full}",
-            "period": ["2023/08", "present"],
+            "period": [
+                "2023/08",
+                "present"
+            ],
             "locales": {
                 "en": {
                     "title": "Full Stack Developer",
-                    "description": "Improving the performance of web applications by implementing best practices, such as lazy loading, code splitting, and caching.standard and deliver high quality codes Developing well-designed and documented APIs using Laravel's built-in features, such as routing, controllers, and middleware. Writing unit tests, integration tests, and end-to-end tests to ensure the reliability and functionality of web applications."
+                    "description": "Improving the performance of web applications by implementing best practices, such as lazy loading, code splitting, and caching. Developing well-designed and documented APIs using Laravel's built-in features, such as routing, controllers, and middleware. Writing unit tests, integration tests, and end-to-end tests to ensure the reliability and functionality of web applications."
                 },
                 "es": {
-                    "title": "Designer UX Principal",
-                    "description": "Impulsé iniciativas de UX supervisando un equipo de diseñadores, elaborando estrategias de diseño y liderando colaboraciones multifuncionales con gerentes de producto, ingenieros y ejecutivos. Centrado en crear diseños centrados en el usuario que se alinearan con los objetivos comerciales y que dieron como resultado una mayor satisfacción del usuario."
+                    "title": "Desarrollador Full Stack",
+                    "description": "Mejorando el rendimiento de las aplicaciones web mediante la implementación de mejores prácticas, como la carga diferida, la división de código y la caché. Desarrollando APIs bien diseñadas y documentadas utilizando las características integradas de Laravel, como el enrutamiento, los controladores y los middleware. Escribiendo pruebas unitarias, pruebas de integración y pruebas de extremo a extremo para garantizar la fiabilidad y la funcionalidad de las aplicaciones web."
                 },
                 "fr": {
-                    "title": "Designer UX Principal",
-                    "description": "A piloté les initiatives UX en supervisant une équipe de concepteurs, en élaborant des stratégies de conception et en dirigeant des collaborations interfonctionnelles avec les responsables de produits, les ingénieurs et les cadres. Axé sur la création de designs centrés sur l'utilisateur alignés sur les objectifs commerciaux et aboutissant à une satisfaction accrue des utilisateurs."
+                    "title": "Développeur Full Stack",
+                    "description": "Amélioration des performances des applications web en mettant en œuvre les meilleures pratiques, telles que le chargement paresseux, la séparation du code et la mise en cache. Développement d'APIs bien conçues et documentées en utilisant les fonctionnalités intégrées de Laravel, telles que le routage, les contrôleurs et les middleware. Rédaction de tests unitaires, de tests d'intégration et de tests de bout en bout pour garantir la fiabilité et la fonctionnalité des applications web."
                 },
                 "zh": {
-                    "title": "首席用户体验设计师",
-                    "description": "通过监督设计团队、制定设计战略，并与产品经理、工程师和高管共同推动跨职能合作，推动了用户体验的创新。专注于创建符合业务目标的以用户为中心的设计，从而实现了增强的用户满意度。"
+                    "title": "全栈开发工程师",
+                    "description": "通过实施最佳实践，如延迟加载、代码分割和缓存，改善Web应用程序的性能。使用Laravel的内置功能，如路由、控制器和中间件，开发设计良好且文档齐全的API。编写单元测试、集成测试和端到端测试，以确保Web应用程序的可靠性和功能性。"
                 }
             }
         }
