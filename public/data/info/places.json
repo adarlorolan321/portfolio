@@ -53,12 +53,12 @@
             }
         }
     },
-    "google": {
-        "logoUrl": null,
-        "faIcon": "fab fa-google",
+    "csc": {
+        "logoUrl": "images/places/logo-csc.jpg",
+        "faIcon": "fas fa-award",
         "locales": {
             "en": {
-                "name": "Google"
+                "name": "csc"
             }
         }
     },

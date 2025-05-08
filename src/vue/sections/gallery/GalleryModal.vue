@@ -35,7 +35,7 @@
               <h1 class="fw-bold mb-3" v-html="props.project['title']" />
 
               <!-- Tags -->
-              <div class="text-4">
+              <div class="text-4" v-if="jsonId == 'portfolio'">
                 <i class="fa fa-tag me-1" />
                 {{ data.getString("tags") }}:
                 <Tags
@@ -50,7 +50,11 @@
                 <!-- Title -->
                 <h5 class="d-none d-lg-inline-block fw-bold">
                   <i class="fa fa-file me-2" />
-                  <span class="ms-1">{{ data.getString("aboutProject") }}</span>
+                  <span class="ms-1">{{
+                    jsonId == "portfolio"
+                      ? data.getString("aboutProject")
+                      : data.getString("about")
+                  }}</span>
                 </h5>
 
                 <!-- Content -->
@@ -61,7 +65,7 @@
               </div>
 
               <!-- Links SubSection -->
-              <div class="modal-subsection">
+              <div class="modal-subsection" v-if="jsonId == 'portfolio'">
                 <!-- Title -->
                 <h5 class="d-inline-block fw-bold">
                   <i class="fa fa-external-link me-2" />
@@ -119,7 +123,12 @@
                 <div
                   v-for="(image, index) in props.project['images']"
                   :key="index"
-                  class="col-6 col-lg-4 mb-3"
+                  :class="[
+                    props.project['images'].length <= 2
+                      ? 'col-12'
+                      : 'col-6 col-lg-4',
+                    'mb-3',
+                  ]"
                 >
                   <ImageView
                     :src="image.src"
@@ -152,6 +161,7 @@ import SocialLinks from "../../widgets/SocialLinks.vue";
  */
 const props = defineProps({
   project: Object,
+  jsonId: String,
 });
 
 const data = useData();
@@ -178,7 +188,7 @@ const display = () => {
   bsModal.show();
 };
 
-const previewImage = ref(null)
+const previewImage = ref(null);
 
 /**
  * @private
@@ -203,40 +213,39 @@ defineExpose({
 }
 
 .image-preview-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
 
-    img {
-        max-width: 90%;
-        max-height: 80%;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .close-preview {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
     }
-
-    .close-preview {
-        position: absolute;
-        top: 30px;
-        right: 40px;
-        font-size: 2rem;
-        color: white;
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        &:hover {
-            color: $primary;
-        }
-    }
+  }
 }
-
 
 .close-button {
   position: absolute;

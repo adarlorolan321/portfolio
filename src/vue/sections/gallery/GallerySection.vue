@@ -15,7 +15,7 @@
         </div>
     </SectionTemplate>
 
-    <GalleryModal ref="modal" :project="selectedProject" />
+    <GalleryModal ref="modal" :project="selectedProject" :jsonId="jsonId" />
 </template>
 
 <script setup>
@@ -38,6 +38,7 @@ const data = useData()
 const selectedCategoryId = ref(null)
 const selectedProject = ref(null)
 const modal = ref(null)
+const jsonId = props.sectionData['id']
 
 /**
  * @type {ComputedRef<Array>}
