@@ -208,12 +208,6 @@
                 "id": "ngj",
                 "title": "NGJ",
                 "logoUrl": "images/portfolio/ngj.png",
-                "links": [
-                    {
-                        "faIcon": "fas fa-globe",
-                        "href": "https://ngjlegal.com.au/online-forms/"
-                    }
-                ],
                 "locales": {
                     "en": {
                         "description": "The philosophy behind <b>NGJ</b> Accounting is simple - give our clients exactly what they want, at a price they are comfortable with and aware of. [...]",
