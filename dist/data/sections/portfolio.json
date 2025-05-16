@@ -103,32 +103,7 @@
                     }
                 }
             },
-            {
-                "id": "ngj",
-                "title": "NGJ",
-                "logoUrl": "images/portfolio/ngj.png",
-                "links": [
-                    {"faIcon": "fas fa-globe", "href": "https://ngjlegal.com.au/online-forms/"}
-                ],
-                "locales": {
-                    "en": {
-                        "description": "The philosophy behind <b>NGJ</b> Accounting is simple - give our clients exactly what they want, at a price they are comfortable with and aware of.We are not the conventional accounting firm. We do not charge in six minute increments, talk unnecessarily complicated and technical jargon, or contact you only to remind you that your tax returns are due. What we are passionate about is helping grow your business into a successful wealth generating enterprise so that you can reap the benefits of all your hard work. To do this, business owners often require guidance from experts who are all too aware of the many uncertainties encountered along the road to developing and maintaining a successful business. That is why <b>NGJ</b> is with you every step of the way, always on call to provide timely and critical advice when needed most.We don't want people worrying about the cost of having to pick up the phone and contact their accountant. If you are a client of <b>NGJ</b> and need timely advice before making those important business decisions, we would rather provide you with a few free minutes of our time to ensure you are from the beginning, walking in the right direction down the road to success.So don't spend time stressing over often trivial taxation and general business matters. Pick up the phone for some quick advice and feel relieved that you can spend more time developing your business and doing the things you are most passionate about.",
-                        "tags": ["app", "finance", "money", "budget"]
-                    },
-                    "es": {
-                        "description": "<b>SmartCash</b> es tu compañero inteligente para las finanzas personales, permitiéndote tomar el control de tu dinero sin esfuerzo. Con su interfaz fácil de usar, SmartCash proporciona un seguimiento en tiempo real de tus gastos e ingresos, lo que te permite identificar patrones de gasto y tomar decisiones financieras informadas. Mantente al tanto de tu presupuesto, ya que SmartCash ofrece recomendaciones personalizadas para ahorrar dinero y alcanzar tus objetivos financieros sin comprometer tu estilo de vida.",
-                        "tags": ["aplicación", "finanzas", "dinero"]
-                    },
-                    "fr": {
-                        "description": "<b>SmartCash</b> est votre compagnon intelligent pour les finances personnelles, vous permettant de prendre le contrôle de votre argent sans effort. Avec son interface conviviale, SmartCash offre un suivi en temps réel de vos dépenses et de vos revenus, vous permettant d'identifier les habitudes de dépenses et de prendre des décisions financières éclairées. Restez maître de votre budget, car SmartCash propose des recommandations personnalisées pour économiser de l'argent et atteindre vos objectifs financiers sans compromettre votre style de vie.",
-                        "tags": ["application", "finance", "argent"]
-                    },
-                    "zh": {
-                        "description": "<b>SmartCash</b> 是您在个人财务方面的智能伴侣，使您轻松掌控您的资金。凭借其用户友好的界面，SmartCash 实时跟踪您的支出和收入，使您能够识别支出模式并做出明智的财务决策。通过提供个性化建议来节省金钱并实现您的财务目标，SmartCash 使您的预算始终保持在掌握之中。",
-                        "tags": ["应用", "财务", "金钱", "预算"]
-                    }
-                }
-            },
+            
             {
                 "id": "snappy",
                 "title": "LocalStalls",
