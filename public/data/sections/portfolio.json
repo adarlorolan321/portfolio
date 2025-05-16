@@ -204,55 +204,7 @@
                     }
                 }
             },
-            {
-                "id": "ngj",
-                "title": "NGJ",
-                "logoUrl": "images/portfolio/ngj.png",
-                "links": [
-                    {
-                        "faIcon": "fas fa-globe",
-                        "href": "https://ngjlegal.com.au/online-forms/"
-                    }
-                ],
-                "locales": {
-                    "en": {
-                        "description": "The philosophy behind <b>NGJ</b> Accounting is simple - give our clients exactly what they want, at a price they are comfortable with and aware of. [...]",
-                        "tags": [
-                            "app",
-                            "finance",
-                            "money",
-                            "budget"
-                        ]
-                    },
-                    "es": {
-                        "description": "La filosofía de <b>NGJ</b> Accounting es simple: brindar a nuestros clientes exactamente lo que desean, a un precio que conocen y con el que se sienten cómodos. [...]",
-                        "tags": [
-                            "aplicación",
-                            "finanzas",
-                            "dinero",
-                            "presupuesto"
-                        ]
-                    },
-                    "fr": {
-                        "description": "La philosophie de <b>NGJ</b> Accounting est simple : offrir à nos clients exactement ce qu’ils veulent, à un prix connu et abordable. [...]",
-                        "tags": [
-                            "application",
-                            "finance",
-                            "argent",
-                            "budget"
-                        ]
-                    },
-                    "zh": {
-                        "description": "<b>NGJ</b> 会计的理念很简单——以客户舒适和知情的价格，提供他们真正需要的服务。[...]",
-                        "tags": [
-                            "应用",
-                            "财务",
-                            "金钱",
-                            "预算"
-                        ]
-                    }
-                }
-            }
+            
         ],
         "booking": [
             {
