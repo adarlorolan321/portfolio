@@ -327,10 +327,10 @@
                 "faIcon": "fab fa-html5",
                 "value": 95,
                 "locales": {
-                    "en": {"title": "HTML 5", "description": "Experience Time: 5 years"},
-                    "es": {"title": "HTML 5", "description": "Experiencia: 5 años"},
-                    "fr": {"title": "HTML 5", "description": "Expérience : 5 ans"},
-                    "zh": {"title": "HTML 5", "description": "经验时长：5年"}
+                    "en": {"title": "HTML 5", "description": "Experience Time: 6 years"},
+                    "es": {"title": "HTML 5", "description": "Experiencia: 6 años"},
+                    "fr": {"title": "HTML 5", "description": "Expérience : 6 ans"},
+                    "zh": {"title": "HTML 5", "description": "经验时长：6年"}
                 }
             },
 
@@ -339,10 +339,10 @@
                 "faIcon": "fab fa-css3-alt",
                 "value": 90,
                 "locales": {
-                    "en": {"title": "CSS 3", "description": "Experience Time: 3 years"},
-                    "es": {"title": "CSS 3", "description": "Experiencia: 3 años"},
-                    "fr": {"title": "CSS 3", "description": "Expérience : 3 ans"},
-                    "zh": {"title": "CSS 3", "description": "经验时长：3年"}
+                    "en": {"title": "CSS 3", "description": "Experience Time: 4 years"},
+                    "es": {"title": "CSS 3", "description": "Experiencia: 4 años"},
+                    "fr": {"title": "CSS 3", "description": "Expérience : 4 ans"},
+                    "zh": {"title": "CSS 3", "description": "经验时长：4年"}
                 }
             },
 
@@ -351,10 +351,10 @@
                 "faIcon": "fab fa-sass",
                 "value": 65,
                 "locales": {
-                    "en": {"title": "Sass/Less", "description": "Experience Time: 2 years"},
-                    "es": {"title": "Sass/Less", "description": "Experiencia: 2 años"},
-                    "fr": {"title": "Sass/Less", "description": "Expérience : 2 ans"},
-                    "zh": {"title": "Sass/Less", "description": "经验时长：2年"}
+                    "en": {"title": "Sass/Less", "description": "Experience Time: 3 years"},
+                    "es": {"title": "Sass/Less", "description": "Experiencia: 3 años"},
+                    "fr": {"title": "Sass/Less", "description": "Expérience : 3 ans"},
+                    "zh": {"title": "Sass/Less", "description": "经验时长：3年"}
                 }
             },
 
@@ -363,10 +363,10 @@
                 "faIcon": "fab fa-js-square",
                 "value": 85,
                 "locales": {
-                    "en": {"title": "JavaScript", "description": "Experience Time: 3 years"},
-                    "es": {"title": "JavaScript", "description": "Experiencia: 3 años"},
-                    "fr": {"title": "JavaScript", "description": "Expérience : 3 ans"},
-                    "zh": {"title": "JavaScript", "description": "经验时长：3年"}
+                    "en": {"title": "JavaScript", "description": "Experience Time: 4 years"},
+                    "es": {"title": "JavaScript", "description": "Experiencia: 4 años"},
+                    "fr": {"title": "JavaScript", "description": "Expérience : 4 ans"},
+                    "zh": {"title": "JavaScript", "description": "经验时长：4年"}
                 }
             },
 
@@ -375,10 +375,10 @@
                 "faIcon": "fab fa-vuejs",
                 "value": 90,
                 "locales": {
-                    "en": {"title": "Vue 3", "description": "Experience Time: 2 years"},
-                    "es": {"title": "Vue 3", "description": "Experiencia: 2 años"},
-                    "fr": {"title": "Vue 3", "description": "Expérience : 2 ans"},
-                    "zh": {"title": "Vue 3", "description": "经验时长：2年"}
+                    "en": {"title": "Vue 3", "description": "Experience Time: 3 years"},
+                    "es": {"title": "Vue 3", "description": "Experiencia: 3 años"},
+                    "fr": {"title": "Vue 3", "description": "Expérience : 3 ans"},
+                    "zh": {"title": "Vue 3", "description": "经验时长：3年"}
                 }
             },
 
@@ -387,10 +387,10 @@
                 "faIcon": "fab fa-brands fa-laravel",
                 "value": 90,
                 "locales": {
-                    "en": {"title": "Laravel", "description": "Experience time: 2 year"},
-                    "es": {"title": "Laravel", "description": "Nanodegree de desarrollo Laravel (Udacity)<br>Experiencia: 1 año"},
-                    "fr": {"title": "Laravel", "description": "Nanodegré en développement Laravel (Udacity)<br>Expérience : 1 an"},
-                    "zh": {"title": "Laravel", "description": "Laravel开发纳米学位毕业生（优达学城）<br>经验时长：1年"}
+                    "en": {"title": "Laravel", "description": "Experience time: 3 years"},
+                    "es": {"title": "Laravel", "description": "Nanodegree de desarrollo Laravel (Udacity)<br>Experiencia: 2 años"},
+                    "fr": {"title": "Laravel", "description": "Nanodegré en développement Laravel (Udacity)<br>Expérience : 2 ans"},
+                    "zh": {"title": "Laravel", "description": "Laravel开发纳米学位毕业生（优达学城）<br>经验时长：2年"}
                 }
             }
         ],

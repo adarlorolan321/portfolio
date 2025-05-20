@@ -318,9 +318,48 @@
         "management": [
             {
                 "id": "buildmax",
-                "title": "buildmax",
+                "title": "Buildmax",
                 "logoUrl": "images/portfolio/buildmax.png",
-                "links": [],
+                "locales": {
+                    "en": {
+                        "description": "BUILDMAX™ was created to address critical gaps in construction procurement and foster stronger supplier-customer partnerships. Inspired by his experience as a Procurement Officer, Bobby recognized inefficiencies in sourcing and product alignment, leading to a vision of redefining industry standards through innovation and collaboration.",
+                        "tags": [
+                            "app",
+                            "hotel",
+                            "booking"
+                        ]
+                    },
+                    "es": {
+                        "description": "BUILDMAX™ fue creado para abordar brechas críticas en la adquisición de materiales de construcción y fomentar relaciones más sólidas entre proveedores y clientes. Inspirado por su experiencia como responsable de compras, Bobby identificó ineficiencias en la búsqueda y alineación de productos, lo que lo llevó a imaginar una nueva forma de redefinir los estándares de la industria a través de la innovación y la colaboración.",
+                        "tags": [
+                            "aplicación",
+                            "construcción",
+                            "proveedores"
+                        ]
+                    },
+                    "fr": {
+                        "description": "BUILDMAX™ a été créé pour combler des lacunes critiques dans l'approvisionnement en construction et favoriser des partenariats plus solides entre fournisseurs et clients. Inspiré par son expérience en tant qu'agent d'approvisionnement, Bobby a constaté des inefficacités dans le sourcing et l'alignement des produits, ce qui l'a conduit à vouloir redéfinir les standards du secteur grâce à l'innovation et à la collaboration.",
+                        "tags": [
+                            "application",
+                            "construction",
+                            "fournisseurs"
+                        ]
+                    },
+                    "zh": {
+                        "description": "BUILDMAX™ 的诞生旨在解决建筑采购中的关键短板，并促进供应商与客户之间更紧密的合作关系。受其作为采购官员经历的启发，Bobby 发现了采购和产品匹配中的低效问题，从而萌生了通过创新与协作重新定义行业标准的愿景。",
+                        "tags": [
+                            "应用",
+                            "建筑",
+                            "供应商"
+                        ]
+                    }
+                },
+                "links": [
+                    {
+                        "faIcon": "fas fa-globe",
+                        "href": "https://gobuildmax.com/"
+                    }
+                ],
                 "images": [
                     {
                         "src": "images/screenshots/buildmax/1.png",
@@ -354,49 +393,8 @@
                         "src": "images/screenshots/buildmax/8.png",
                         "alt": "Buildmax"
                     }
-                ],
-                "locales": {
-                    "en": {
-                        "description": "Coming soon ....",
-                        "tags": [
-                            "app",
-                            "finance",
-                            "money",
-                            "ordering",
-                            "shipping"
-                        ]
-                    },
-                    "es": {
-                          "description": "Coming soon ....",
-                           "tags": [
-                            "app",
-                            "finance",
-                            "money",
-                            "ordering",
-                            "shipping"
-                        ]
-                    },
-                    "fr": {
-                          "description": "Coming soon ....",
-                          "tags": [
-                            "app",
-                            "finance",
-                            "money",
-                            "ordering",
-                            "shipping"
-                        ]
-                    },
-                    "zh": {
-                        "description": "Coming soon ....",  
-                        "tags": [
-                            "app",
-                            "finance",
-                            "money",
-                            "ordering",
-                            "shipping"
-                        ]
-                    }
-                }
+                ]
+              
             }
         ]
     }
