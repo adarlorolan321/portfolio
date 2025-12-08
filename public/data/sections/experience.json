@@ -75,7 +75,7 @@
             "place": "@link{places.innsite-full}",
             "period": [
                 "2023/08",
-                "present"
+                "2025/10"
             ],
             "locales": {
                 "en": {
@@ -93,6 +93,32 @@
                 "zh": {
                     "title": "全栈开发工程师",
                     "description": "通过实施最佳实践，如延迟加载、代码分割和缓存，改善Web应用程序的性能。使用Laravel的内置功能，如路由、控制器和中间件，开发设计良好且文档齐全的API。编写单元测试、集成测试和端到端测试，以确保Web应用程序的可靠性和功能性。"
+                }
+            }
+        },
+        {
+            "id": "experience_item_4",
+            "place": "@link{places.sven-full}",
+            "period": [
+                "2025/11",
+                "present"
+            ],
+            "locales": {
+                "en": {
+                    "title": "Senior Full Stack Developer",
+                    "description": "Leading a team of developers, providing technical guidance and mentoring to junior developers. Developing well-designed and documented APIs using Laravel's built-in features, such as routing, controllers, and middleware. Building modern frontend applications using React.js and Next.js, leveraging server-side rendering and optimized performance. Utilizing Docker for containerization and deployment workflows, and working with Windows Subsystem for Linux (WSL) for development environments. Writing unit tests, integration tests, and end-to-end tests to ensure the reliability and functionality of web applications."
+                },
+                "es": {
+                    "title": "Desarrollador Full Stack",
+                    "description": "Liderando un equipo de desarrolladores, proporcionando orientación técnica y mentoría a desarrolladores junior. Desarrollando APIs bien diseñadas y documentadas utilizando las características integradas de Laravel, como el enrutamiento, los controladores y los middleware. Construyendo aplicaciones frontend modernas usando React.js y Next.js, aprovechando el renderizado del lado del servidor y el rendimiento optimizado. Utilizando Docker para la containerización y flujos de trabajo de despliegue, y trabajando con Windows Subsystem for Linux (WSL) para entornos de desarrollo. Escribiendo pruebas unitarias, pruebas de integración y pruebas de extremo a extremo para garantizar la fiabilidad y la funcionalidad de las aplicaciones web."
+                },
+                "fr": {
+                    "title": "Développeur Full Stack",
+                    "description": "Diriger une équipe de développeurs, fournir des conseils techniques et encadrer les développeurs juniors. Développer des APIs bien conçues et documentées en utilisant les fonctionnalités intégrées de Laravel, telles que le routage, les contrôleurs et les middleware. Créer des applications frontend modernes en utilisant React.js et Next.js, en tirant parti du rendu côté serveur et des performances optimisées. Utiliser Docker pour la conteneurisation et les flux de travail de déploiement, et travailler avec Windows Subsystem for Linux (WSL) pour les environnements de développement. Rédaction de tests unitaires, de tests d'intégration et de tests de bout en bout pour garantir la fiabilité et la fonctionnalité des applications web."
+                },
+                "zh": {
+                    "title": "全栈开发工程师",
+                    "description": "领导开发团队，为初级开发人员提供技术指导和指导。使用Laravel的内置功能（如路由、控制器和中间件）开发设计良好且文档齐全的API。使用React.js和Next.js构建现代前端应用程序，利用服务器端渲染和优化的性能。使用Docker进行容器化和部署工作流程，并使用Windows Subsystem for Linux (WSL)进行开发环境。编写单元测试、集成测试和端到端测试，以确保Web应用程序的可靠性和功能性。"
                 }
             }
         }

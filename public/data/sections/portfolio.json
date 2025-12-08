@@ -203,6 +203,94 @@
                         ]
                     }
                 }
+            },
+            {
+                "id": "overwatch",
+                "title": "OverWatch",
+                "logoUrl": "images/portfolio/default-logo.svg",
+                "links": [],
+                "locales": {
+                    "en": {
+                        "description": "<b>OverWatch</b> is a comprehensive monitoring and management platform designed to provide real-time insights and oversight for various systems and processes. The platform offers advanced tracking capabilities, alert systems, and detailed analytics to help organizations maintain optimal performance and quickly identify potential issues.",
+                        "tags": [
+                            "app",
+                            "monitoring",
+                            "management",
+                            "analytics"
+                        ]
+                    },
+                    "es": {
+                        "description": "<b>OverWatch</b> es una plataforma integral de monitoreo y gestión diseñada para proporcionar información y supervisión en tiempo real para diversos sistemas y procesos. La plataforma ofrece capacidades avanzadas de seguimiento, sistemas de alertas y análisis detallados para ayudar a las organizaciones a mantener un rendimiento óptimo e identificar rápidamente posibles problemas.",
+                        "tags": [
+                            "aplicación",
+                            "monitoreo",
+                            "gestión",
+                            "análisis"
+                        ]
+                    },
+                    "fr": {
+                        "description": "<b>OverWatch</b> est une plateforme complète de surveillance et de gestion conçue pour fournir des informations et une supervision en temps réel pour divers systèmes et processus. La plateforme offre des capacités de suivi avancées, des systèmes d'alerte et des analyses détaillées pour aider les organisations à maintenir des performances optimales et à identifier rapidement les problèmes potentiels.",
+                        "tags": [
+                            "application",
+                            "surveillance",
+                            "gestion",
+                            "analyse"
+                        ]
+                    },
+                    "zh": {
+                        "description": "<b>OverWatch</b> 是一个全面的监控和管理平台，旨在为各种系统和流程提供实时洞察和监督。该平台提供先进的跟踪功能、警报系统和详细分析，帮助组织保持最佳性能并快速识别潜在问题。",
+                        "tags": [
+                            "应用",
+                            "监控",
+                            "管理",
+                            "分析"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "simpletrak",
+                "title": "SimpleTrak",
+                "logoUrl": "images/portfolio/default-logo.svg",
+                "links": [],
+                "locales": {
+                    "en": {
+                        "description": "<b>SimpleTrak</b> is an intuitive tracking and management solution designed to simplify workflow monitoring and task management. The platform provides easy-to-use tools for tracking progress, managing resources, and maintaining visibility across projects and operations.",
+                        "tags": [
+                            "app",
+                            "tracking",
+                            "management",
+                            "productivity"
+                        ]
+                    },
+                    "es": {
+                        "description": "<b>SimpleTrak</b> es una solución intuitiva de seguimiento y gestión diseñada para simplificar el monitoreo de flujos de trabajo y la gestión de tareas. La plataforma proporciona herramientas fáciles de usar para rastrear el progreso, gestionar recursos y mantener la visibilidad en proyectos y operaciones.",
+                        "tags": [
+                            "aplicación",
+                            "seguimiento",
+                            "gestión",
+                            "productividad"
+                        ]
+                    },
+                    "fr": {
+                        "description": "<b>SimpleTrak</b> est une solution intuitive de suivi et de gestion conçue pour simplifier la surveillance des flux de travail et la gestion des tâches. La plateforme fournit des outils faciles à utiliser pour suivre les progrès, gérer les ressources et maintenir la visibilité sur les projets et les opérations.",
+                        "tags": [
+                            "application",
+                            "suivi",
+                            "gestion",
+                            "productivité"
+                        ]
+                    },
+                    "zh": {
+                        "description": "<b>SimpleTrak</b> 是一个直观的跟踪和管理解决方案，旨在简化工作流监控和任务管理。该平台提供易于使用的工具，用于跟踪进度、管理资源并在项目和运营中保持可见性。",
+                        "tags": [
+                            "应用",
+                            "跟踪",
+                            "管理",
+                            "生产力"
+                        ]
+                    }
+                }
             }
             
         ],

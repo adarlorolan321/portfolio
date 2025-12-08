@@ -26,6 +26,15 @@
             }
         }
     },
+    "sven-full": {
+        "logoUrl": "images/places/logo-sven.jpg",
+        "faIcon": "fa fa-house-laptop",
+        "locales": {
+            "en": {
+                "name": "The SVEN Group"
+            }
+        }
+    },
     "apple": {
         "logoUrl": "images/places/logo-apple.png",
         "faIcon": "fab fa-apple",
