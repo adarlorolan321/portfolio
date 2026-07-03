@@ -79,7 +79,9 @@ const _onLinkClicked = (section) => {
     width: $nav-sidebar-column-size;
     overflow: auto;
 
-    background-color: $nav-background-color;
+    background: $nav-background-gradient;
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .nav-sidebar-content {
@@ -102,30 +104,41 @@ li.nav-item {
     justify-content: left;
     align-items: center;
 
-    padding: 0 2.7rem 0 2.7rem;
+    padding: 0 2rem 0 2rem;
     width: 100%;
     min-height: clamp(2rem, calc(100vh/40)*2, 2.7rem);
+    margin: 0.25rem 0;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
 
     .nav-link {
         cursor: pointer;
         font-size: clamp(0.9rem, calc(100vh/50), 1rem);
+        padding: 0.5rem 0.75rem;
+        width: 100%;
+        border-radius: 0.5rem;
 
         font-family: $headings-font-family;
         text-transform: uppercase;
-        text-align: center;
+        text-align: left;
 
         color: $light-1;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
         i {
             min-width: 35px;
             color: $nav-item-grayed-out-color;
-            transition: color 0.2s;
+            transition: all 0.3s ease;
         }
 
         &:hover {
             color: $nav-item-lighten-color;
+            background: $nav-item-hover-bg;
+            transform: translateX(4px);
+            
             i {
                 color: $nav-item-lighten-strong-color;
+                transform: scale(1.1);
             }
         }
     }
@@ -133,6 +146,9 @@ li.nav-item {
     &.nav-item-selected {
         .nav-link {
             color: $nav-item-lighten-color;
+            background: $nav-item-hover-bg;
+            border-left: 3px solid $primary;
+            
             i {
                 color: $nav-item-lighten-strong-color;
             }

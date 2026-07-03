@@ -201,52 +201,76 @@ const alertStatus = computed(() => {
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
 
-$form-input-background-color: lighten($light-3, 20%);
-$form-input-placeholder-color:$light-5;
+$form-input-background-color: white;
+$form-input-placeholder-color: $text-muted;
 
-$form-input-border-color: $light-2;
-$form-input-border-color-focus: lighten($primary, 5%);
+$form-input-border-color: $light-3;
+$form-input-border-color-focus: $primary;
 
 $form-input-group-background-color: $light-1;
-$form-input-group-font-color: $headings-color;
+$form-input-group-font-color: $primary;
 
 input,
 textarea {
     padding: 1rem;
-    font-family: $headings-font-family;
+    font-family: $font-family-base;
 
     background-color: $form-input-background-color;
-    color: $dark;
-    border: 2px solid $form-input-background-color;
-    border-radius: 0;
+    color: $text-normal;
+    border: 2px solid $form-input-border-color;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
     &:focus {
         border: 2px solid $form-input-border-color-focus;
+        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
+        transform: translateY(-1px);
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $form-input-placeholder-color;
     }
 }
 
 .input-group {
     @include generate-dynamic-styles-with-hash((
-        xxxl: (margin-bottom: 0.8rem),
-        sm:   (margin-bottom: 0.4rem)
+        xxxl: (margin-bottom: 1rem),
+        sm:   (margin-bottom: 0.75rem)
     ));
 
     border: 2px solid $form-input-border-color;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    &:focus-within {
+        border-color: $form-input-border-color-focus;
+        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
+    }
 }
 
 .input-group-text {
     border: none;
     border-right: 2px solid $form-input-border-color;
     min-width: 60px;
-    background-color: $form-input-group-background-color;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(20, 184, 166, 0.05) 100%);
 
-    border-radius: 0;
     text-align: center;
+    transition: all 0.3s ease;
 
     i {
         color: $form-input-group-font-color;
         margin: 0 auto;
+        transition: all 0.3s ease;
     }
+}
+
+.input-group:focus-within .input-group-text i {
+    color: $primary;
+    transform: scale(1.1);
 }
 
 input {
@@ -266,6 +290,7 @@ textarea {
     ));
 
     border: 2px solid $form-input-border-color;
+    resize: vertical;
 }
 
 ::-webkit-input-placeholder {

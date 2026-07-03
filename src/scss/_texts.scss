@@ -84,13 +84,30 @@ $texts-base-sizes: (
 
 a {
     text-decoration: none;
+    transition: all 0.3s ease;
 
     &.light {
-        color: lighten($primary, 30%);
+        color: $primary-light;
         font-weight: bold;
+        position: relative;
 
         &:hover {
-            color: lighten($primary, 20%);
+            color: $primary;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+            transition: width 0.3s ease;
+        }
+        
+        &:hover::after {
+            width: 100%;
         }
     }
 

@@ -137,7 +137,8 @@ ul.timeline {
         left: calc(var(--image-size)/2 - var(--line-width)/2);
         width: var(--line-width);
         content: "";
-        background-color: $light-4;
+        background: linear-gradient(180deg, $primary 0%, $secondary 100%);
+        border-radius: var(--line-width);
     }
 
     .timeline-item {
@@ -161,12 +162,19 @@ ul.timeline {
         height: var(--image-size);
         z-index: 50;
 
-        border: var(--image-border-size) solid $light-3;
+        border: var(--image-border-size) solid white;
         border-radius: 100%;
-        background-color: $light-4;
+        background-color: $light-2;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+        }
 
         &-bg-primary {
-            background-color: lighten($primary, 20%);
+            background: linear-gradient(135deg, $primary 0%, $secondary 100%);
         }
     }
 
@@ -188,6 +196,18 @@ ul.timeline {
 
     .timeline-item-content {
         margin-left: calc(var(--image-size) + calc(var(--image-size)/5));
+        padding: 1.5rem;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(99, 102, 241, 0.1);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
     }
 
     .timeline-item-content-header {

@@ -48,7 +48,7 @@ const props = defineProps({
 
 .img-pfp {
     --max-height:clamp(140px, 21.5vh, 170px);
-    --border-width:6px;
+    --border-width:4px;
 
     @include media-breakpoint-down(lg) {
         --max-height:140px;
@@ -56,7 +56,7 @@ const props = defineProps({
 
     @include media-breakpoint-down(sm) {
         --max-height: min(110px, 19.5vh);
-        --border-width: 4px;
+        --border-width: 3px;
     }
 
     min-width: calc(var(--max-height)/2);
@@ -64,19 +64,30 @@ const props = defineProps({
     width: var(--max-height);
     height: var(--max-height);
 
-    border: var(--border-width) solid adjust-color(lighten($nav-background-color, 32%), $alpha:-0.85);
+    border: var(--border-width) solid transparent;
+    background: linear-gradient($nav-background-color, $nav-background-color) padding-box,
+                linear-gradient(135deg, $primary 0%, $secondary 100%) border-box;
     border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 32px rgba(99, 102, 241, 0.4);
+    }
 }
 
 .nav-profile-card-title {
     margin-top:1rem;
     text-transform: uppercase;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.5px;
     color: $white;
+    font-weight: 700;
 }
 
 .nav-profile-card-subtitle {
     font-family: $custom-subheadings-font-family;
     color: $light-5;
+    font-weight: 500;
 }
 </style>

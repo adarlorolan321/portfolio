@@ -59,25 +59,52 @@ const style = computed(() => {
 
 .progress {
     @include generate-dynamic-styles-with-hash((
-        xxxl:     (height: 5px),
-        md:       (height: 4px)
+        xxxl:     (height: 8px),
+        md:       (height: 6px)
     ));
 
-
-    background-color: lighten($light-3, 2%);
+    background-color: $light-2;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .progress-bar {
-    background-color: lighten($primary, 10%);
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
+    background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+    border-radius: 1rem;
+    transition: width 0.6s ease-in-out;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, 
+            transparent, 
+            rgba(255, 255, 255, 0.3), 
+            transparent
+        );
+        animation: shimmer 2s infinite;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .progress-description {
-    margin-top:0.2rem;
-    color:$light-6;
+    margin-top: 0.5rem;
+    color: $text-muted;
+    font-weight: 500;
 }
 </style>

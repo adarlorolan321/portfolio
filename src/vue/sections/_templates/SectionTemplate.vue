@@ -90,7 +90,7 @@ const sectionTitle = computed(() => {
     }
 
     &-with-division {
-        border-bottom: 1px solid $dark;
+        border-bottom: 1px solid rgba(99, 102, 241, 0.1);
     }
 
     &-cover {
@@ -112,9 +112,21 @@ const sectionTitle = computed(() => {
     ));
 
     width: min(100%, $max-content-width);
+    animation: fadeInUp 0.6s ease-out;
 
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         margin-bottom: $nav-tabs-height;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -125,5 +137,14 @@ const sectionTitle = computed(() => {
         xl: (margin-bottom:2rem),
         lg: (margin-bottom:1.5rem),
     ))
+}
+
+.section-title {
+    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
 }
 </style>

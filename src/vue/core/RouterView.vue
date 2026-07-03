@@ -148,7 +148,7 @@ const _navigateToCategory = (categoryId) => {
     min-height: 100vh;
     background-color: $nav-background-color;
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        background-color: $background-color;
+        background: linear-gradient(135deg, $background-gradient-start 0%, $background-gradient-end 100%);
     }
 }
 
@@ -156,7 +156,7 @@ const _navigateToCategory = (categoryId) => {
     width: $nav-sidebar-column-size;
     min-height: 100vh;
 
-    background-color: $dark;
+    background: $nav-background-gradient;
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         display: none;
     }
@@ -166,7 +166,7 @@ const _navigateToCategory = (categoryId) => {
     width: calc(100vw - $nav-sidebar-column-size);
     min-height: 100vh;
 
-    background-color: $background-color;
+    background: linear-gradient(135deg, $background-gradient-start 0%, $background-gradient-end 100%);
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
         width: 100vw;
     }
