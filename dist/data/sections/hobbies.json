@@ -48,7 +48,7 @@
             {
                 "imageIconUrl": null,
                 "faIcon": "fas fa-users",
-                "value": 15,
+                "value": 20,
                 "locales": {
                     "en": {"title": "Family & Friends", "description": "Time spent with cherished loved ones, creating lifelong memories."},
                     "es": {"title": "Familia y amigos", "description": "Tiempo con seres queridos apreciados, creando recuerdos inolvidables."},
@@ -108,7 +108,7 @@
             {
                 "imageIconUrl": null,
                 "faIcon": "fas fa-utensils",
-                "value": 19,
+                "value": 14,
                 "locales": {
                     "en": {"title": "Cooking", "description": "Creating culinary masterpieces, infusing flavors into every dish."},
                     "es": {"title": "Cocina", "description": "Creando obras maestras culinarias, infundiendo sabores en cada plato."},

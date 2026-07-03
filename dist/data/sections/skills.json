@@ -318,6 +318,30 @@
                         "description": "熟练将概念转化为交互式原型，以进行测试和完善。"
                     }
                 }
+            },
+
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-linux",
+                "value": null,
+                "locales": {
+                    "en": {
+                        "title": "Linux WSL",
+                        "description": "Proficient in using Windows Subsystem for Linux (WSL) for development workflows. Experience with Linux command line tools and environment setup."
+                    },
+                    "es": {
+                        "title": "Linux WSL",
+                        "description": "Competente en el uso de Windows Subsystem for Linux (WSL) para flujos de trabajo de desarrollo. Experiencia con herramientas de línea de comandos de Linux y configuración de entornos."
+                    },
+                    "fr": {
+                        "title": "Linux WSL",
+                        "description": "Compétent dans l'utilisation de Windows Subsystem for Linux (WSL) pour les flux de travail de développement. Expérience avec les outils en ligne de commande Linux et la configuration d'environnements."
+                    },
+                    "zh": {
+                        "title": "Linux WSL",
+                        "description": "熟练使用Windows Linux子系统（WSL）进行开发工作流程。具有Linux命令行工具和环境设置的经验。"
+                    }
+                }
             }
         ],
 
@@ -391,6 +415,42 @@
                     "es": {"title": "Laravel", "description": "Nanodegree de desarrollo Laravel (Udacity)<br>Experiencia: 2 años"},
                     "fr": {"title": "Laravel", "description": "Nanodegré en développement Laravel (Udacity)<br>Expérience : 2 ans"},
                     "zh": {"title": "Laravel", "description": "Laravel开发纳米学位毕业生（优达学城）<br>经验时长：2年"}
+                }
+            },
+
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-react",
+                "value": 85,
+                "locales": {
+                    "en": {"title": "React", "description": "Experience Time: 3 years"},
+                    "es": {"title": "React", "description": "Experiencia: 3 años"},
+                    "fr": {"title": "React", "description": "Expérience : 3 ans"},
+                    "zh": {"title": "React", "description": "经验时长：3年"}
+                }
+            },
+
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-react",
+                "value": 80,
+                "locales": {
+                    "en": {"title": "Next.js", "description": "Experience Time: 2 years"},
+                    "es": {"title": "Next.js", "description": "Experiencia: 2 años"},
+                    "fr": {"title": "Next.js", "description": "Expérience : 2 ans"},
+                    "zh": {"title": "Next.js", "description": "经验时长：2年"}
+                }
+            },
+
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-docker",
+                "value": 75,
+                "locales": {
+                    "en": {"title": "Docker", "description": "Experience Time: 2 years"},
+                    "es": {"title": "Docker", "description": "Experiencia: 2 años"},
+                    "fr": {"title": "Docker", "description": "Expérience : 2 ans"},
+                    "zh": {"title": "Docker", "description": "经验时长：2年"}
                 }
             }
         ],

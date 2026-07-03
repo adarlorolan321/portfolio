@@ -1,5 +1,5 @@
 {
-    "locales": {
+   "locales": {
         "en": {
             "welcome": "Welcome to my <span class='text-primary'>Resume!</span>",
             "welcomeShort": "Welcome!",
