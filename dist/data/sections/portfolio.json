@@ -2,19 +2,19 @@
     "locales": {
         "en": {
             "title": "My <span class='text-primary'>Portfolio</span>",
-            "description": "Explore a selection of my recent projects and creative works."
+            "description": "Selected work — SaaS platforms, booking systems, and tools I've designed and shipped."
         },
         "es": {
             "title": "Mi <span class='text-primary'>Portafolio</span>",
-            "description": "Explora una selección de mis proyectos recientes y trabajos creativos."
+            "description": "Trabajos seleccionados — plataformas SaaS, sistemas de reservas y herramientas que he diseñado y lanzado."
         },
         "fr": {
             "title": "Mon <span class='text-primary'>Portfolio</span>",
-            "description": "Découvrez une sélection de mes projets récents et œuvres créatives."
+            "description": "Travaux sélectionnés — plateformes SaaS, systèmes de réservation et outils que j'ai conçus et livrés."
         },
         "zh": {
             "title": "我的<span class='text-primary'>作品集</span>",
-            "description": "浏览我最近的一些项目和创意作品。"
+            "description": "精选作品 — 我设计与交付的 SaaS 平台、预订系统与工具。"
         }
     },
     "subcategories": [

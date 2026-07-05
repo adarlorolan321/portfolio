@@ -1,26 +1,25 @@
 <template>
-    <div class="row pt-1 pt-lg-3">
-        <div v-for="item in props.items" class="col-12 col-md-6">
-            <!-- Item -->
-            <div class="contact-item">
-                <!-- Item Logo -->
-                <div class="contact-item-logo">
-                    <i :class="item['faIcon']"/>
-                </div>
+    <div class="contact-channels">
+        <a v-for="(item, index) in props.items"
+           :key="item['id']"
+           :href="item['href'] || undefined"
+           :class="['contact-channel', 'hover-glow', { 'contact-channel--static': !item['href'] }]"
+           :target="item['href'] ? '_blank' : undefined"
+           :rel="item['href'] ? 'noopener noreferrer' : undefined">
 
-                <!-- Item Texts -->
-                <div class="contact-item-content">
-                    <!-- Item Title -->
-                    <h5 class="contact-item-title">{{ data.getString(item['id']) }}</h5>
+            <span class="contact-channel-icon">
+                <i :class="item['faIcon']" aria-hidden="true"/>
+            </span>
 
-                    <!-- Item Link... -->
-                    <a v-if="item['href']" v-html="_getItemLabel(item)" :href="item['href']" class="text-3 muted" target="_blank"/>
+            <span class="contact-channel-body">
+                <span class="contact-channel-label">{{ data.getString(item['id']) }}</span>
+                <span class="contact-channel-value" v-html="_getItemLabel(item)"/>
+            </span>
 
-                    <!-- Fallback (if there's not a link...) -->
-                    <p v-else v-html="_getItemLabel(item)" class="text-3 text-muted mb-0"/>
-                </div>
-            </div>
-        </div>
+            <i v-if="item['href']"
+               class="fa-solid fa-arrow-up-right-from-square contact-channel-arrow"
+               aria-hidden="true"/>
+        </a>
     </div>
 </template>
 
@@ -30,7 +29,6 @@ import {useData} from "../../../composables/data.js"
 /**
  * @property {Object[]} items
  */
-
 const props = defineProps({
     items: Array
 })
@@ -50,64 +48,96 @@ const _getItemLabel = (item) => {
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
 
-.contact-item {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (height:85px),
-        xl:   (height:75px),
-        lg:   (height:65px),
-        md:   (height:60px),
-        sm:   (height:55px)
-    ));
+.contact-channels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
 
+    @include media-breakpoint-up(sm) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.contact-channel {
     display: flex;
-    padding-bottom: 0.5rem;
-    text-align: left;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    text-decoration: none;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+    &:not(.contact-channel--static):hover {
+        transform: translateY(-1px);
+    }
+
+    &--static {
+        cursor: default;
+    }
 }
 
-.contact-item-logo {
-    --font-size:1.5rem;
-    @include media-breakpoint-down(xl) {--font-size: 1.4rem;}
-    @include media-breakpoint-down(lg) {--font-size: 1.2rem;}
-    @include media-breakpoint-down(md) {--font-size: 1.1rem;}
-    @include media-breakpoint-down(sm) {--font-size: 1rem;}
-
-    --dimensions:calc(var(--font-size) * 2.4);
-
-    min-width: var(--dimensions);
-    width: var(--dimensions);
-    height: var(--dimensions);
-    font-size: var(--font-size);
-
+.contact-channel-icon {
+    flex-shrink: 0;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-
-    margin-top: 0;
-    margin-right: 1rem;
-
-    opacity: 0.9;
-    border-radius: 30%;
-
-    color: $white;
-    background-color: darken($primary, 10%);
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.1);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.2);
+    border-radius: 8px;
 }
 
-.contact-item-content {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (margin-top:5px),
-        lg:  (margin-top:1px)
-    ));
-
+.contact-channel-body {
     display: flex;
     flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+    flex: 1;
 }
 
-.contact-item-title {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (margin-bottom: 0.25rem),
-        lg:  (margin-bottom: 0.2rem)
-    ));
+.contact-channel-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
+}
 
-    font-weight: bold;
+.contact-channel-value {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--color-heading);
+    word-break: break-word;
+}
+
+.contact-channel:not(.contact-channel--static) .contact-channel-value {
+    color: var(--color-text);
+}
+
+.contact-channel-arrow {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    font-size: 0.68rem;
+    color: var(--color-text-muted);
+    opacity: 0;
+    transform: translate(-2px, 2px);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.contact-channel:not(.contact-channel--static):hover .contact-channel-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+    color: var(--color-primary);
 }
 </style>

@@ -1,47 +1,65 @@
 <template>
-    <form id="contact-form">
-        <div class="row contact-form-row align-items-stretch">
-            <!-- Feedback Alert -->
-            <div class="col-12 mb-1" v-if="alertStatus">
-                <Alert :type="alertStatus.type" :message="alertStatus.message"/>
+    <form id="contact-form" class="contact-form">
+        <div v-if="alertStatus" class="contact-alert">
+            <Alert :type="alertStatus.type" :message="alertStatus.message"/>
+        </div>
+
+        <div class="contact-fields">
+            <div class="contact-field">
+                <label class="contact-label" for="form-name">
+                    <i class="fa-solid fa-signature" aria-hidden="true"/>
+                    {{ data.getString('name') }}
+                </label>
+                <input id="form-name"
+                       class="contact-input"
+                       type="text"
+                       :placeholder="data.getString('name')"
+                       required>
             </div>
 
-            <!-- Left Column -->
-            <div class="col-xl-6">
-                <!-- Name Input -->
-                <div class="form-group input-group">
-                    <span class="input-group-text input-group-attach"><i class="fa fa-signature"/></span>
-                    <input class="form-control" id="form-name" type="text" :placeholder="data.getString('name') + ' *'" required/>
-                </div>
-
-                <!-- E-mail Address Input -->
-                <div class="form-group input-group">
-                    <span class="input-group-text input-group-attach"><i class="fa fa-envelope"/></span>
-                    <input class="form-control" id="form-email" type="email" :placeholder="data.getString('email') + ' *'" required/>
-                </div>
-
-                <!-- Subject Input -->
-                <div class="form-group input-group">
-                    <span class="input-group-text input-group-attach"><i class="fa fa-pen-to-square"/></span>
-                    <input class="form-control" id="form-subject" type="text" :placeholder="data.getString('subject') + ' *'" required/>
-                </div>
+            <div class="contact-field">
+                <label class="contact-label" for="form-email">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"/>
+                    {{ data.getString('email') }}
+                </label>
+                <input id="form-email"
+                       class="contact-input"
+                       type="email"
+                       :placeholder="data.getString('email')"
+                       required>
             </div>
 
-            <!-- Right Column -->
-            <div class="col-xl-6">
-                <!-- Message TextArea -->
-                <div class="form-group form-group-textarea mb-md-0">
-                    <textarea class="form-control" id="form-message" :placeholder="data.getString('message')" required/>
-                </div>
+            <div class="contact-field">
+                <label class="contact-label" for="form-subject">
+                    <i class="fa-solid fa-pen-to-square" aria-hidden="true"/>
+                    {{ data.getString('subject') }}
+                </label>
+                <input id="form-subject"
+                       class="contact-input"
+                       type="text"
+                       :placeholder="data.getString('subject')"
+                       required>
             </div>
 
-            <!-- Bottom Column -->
-            <div class="col-12 text-center mt-3 mt-lg-4">
-                <button class="btn btn-primary btn-xl" type="submit" id="btn-submit-message" :class="{disabled: submitStatus === SubmitStatus.SENDING}">
-                    <i class="fa fa-envelope me-1"/> {{ data.getString('sendMessage') }}
-                </button>
+            <div class="contact-field contact-field--full">
+                <label class="contact-label" for="form-message">
+                    <i class="fa-solid fa-message" aria-hidden="true"/>
+                    {{ data.getString('message') }}
+                </label>
+                <textarea id="form-message"
+                          class="contact-input contact-textarea"
+                          :placeholder="data.getString('message')"
+                          required/>
             </div>
         </div>
+
+        <button class="contact-submit"
+                type="submit"
+                id="btn-submit-message"
+                :disabled="submitStatus === SubmitStatus.SENDING">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"/>
+            <span>{{ submitStatus === SubmitStatus.SENDING ? data.getString('sendingMessage') + '...' : data.getString('sendMessage') }}</span>
+        </button>
     </form>
 </template>
 
@@ -121,15 +139,7 @@ const _onSubmit = (e) => {
         e.preventDefault()
     }
 
-    const values = {}
-
-    FORM_FIELDS.forEach(field => {
-        const elField = document.getElementById(`form-${field}`)
-        values[field] = elField.value
-    })
-
     submitStatus.value = SubmitStatus.SENDING
-
     _sendMessage()
     return false
 }
@@ -201,80 +211,140 @@ const alertStatus = computed(() => {
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
 
-$form-input-background-color: lighten($light-3, 20%);
-$form-input-placeholder-color:$light-5;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-$form-input-border-color: $light-2;
-$form-input-border-color-focus: lighten($primary, 5%);
+.contact-alert {
+    :deep(.alert) {
+        margin: 0;
+        padding: 0.65rem 0.85rem;
+        font-size: 0.82rem;
+        border-radius: 8px;
+        border: 1px solid var(--color-border);
+        background: var(--color-bg-elevated);
+        color: var(--color-text);
+    }
 
-$form-input-group-background-color: $light-1;
-$form-input-group-font-color: $headings-color;
+    :deep(.alert-success) {
+        border-color: rgba(var(--color-primary-rgb), 0.35);
+        color: var(--color-primary);
+    }
 
-input,
-textarea {
-    padding: 1rem;
-    font-family: $headings-font-family;
-
-    background-color: $form-input-background-color;
-    color: $dark;
-    border: 2px solid $form-input-background-color;
-    border-radius: 0;
-
-    &:focus {
-        border: 2px solid $form-input-border-color-focus;
+    :deep(.alert-danger) {
+        border-color: rgba(239, 68, 68, 0.35);
+        color: #f87171;
     }
 }
 
-.input-group {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (margin-bottom: 0.8rem),
-        sm:   (margin-bottom: 0.4rem)
-    ));
+.contact-fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
 
-    border: 2px solid $form-input-border-color;
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-.input-group-text {
-    border: none;
-    border-right: 2px solid $form-input-border-color;
-    min-width: 60px;
-    background-color: $form-input-group-background-color;
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
 
-    border-radius: 0;
-    text-align: center;
+    &--full {
+        @include media-breakpoint-up(md) {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+.contact-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    color: var(--color-text-muted);
 
     i {
-        color: $form-input-group-font-color;
-        margin: 0 auto;
+        font-size: 0.68rem;
+        color: var(--color-primary);
     }
 }
 
-input {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (height: auto),
-        xl:   (height: max(50px, 6.5vh)),
-        lg:   (height: max(40px, 4.5vh)),
-        sm:   (height: 40px, font-size: 0.8rem),
-    ))
+.contact-input {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.86rem;
+    font-family: inherit;
+    color: var(--color-heading);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+
+    &::placeholder {
+        color: var(--color-text-muted);
+        opacity: 0.75;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: rgba(var(--color-primary-rgb), 0.45);
+        box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.12);
+        background: var(--color-bg-card);
+    }
 }
 
-textarea {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (height: 218px),
-        lg:   (height: 200px),
-        sm:   (height: 150px, font-size: 0.8rem)
-    ));
-
-    border: 2px solid $form-input-border-color;
+.contact-textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.55;
 }
 
-::-webkit-input-placeholder {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (font-size: 1.1rem),
-        lg:   (font-size: 0.9rem)
-    ));
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.7rem 1rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    color: var(--color-heading);
+    background: rgba(var(--color-primary-rgb), 0.12);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
 
-    font-family: $headings-font-family;
-    color: $light-5;
+    &:hover:not(:disabled) {
+        background: rgba(var(--color-primary-rgb), 0.18);
+        border-color: rgba(var(--color-primary-rgb), 0.5);
+        transform: translateY(-1px);
+    }
+
+    &:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+
+    i {
+        font-size: 0.78rem;
+        color: var(--color-primary);
+    }
 }
 </style>

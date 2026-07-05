@@ -26,7 +26,19 @@
                 <SocialLinks variant="text" :items="props.sectionData.content['items']['socialCircles']"/>
             </RevealOnScroll>
 
-            <RevealOnScroll v-if="heroStats.length" immediate :delay="400">
+            <RevealOnScroll immediate :delay="400">
+                <div class="hero-actions">
+                    <button type="button" class="hero-btn hero-btn-primary" @click="_scrollToSection('portfolio')">
+                        {{ data.getString('viewProjects') }}
+                        <i class="fa-solid fa-arrow-right hero-btn-icon" aria-hidden="true"/>
+                    </button>
+                    <button type="button" class="hero-btn hero-btn-ghost" @click="_scrollToSection('contact')">
+                        {{ data.getString('getInTouch') }}
+                    </button>
+                </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll v-if="heroStats.length" immediate :delay="480">
                 <div class="hero-stats">
                     <div v-for="(stat, index) in heroStats" :key="index" class="hero-stat">
                         <i :class="stat['icon']" class="hero-stat-icon" aria-hidden="true"/>
@@ -44,12 +56,14 @@ import SectionTemplate from "../_templates/SectionTemplate.vue"
 import {computed} from "vue"
 import {useData} from "../../../composables/data.js"
 import {useUtils} from "../../../composables/utils.js"
+import {useLayout} from "../../../composables/layout.js"
 import {getStatIcon} from "../../../composables/icons.js"
 import ImageView from "../../widgets/ImageView.vue"
 import SocialLinks from "../../widgets/SocialLinks.vue"
 
 const data = useData()
 const utils = useUtils()
+const layout = useLayout()
 
 /**
  * @property {Object} sectionData
@@ -102,6 +116,14 @@ const heroStats = computed(() => {
         }
     })
 })
+
+/**
+ * @param {string} sectionId
+ * @private
+ */
+const _scrollToSection = (sectionId) => {
+    layout.smoothScrollToElement(sectionId, false)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -148,10 +170,61 @@ const heroStats = computed(() => {
 }
 
 .hero-bio {
-    margin: 0 0 2rem;
+    margin: 0 0 1.5rem;
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--color-text);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+    &-primary {
+        color: var(--color-heading);
+        background: rgba(var(--color-primary-rgb), 0.12);
+        border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+
+        &:hover {
+            background: rgba(var(--color-primary-rgb), 0.18);
+            border-color: rgba(var(--color-primary-rgb), 0.5);
+            transform: translateY(-1px);
+        }
+    }
+
+    &-ghost {
+        color: var(--color-text-muted);
+        background: transparent;
+        border: 1px solid var(--color-border);
+
+        &:hover {
+            color: var(--color-heading);
+            border-color: rgba(var(--color-primary-rgb), 0.3);
+        }
+    }
+
+    &-icon {
+        font-size: 0.72rem;
+    }
 }
 
 .hero-stats {
