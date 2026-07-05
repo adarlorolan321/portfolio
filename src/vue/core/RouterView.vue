@@ -1,23 +1,23 @@
 <template>
     <div class="resume">
-        <!-- Navigation (Large Screens) -->
-        <div class="sidebar-column">
-            <!-- Sidebar -->
-            <NavSidebar @link-clicked="_navigateToSection"/>
-        </div>
+        <PortfolioBackground />
+
+        <!-- Top Navigation (Desktop) -->
+        <NavTopBar @link-clicked="_navigateToSection"/>
 
         <!-- Content -->
-        <div class="content-column">
-            <!-- Navigation Header (Small Screens) -->
+        <div class="content-column content-enter">
+            <!-- Navigation Header (Mobile) -->
             <NavHeader @link-clicked="_navigateToSection"/>
 
             <!-- Website Sections -->
             <component v-for="section in data.getSections()"
+                       :key="section['id']"
                        :is="_getSectionComponentByName(section['component'])"
                        :section-data="section"/>
         </div>
 
-        <!-- Navigation Category Tabs (Small Screens) -->
+        <!-- Navigation Category Tabs (Mobile) -->
         <div class="nav-tabs-column">
             <NavTabs @link-clicked="_navigateToCategory"/>
         </div>
@@ -32,9 +32,10 @@ import {useRoute, useRouter} from "vue-router"
 import {onMounted, onUnmounted, watch} from "vue"
 import {useLayout} from "../../composables/layout.js"
 
-import NavSidebar from "../navigation/default/NavSidebar.vue"
+import NavTopBar from "../navigation/default/NavTopBar.vue"
 import NavHeader from "../navigation/mobile/NavHeader.vue"
 import NavTabs from "../navigation/mobile/NavTabs.vue"
+import PortfolioBackground from "../widgets/PortfolioBackground.vue"
 
 import DefaultSection from "../sections/_templates/SectionTemplate.vue"
 import ContactSection from "../sections/contact/ContactSection.vue"
@@ -43,6 +44,8 @@ import GallerySection from "../sections/gallery/GallerySection.vue"
 import InfoSection from "../sections/info/InfoSection.vue"
 import ThreadsSection from "../sections/threads/ThreadsSection.vue"
 import TimelineSection from "../sections/timeline/TimelineSection.vue"
+import StackSection from "../sections/stack/StackSection.vue"
+import RecommendationsSection from "../sections/recommendations/RecommendationsSection.vue"
 
 const data = useData()
 const navigation = useNavigation()
@@ -56,7 +59,7 @@ const scrollPositions = {}
 /**
  * @type {Object}
  */
-const SECTION_VUE_COMPONENTS = {DefaultSection, ContactSection, CoverSection, GallerySection, InfoSection, ThreadsSection, TimelineSection}
+const SECTION_VUE_COMPONENTS = {DefaultSection, ContactSection, CoverSection, GallerySection, InfoSection, ThreadsSection, TimelineSection, StackSection, RecommendationsSection}
 
 /**
  * @param {String} componentName
@@ -67,7 +70,6 @@ const _getSectionComponentByName = (componentName) => {
     if(SECTION_VUE_COMPONENTS[componentName])
         return SECTION_VUE_COMPONENTS[componentName]
 
-    //console.warn("Couldn't find component with name: " + componentName + ". All section components must be registered on RouterView.vue.")
     return DefaultSection
 }
 
@@ -144,31 +146,24 @@ const _navigateToCategory = (categoryId) => {
 @import "/src/scss/_theming.scss";
 
 .resume {
-    display: flex;
+    position: relative;
     min-height: 100vh;
-    background-color: $nav-background-color;
-    @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        background-color: $background-color;
-    }
-}
-
-.sidebar-column {
-    width: $nav-sidebar-column-size;
-    min-height: 100vh;
-
-    background-color: $dark;
-    @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        display: none;
-    }
+    background-color: transparent;
 }
 
 .content-column {
-    width: calc(100vw - $nav-sidebar-column-size);
+    position: relative;
+    z-index: 1;
+    width: 100%;
     min-height: 100vh;
+    background-color: transparent;
 
-    background-color: $background-color;
+    @include media-breakpoint-up($navigation-sidebar-breakpoint) {
+        padding-top: $nav-topbar-height;
+    }
+
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        width: 100vw;
+        padding-bottom: calc(#{$nav-tabs-height} + env(safe-area-inset-bottom, 0px));
     }
 }
 

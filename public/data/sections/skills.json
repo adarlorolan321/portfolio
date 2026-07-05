@@ -2,19 +2,19 @@
     "locales": {
         "en": {
             "title": "<span class='text-primary'>Skill</span> Set",
-            "description": "Exploring the diverse range of skills I've acquired and developed:"
+            "description": "Core competencies and professional abilities I've developed throughout my career."
         },
         "es": {
             "title": "Conjunto de <span class='text-primary'>Habilidades</span>",
-            "description": "Explorando la diversidad de habilidades que he adquirido y desarrollado:"
+            "description": "Competencias clave y habilidades profesionales que he desarrollado a lo largo de mi carrera."
         },
         "fr": {
             "title": "Ensemble de <span class='text-primary'>Compétences</span>",
-            "description": "Exploration de la gamme variée de compétences que j'ai acquises et développées:"
+            "description": "Compétences clés et aptitudes professionnelles que j'ai développées tout au long de ma carrière."
         },
         "zh": {
             "title": "<span class='text-primary'>技能</span> 集",
-            "description": "探索我所掌握和发展的多样技能:"
+            "description": "我在职业生涯中培养的核心能力和专业技能。"
         }
     },
 
@@ -23,46 +23,18 @@
             "id": "abilities",
             "type": "list",
             "progress": null,
-            "faIcon": "fa-solid fa-square",
+            "faIcon": "fa-solid fa-microchip",
             "locales": {
                 "en": {"title": null}
             }
-        },
-
-        {
-            "id": "programming",
-            "type": "grid",
-            "progress": "number",
-            "faIcon": "fa fa-code",
-            "locales": {
-                "en": {"title": "Programming"},
-                "es": {"title": "Programación"},
-                "fr": {"title": "Programmation"},
-                "zh": {"title": "编程"}
-            }
-        },
-
-        {
-            "id": "languages",
-            "type": "list",
-            "progress": {"0": "beginner", "20": "rookie", "40": "intermediate", "60": "advanced", "80": "fluent", "100": "native"},
-            "faIcon": "fa fa-language",
-            "locales": {
-                "en": {"title": "Languages"},
-                "es": {"title": "Idiomas"},
-                "fr": {"title": "Langues"},
-                "zh": {"title": "语言"}
-            }
         }
-
-       
     ],
 
     "items": {
         "abilities": [
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-brands fa-laravel",
+                "faIcon": "fab fa-laravel",
                 "value": null,
                 "locales": {
                     "en": {
@@ -86,7 +58,7 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-brands fa-vuejs",
+                "faIcon": "fab fa-vuejs",
                 "value": null,
                 "locales": {
                     "en": {
@@ -109,7 +81,7 @@
             },
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-database",
+                "faIcon": "fa-solid fa-server",
                 "value": null,
                 "locales": {
                     "en": {
@@ -133,7 +105,7 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-desktop",
+                "faIcon": "fa-solid fa-display",
                 "value": null,
                 "locales": {
                     "en": {
@@ -157,7 +129,7 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-window-restore",
+                "faIcon": "fa-solid fa-puzzle-piece",
                 "value": null,
                 "locales": {
                     "en": {
@@ -181,7 +153,7 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-brands fa-git-alt",
+                "faIcon": "fab fa-git-alt",
                 "value": null,
                 "locales": {
                     "en": {
@@ -205,7 +177,7 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-microscope",
+                "faIcon": "fa-solid fa-bug",
                 "value": null,
                 "locales": {
                     "en": {
@@ -229,7 +201,7 @@
 
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-arrows-split-up-and-left",
+                "faIcon": "fa-solid fa-people-group",
                 "value": null,
                 "locales": {
                     "en": {
@@ -252,7 +224,7 @@
             },
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-code-compare",
+                "faIcon": "fa-solid fa-code-merge",
                 "value": null,
                 "locales": {
                     "en": {
@@ -275,7 +247,7 @@
             },
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-lightbulb",
+                "faIcon": "fa-solid fa-lightbulb",
                 "value": null,
                 "locales": {
                     "en": {
@@ -298,7 +270,7 @@
             },
             {
                 "imageIconUrl": null,
-                "faIcon": "fas fa-list-check",
+                "faIcon": "fa-solid fa-list-check",
                 "value": null,
                 "locales": {
                     "en": {
@@ -343,142 +315,6 @@
                     }
                 }
             }
-        ],
-
-        "programming": [
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-html5",
-                "value": 95,
-                "locales": {
-                    "en": {"title": "HTML 5", "description": "Experience Time: 6 years"},
-                    "es": {"title": "HTML 5", "description": "Experiencia: 6 años"},
-                    "fr": {"title": "HTML 5", "description": "Expérience : 6 ans"},
-                    "zh": {"title": "HTML 5", "description": "经验时长：6年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-css3-alt",
-                "value": 90,
-                "locales": {
-                    "en": {"title": "CSS 3", "description": "Experience Time: 4 years"},
-                    "es": {"title": "CSS 3", "description": "Experiencia: 4 años"},
-                    "fr": {"title": "CSS 3", "description": "Expérience : 4 ans"},
-                    "zh": {"title": "CSS 3", "description": "经验时长：4年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-sass",
-                "value": 65,
-                "locales": {
-                    "en": {"title": "Sass/Less", "description": "Experience Time: 3 years"},
-                    "es": {"title": "Sass/Less", "description": "Experiencia: 3 años"},
-                    "fr": {"title": "Sass/Less", "description": "Expérience : 3 ans"},
-                    "zh": {"title": "Sass/Less", "description": "经验时长：3年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-js-square",
-                "value": 85,
-                "locales": {
-                    "en": {"title": "JavaScript", "description": "Experience Time: 4 years"},
-                    "es": {"title": "JavaScript", "description": "Experiencia: 4 años"},
-                    "fr": {"title": "JavaScript", "description": "Expérience : 4 ans"},
-                    "zh": {"title": "JavaScript", "description": "经验时长：4年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-vuejs",
-                "value": 90,
-                "locales": {
-                    "en": {"title": "Vue 3", "description": "Experience Time: 3 years"},
-                    "es": {"title": "Vue 3", "description": "Experiencia: 3 años"},
-                    "fr": {"title": "Vue 3", "description": "Expérience : 3 ans"},
-                    "zh": {"title": "Vue 3", "description": "经验时长：3年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-brands fa-laravel",
-                "value": 90,
-                "locales": {
-                    "en": {"title": "Laravel", "description": "Experience time: 3 years"},
-                    "es": {"title": "Laravel", "description": "Nanodegree de desarrollo Laravel (Udacity)<br>Experiencia: 2 años"},
-                    "fr": {"title": "Laravel", "description": "Nanodegré en développement Laravel (Udacity)<br>Expérience : 2 ans"},
-                    "zh": {"title": "Laravel", "description": "Laravel开发纳米学位毕业生（优达学城）<br>经验时长：2年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-react",
-                "value": 85,
-                "locales": {
-                    "en": {"title": "React", "description": "Experience Time: 3 years"},
-                    "es": {"title": "React", "description": "Experiencia: 3 años"},
-                    "fr": {"title": "React", "description": "Expérience : 3 ans"},
-                    "zh": {"title": "React", "description": "经验时长：3年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-react",
-                "value": 80,
-                "locales": {
-                    "en": {"title": "Next.js", "description": "Experience Time: 2 years"},
-                    "es": {"title": "Next.js", "description": "Experiencia: 2 años"},
-                    "fr": {"title": "Next.js", "description": "Expérience : 2 ans"},
-                    "zh": {"title": "Next.js", "description": "经验时长：2年"}
-                }
-            },
-
-            {
-                "imageIconUrl": null,
-                "faIcon": "fab fa-docker",
-                "value": 75,
-                "locales": {
-                    "en": {"title": "Docker", "description": "Experience Time: 2 years"},
-                    "es": {"title": "Docker", "description": "Experiencia: 2 años"},
-                    "fr": {"title": "Docker", "description": "Expérience : 2 ans"},
-                    "zh": {"title": "Docker", "description": "经验时长：2年"}
-                }
-            }
-        ],
-
-        "languages": [
-            {
-                "imageIconUrl": "images/flags/phflag.jpg",
-                "faIcon": null,
-                "value": 90,
-                "locales": {
-                    "en": {"title": "Filipino", "description": "Native speaker with excellent communication and writing skills."},
-                    "es": {"title": "Español", "description": "Fluido en español hablado y escrito; seguro en la comunicación profesional."},
-                    "fr": {"title": "Espagnol", "description": "Courant à la fois à l'oral et à l'écrit en espagnol ; confiant dans la communication professionnelle."},
-                    "zh": {"title": "西班牙语", "description": "流利的西班牙语口语和书写能力；自信地进行专业沟通。"}
-                }
-            },
-            {
-                "imageIconUrl": "images/flags/en.png",
-                "faIcon": null,
-                "value": 100,
-                "locales": {
-                    "en": {"title": "English", "description": "Fluent in both spoken and written English; confident in professional communication."},
-                    "es": {"title": "Inglés", "description": "Hablante nativo con excelentes habilidades de comunicación y escritura."},
-                    "fr": {"title": "Anglais", "description": "Locuteur natif avec d'excellentes compétences en communication et en écriture."},
-                    "zh": {"title": "英语", "description": "母语人士，具有出色的沟通和写作能力。"}
-                }
-            }
-           
         ],
 
         "extra": [

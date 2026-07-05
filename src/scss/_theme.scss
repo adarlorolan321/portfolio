@@ -1,0 +1,99 @@
+:root,
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-primary: #5eead4;
+    --color-primary-rgb: 94, 234, 212;
+    --color-bg: #0a0a0a;
+    --color-bg-elevated: #141414;
+    --color-bg-card: rgba(20, 20, 20, 0.72);
+    --color-border: #262626;
+    --color-text: #e5e5e5;
+    --color-text-muted: #a3a3a3;
+    --color-heading: #fafafa;
+    --color-nav-bg: rgba(10, 10, 10, 0.82);
+    --color-icon-bg: #ffffff;
+    --color-grid-line: rgba(94, 234, 212, 0.05);
+    --color-glow-1: rgba(94, 234, 212, 0.14);
+    --color-glow-2: rgba(56, 189, 248, 0.1);
+    --color-glow-3: rgba(167, 139, 250, 0.08);
+    --color-selection-bg: rgba(94, 234, 212, 0.35);
+    --color-selection-text: #0a0a0a;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+
+    --color-primary: #0d9488;
+    --color-primary-rgb: 13, 148, 136;
+    --color-bg: #f0f4f8;
+    --color-bg-elevated: #ffffff;
+    --color-bg-card: rgba(255, 255, 255, 0.82);
+    --color-border: #dbe3ee;
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+    --color-heading: #0f172a;
+    --color-nav-bg: rgba(255, 255, 255, 0.88);
+    --color-icon-bg: #ffffff;
+    --color-grid-line: rgba(13, 148, 136, 0.09);
+    --color-glow-1: rgba(13, 148, 136, 0.12);
+    --color-glow-2: rgba(59, 130, 246, 0.1);
+    --color-glow-3: rgba(139, 92, 246, 0.08);
+    --color-selection-bg: rgba(13, 148, 136, 0.25);
+    --color-selection-text: #0f172a;
+}
+
+html {
+    background-color: var(--color-bg);
+    transition: background-color 0.35s ease, color 0.35s ease;
+
+    &.theme-switching,
+    &.language-switching {
+        transition: none;
+    }
+
+    &.theme-switching .resume,
+    &.theme-switching .resume *,
+    &.language-switching .resume,
+    &.language-switching .resume * {
+        transition: none !important;
+    }
+
+    &.language-switching {
+        cursor: progress;
+    }
+}
+
+body {
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.section,
+.nav-topbar,
+.nav-pills-fixed-container,
+.nav-tabs-wrapper,
+.recommendation-card,
+.project-card,
+.stack-pill,
+.info-card {
+    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.25s ease;
+}
+
+::selection {
+    color: var(--color-selection-text);
+    background: var(--color-selection-bg);
+}
+
+::-moz-selection {
+    color: var(--color-selection-text);
+    background: var(--color-selection-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: var(--color-bg-elevated);
+}

@@ -4,21 +4,27 @@
         <!-- Section Container -->
         <div class="section-container" v-if="props.sectionData.content">
             <!-- Section Header -->
-            <div class="section-header" v-if="props.sectionData.content['locales']['title']">
-                <!-- Title -->
-                <h1 class="section-title mb-1 mb-lg-2 fw-bold text-uppercase" v-html="sectionTitle"/>
+            <RevealOnScroll v-if="sectionTitle && !props.sectionData['cover']">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span v-if="sectionNumber" class="section-number">{{ sectionNumber }}</span>
+                        <span v-if="sectionNumber" class="section-dash"> — </span>
+                        {{ sectionTitle }}
+                    </h2>
 
-                <!-- Divider -->
-                <hr class="solid-divider ms-1 me-1 mb-3 mb-lg-4">
-
-                <!-- Description -->
-                <p v-if="props.sectionData.content['locales']['description']" class="lead text-muted">
-                    {{props.sectionData.content['locales']['description']}}
-                </p>
-            </div>
+                    <p v-if="props.sectionData.content['locales']['description']" class="section-description">
+                        {{ props.sectionData.content['locales']['description'] }}
+                    </p>
+                </div>
+            </RevealOnScroll>
 
             <!-- Section Content -->
-            <div class="section-content">
+            <RevealOnScroll v-if="!props.sectionData['cover']" :delay="120">
+                <div class="section-content">
+                    <slot/>
+                </div>
+            </RevealOnScroll>
+            <div v-else class="section-content">
                 <slot/>
             </div>
         </div>
@@ -65,15 +71,24 @@ const classList = computed(() => {
 })
 
 /**
+ * @type {ComputedRef<String|null>}
+ */
+const sectionNumber = computed(() => {
+    const sections = data.getSections().filter(section => !section['cover'])
+    const index = sections.findIndex(section => section['id'] === props.sectionData['id'])
+
+    if (index === -1) {
+        return null
+    }
+
+    return String(index + 1).padStart(2, '0')
+})
+
+/**
  * @type {ComputedRef<String>}
  */
 const sectionTitle = computed(() => {
-    if(navigation.isAllAtOnceMode()) {
-        return props.sectionData.content['locales']['title']
-    }
-    else {
-        return data.getString(props.sectionData['id'])
-    }
+    return data.getString(props.sectionData['id'])
 })
 </script>
 
@@ -83,47 +98,73 @@ const sectionTitle = computed(() => {
 .section {
     position: relative;
     display: flex;
-    min-height: 100vh;
+    color: var(--color-text);
 
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        min-height: calc(100vh - 170px);
+        min-height: calc(100vh - #{$nav-tabs-height} - 6.25rem);
     }
 
     &-with-division {
-        border-bottom: 1px solid $dark;
+        border-bottom: 1px solid var(--color-border);
     }
 
     &-cover {
-        @include media-breakpoint-up($navigation-sidebar-breakpoint) {
-            .section-container {
-                margin: auto 0;
-            }
+        min-height: calc(100vh - #{$nav-topbar-height});
+
+        @include media-breakpoint-down($navigation-sidebar-breakpoint) {
+            min-height: calc(100vh - #{$nav-tabs-height} - 6.25rem);
+        }
+
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: inherit;
         }
     }
 }
 
 .section-container {
+    width: min(100%, $max-content-width);
+    margin: 0 auto;
+
     @include generate-dynamic-styles-with-hash((
-        xxxl:   (padding: clamp(5rem, 5vw, 10rem) clamp(5rem, 5vw, 10rem) clamp(6rem, 5vw, 10rem)),
-        xxl:    (padding: 4rem 4rem 6rem),
-        lg:     (padding: 2rem 2rem),
-        md:     (padding: 1.5rem 1.5rem),
-        sm:     (padding: 1.5rem 1.2rem 3rem)
+        xxxl:   (padding: 5rem 1.5rem),
+        xxl:    (padding: 4.5rem 1.5rem),
+        lg:     (padding: 4rem 1.5rem),
+        md:     (padding: 3rem 1.25rem),
+        sm:     (padding: 2.5rem 1.2rem 3rem)
     ));
 
-    width: min(100%, $max-content-width);
-
     @include media-breakpoint-down($navigation-sidebar-breakpoint) {
-        margin-bottom: $nav-tabs-height;
+        padding: 2.5rem 1.15rem 2rem;
     }
 }
 
 .section-header {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (margin-bottom:3rem),
-        xxl: (margin-bottom:2.5rem),
-        xl: (margin-bottom:2rem),
-        lg: (margin-bottom:1.5rem),
-    ))
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: var(--color-heading);
+    letter-spacing: -0.01em;
+}
+
+.section-number {
+    color: var(--color-text-muted);
+}
+
+.section-dash {
+    color: var(--color-text-muted);
+}
+
+.section-description {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
 }
 </style>

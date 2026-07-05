@@ -1,38 +1,47 @@
 <template>
-    <div class="gallery-grid row">
-        <!-- Grid Column -->
-        <div v-for="item in props.items"
-             v-show="item.visible"
-             class="gallery-grid-col col-4 col-xl-3 text-center"
-             :class="{'gallery-grid-col-appear': item.visible && !isAnimating}">
+    <div class="project-cards">
+        <RevealOnScroll v-for="(item, index) in visibleItems"
+                        v-show="item.visible"
+                        :key="item.data['id']"
+                        tag="article"
+                        class="project-card hover-lift"
+                        :delay="index * 80"
+                        @click="_onItemClicked(item)">
 
-            <!-- Item -->
-            <div class="gallery-item" @click="_onItemClicked(item)">
-                <!-- Logo -->
-                <div class="gallery-thumb-wrapper image-contain">
-                    <ImageView :src="item.data['logoUrl']"
-                               :alt="item.data['locales']['name']"
-                               class="gallery-thumb"/>
+            <div v-if="item.data['badge']" class="project-badge">{{ item.data['badge'] }}</div>
+            <p v-if="item.subcategory" class="project-category">{{ item.subcategory['locales']['title'] }}</p>
 
-                    <div class="gallery-thumb-overlay">
-                        <div class="gallery-thumb-overlay-content eq-h6">
-                            <i class="fas fa-eye fa-2x"></i>
-                        </div>
+            <div class="project-card-body">
+                <div class="project-icon">
+                    <ImageView v-if="item.data['logoUrl']"
+                               :src="item.data['logoUrl']"
+                               :alt="item.data['title']"
+                               class="project-icon-img"/>
+                    <i v-else class="fa-solid fa-code project-icon-fallback" aria-hidden="true"/>
+                </div>
+
+                <div class="project-info">
+                    <h3 class="project-title">{{ item.data['title'] }}</h3>
+                    <p class="project-description">{{ _getDescriptionExcerpt(item.data) }}</p>
+
+                    <div v-if="item.data['links']?.length" class="project-links">
+                        <a v-for="(link, linkIndex) in item.data['links']"
+                           :key="linkIndex"
+                           :href="link['href']"
+                           target="_blank"
+                           class="project-link"
+                           @click.stop>
+                            {{ _getLinkLabel(link) }} ↗
+                        </a>
                     </div>
                 </div>
-
-                <!-- Project Info -->
-                <div class="gallery-description-wrapper">
-                    <button class="gallery-title">{{ item.data['title'] }}</button>
-                    <p class="gallery-category text-muted">{{ item.subcategory['locales']['title'] }}</p>
-                </div>
             </div>
-        </div>
+        </RevealOnScroll>
     </div>
 </template>
 
 <script setup>
-import {ref, watch} from "vue"
+import {computed} from "vue"
 import ImageView from "../../widgets/ImageView.vue"
 
 /**
@@ -47,16 +56,11 @@ const props = defineProps({
 const emit = defineEmits(['open'])
 
 /**
- * @const
- * @type {number}
+ * @type {import('vue').ComputedRef<Object[]>}
  */
-const ANIMATION_DURATION = 0.3
-
-/** @type {Boolean||{value:Boolean}} **/
-const isAnimating = ref(false)
-
-/** @type {Number} **/
-let timeout = null
+const visibleItems = computed(() => {
+    return props.items ?? []
+})
 
 /**
  * @param {Object} item
@@ -67,128 +71,137 @@ const _onItemClicked = (item) => {
 }
 
 /**
+ * @param {Object} projectData
+ * @return {string}
  * @private
  */
-watch(() => props.selectedCategoryId, () => {
-    isAnimating.value = false
-    clearTimeout(timeout)
+const _getDescriptionExcerpt = (projectData) => {
+    const description = projectData['locales']?.['description'] ?? ''
+    const plain = description.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()
 
-    timeout = setTimeout(() => {
-        isAnimating.value = true
-    }, ANIMATION_DURATION*1000)
-})
+    if (plain.length <= 140) {
+        return plain
+    }
+
+    return plain.slice(0, 137) + '...'
+}
+
+/**
+ * @param {Object} link
+ * @return {string}
+ * @private
+ */
+const _getLinkLabel = (link) => {
+    if (link['href']?.includes('play.google')) {
+        return 'google play'
+    }
+    if (link['href']?.includes('apps.apple')) {
+        return 'app store'
+    }
+
+    return 'website'
+}
 </script>
 
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
 
-.image-contain{
-    padding: 10px;
-    background-color: white;
-    img{
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card {
+    padding: 1.25rem 1.5rem;
+    background: var(--color-bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project-badge {
+    margin-bottom: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+}
+
+.project-category {
+    margin: 0 0 0.75rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.project-card-body {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.project-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    background-color: rgba(var(--color-primary-rgb), 0.08);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.18);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-icon-fallback {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+}
+
+.project-icon-img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-
-    }
-}
-.gallery-grid {
-    --logo-size: min(clamp(140px, 20vh, 170px), clamp(80px, 10.5vw, 170px));
-    @include media-breakpoint-down(lg) {
-        --logo-size: min(clamp(80px, 20vh, 110px), clamp(75px, 17.5vw, 110px));
-    }
-
-    min-height: calc(var(--logo-size) * 3.8);
-
-    .gallery-item {
-        display: inline-flex;
-        flex-direction: column;
-        position: relative;
-        margin-top: calc(var(--logo-size)/2.5);
-    }
-
-    .gallery-thumb-wrapper {
-        position: relative;
-        margin: 0 auto;
-        cursor: pointer;
-        height: var(--logo-size);
-        width: var(--logo-size);
-        overflow: hidden;
-        border-radius: 25%;
-    }
-
-    .gallery-thumb {
-        width: 100%;
-        height: 100%;
-    }
-
-    .gallery-thumb-overlay {
-        position: absolute;
-        top: 0;
-        opacity: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-        height: 100%;
-        border-radius: 25%;
-
-        background: fade-out(lighten($primary, 5%), 0.1);
-        transition: all ease-in-out 0.25s;
-
-        &-content {
-            color: $white;
-        }
-    }
-
-    .gallery-title {
-        border: none;
-        padding: 0;
-        font-weight: bold;
-        background-color: transparent;
-        color: $dark;
-
-        margin: calc(var(--logo-size)/12) 0 0;
-        font-size: calc(var(--logo-size)/8.2);
-        @include media-breakpoint-down(lg) {
-            margin: calc(var(--logo-size)/12) 0 0;
-            font-size: calc(var(--logo-size)/6.4);
-        }
-    }
-
-    .gallery-category {
-        margin: 0;
-        padding: 0;
-
-        font-size: calc(var(--logo-size)/10.5);
-        @include media-breakpoint-down(lg) {
-            font-size: calc(var(--logo-size)/7.8);
-        }
-    }
-
-    .gallery-item:hover {
-        .gallery-title {
-            color: lighten($primary, 10%);
-            transition: color ease-in-out 0.3s;
-        }
-
-        .gallery-thumb-overlay {
-            opacity: 1;
-        }
-    }
 }
 
-.gallery-grid-col-appear {
-    animation: appear 0.3s ease-out forwards;
+.project-info {
+    flex: 1;
+    min-width: 0;
 }
 
-@keyframes appear {
-    from {
-        opacity:0;
-        transform: scale(0.3) translateY(-20%);
-    }
-    to {
-        opacity:1
+.project-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+.project-description {
+    margin: 0 0 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.project-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+
+    &:hover {
+        color: var(--color-primary);
     }
 }
 </style>

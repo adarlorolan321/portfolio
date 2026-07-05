@@ -1,13 +1,13 @@
 <template>
-    <!-- Nav Pills (Category Navigation) -->
-    <div v-if="props.sections && props.sections.length >= 2" class="nav-pills">
-        <!-- Nav Pill -->
-        <button v-for="section in props.sections" :class="_getNavPillClass(section)" @click="_onLinkClicked(section)">
-            <!-- Button Content -->
-            <i class="nav-pill-icon" :class="section['faIcon']"/>
-            <span class="d-none d-sm-inline">{{data.getString(section['id'])}}</span>
+    <nav v-if="props.sections && props.sections.length >= 2" class="nav-pills">
+        <button v-for="section in props.sections"
+                :key="section['id']"
+                type="button"
+                :class="_getNavPillClass(section)"
+                @click="_onLinkClicked(section)">
+            {{ data.getString(section['id']) }}
         </button>
-    </div>
+    </nav>
 </template>
 
 <script setup>
@@ -18,20 +18,26 @@ import {useData} from "../../../composables/data.js"
  * @property {Object[]} sections
  */
 const props = defineProps({
-    sections:Array
+    sections: Array
 })
 
 const data = useData()
 const navigation = useNavigation()
-
 const emit = defineEmits(['linkClicked'])
 
 /**
  * @param {Object} section
+ * @return {string}
  * @private
  */
 const _getNavPillClass = (section) => {
-    return `nav-item ${navigation.isSectionActive(section['id']) ? 'nav-item-selected' : ''}`
+    let classList = 'nav-pill'
+
+    if (navigation.isSectionActive(section['id'])) {
+        classList += ' nav-pill-active'
+    }
+
+    return classList
 }
 
 /**
@@ -46,42 +52,38 @@ const _onLinkClicked = (section) => {
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
 
-.nav-item {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (font-size:0.9rem, border-width:2px, min-height: min(50px, 10vh)),
-        sm:   (font-size:0.9rem, border-width:2px, min-height: min(45px, 7.5vh)),
-    ));
+.nav-pills {
+    display: flex;
+    gap: 0.25rem;
+    overflow-x: auto;
+    padding: 0.5rem 1rem;
+    scrollbar-width: none;
 
-    flex:1;
-    padding: 0.5rem 0.5rem;
-    font-family: $headings-font-family;
-    text-transform: uppercase;
-
-    border:none;
-    border-top: 2px solid lighten($nav-background-color, 5%);
-
-    background-color: darken($nav-background-color, 2%);
-    color: lighten($nav-item-grayed-out-color, 10%);
-}
-
-.nav-pill-icon {
-    @include generate-dynamic-styles-with-hash((
-        xxxl: (width:30px),
-        sm:   (width:25px),
-    ));
-
-    color: $nav-item-grayed-out-color;
-}
-
-.nav-item:hover, .nav-item-selected {
-    color: $white;
-    .nav-pill-icon {
-        color: $white;
+    &::-webkit-scrollbar {
+        display: none;
     }
 }
 
-.nav-item-selected {
-    border-color: lighten($primary, 20%);
-    background-color: lighten($nav-background-color, 2%);
+.nav-pill {
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    &:hover {
+        color: var(--color-heading);
+    }
+
+    &-active {
+        color: var(--color-primary);
+        background-color: rgba(var(--color-primary-rgb), 0.1);
+    }
 }
 </style>

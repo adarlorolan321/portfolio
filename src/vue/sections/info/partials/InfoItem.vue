@@ -1,7 +1,7 @@
 <template>
     <div class="info-item">
         <!-- Icon -->
-        <CircleIcon :src="item['imageIconUrl'] || item['faIcon'] || 'fa-regular fa-sticky-note'"
+        <CircleIcon :src="_getItemIcon(item)"
                     :type="'standard'"
                     :color="_getItemColor(item)"
                     :text-class="_getItemFontAwesomeTextClass(item)"
@@ -26,7 +26,7 @@
             <!-- Description With Progress Bar -->
             <ProgressBar v-if="props.descriptionWithProgressBar && item['formattedPercentage']"
                          :percentage="item['value']"
-                         :description="item['locales']['description']"
+                         :description="item['experienceDescription'] ?? item['locales']['description']"
                          :color="_getProgressBarColor(item)"
                          class="mt-1"/>
 
@@ -41,6 +41,7 @@
 <script setup>
 import CircleIcon from "../../../widgets/CircleIcon.vue"
 import ProgressBar from "../../../widgets/ProgressBar.vue"
+import {normalizeFaIcon} from "../../../../composables/icons.js"
 
 /**
  * @property {Object} item
@@ -56,6 +57,19 @@ const props = defineProps({
     iconColorStyle: String,
     smallDescription: Boolean
 })
+
+/**
+ * @param {Object} item
+ * @return {string}
+ * @private
+ */
+const _getItemIcon = (item) => {
+    if (item['imageIconUrl']) {
+        return item['imageIconUrl']
+    }
+
+    return normalizeFaIcon(item['faIcon']) ?? 'fa-solid fa-code'
+}
 
 /**
  * @param {Object} item

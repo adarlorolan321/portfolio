@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/portfolio/images/icons/resume.ico" />
+        <link rel="icon" type="image/svg+xml" href="./images/icons/resume.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Explore the portfolio of a skilled Full-Stack Developer with expertise in the VILT stack, including Vue.js, Laravel, and Tailwind CSS. Discover projects that showcase proficiency in API integration, responsive design, and more." />
 
@@ -10,13 +10,19 @@
         <title>Rolan Portfolio</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Saira:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Archivo:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-      <script type="module" crossorigin src="/portfolio/assets/index-5675f512.js"></script>
-      <link rel="stylesheet" href="/portfolio/assets/index-0aab2cfa.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+        <script>
+            (function () {
+                var theme = localStorage.getItem('app.preferences.theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+                document.documentElement.setAttribute('data-bs-theme', theme);
+            })();
+        </script>
+      <script type="module" crossorigin src="./assets/index-303a0b30.js"></script>
+      <link rel="stylesheet" href="./assets/index-04426cdd.css">
     </head>
-    <body class="no-scroll" style="background-color: #212529">
+    <body class="no-scroll">
         <div id="app"></div>
         
     </body>

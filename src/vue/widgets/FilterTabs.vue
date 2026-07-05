@@ -3,7 +3,7 @@
         <!-- Bootstrap's Button Group -->
         <div class="btn-group" role="group">
             <!-- Filter Items -->
-            <button v-for="item in props.items" type="button" class="btn btn-light text-2"
+            <button v-for="item in props.items" type="button" class="btn text-2"
                     :class="{active:_isItemSelected(item)}"
                     @click="_selectItem(item)">
                 <!-- Item Label -->
@@ -74,19 +74,21 @@ const _selectItem = (item) => {
         sm: (padding: 0.3rem 0)
     ));
 
-    opacity: 0.8;
+    background-color: var(--color-bg-elevated);
+    border-color: var(--color-border);
+    color: var(--color-text-muted);
+    opacity: 0.9;
     border-radius: 30px;
 
     &.active, &:hover {
-        background-color: $light;
-        border-color: $light;
-        color: $primary;
+        background-color: var(--color-border);
+        border-color: var(--color-border);
+        color: var(--color-primary);
     }
 
     &.active {
         font-weight: bold;
         opacity: 1;
-        background-color: darken($light-1, 1%);
     }
 }
 </style>

@@ -10,11 +10,17 @@
         <title>Rolan Portfolio</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Saira:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Archivo:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+        <script>
+            (function () {
+                var theme = localStorage.getItem('app.preferences.theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+                document.documentElement.setAttribute('data-bs-theme', theme);
+            })();
+        </script>
     </head>
-    <body class="no-scroll" style="background-color: #212529">
+    <body class="no-scroll">
         <div id="app"></div>
         <script type="module" src="/src/main.js"></script>
     </body>

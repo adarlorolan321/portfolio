@@ -75,6 +75,7 @@
             {
                 "id": "kmt",
                 "title": "Know My Tow",
+                "badge": "SAAS · Towing Calculator",
                 "logoUrl": "images/portfolio/KMT.svg",
                 "links": [
                     {
@@ -154,6 +155,7 @@
             {
                 "id": "pvg",
                 "title": "Valu8er Expert Reports",
+                "badge": "AI · Business Valuation",
                 "logoUrl": "images/portfolio/pvg-logo.png",
                 "links": [
                     {
@@ -207,6 +209,7 @@
             {
                 "id": "overwatch",
                 "title": "OverWatch",
+                "badge": "Monitoring Platform",
                 "logoUrl": "images/portfolio/default-logo.svg",
                 "links": [],
                 "locales": {
@@ -251,6 +254,7 @@
             {
                 "id": "simpletrak",
                 "title": "SimpleTrak",
+                "badge": "Workflow Tracker",
                 "logoUrl": "images/portfolio/default-logo.svg",
                 "links": [],
                 "locales": {
@@ -298,6 +302,7 @@
             {
                 "id": "localstalls",
                 "title": "LocalStalls",
+                "badge": "Marketplace",
                 "logoUrl": "images/portfolio/localstalls.png",
                 "links": [
                     {
@@ -365,6 +370,7 @@
             {
                 "id": "guestbook",
                 "title": "Guestbook",
+                "badge": "Bookings",
                 "logoUrl": "images/portfolio/guestbook.png",
                 "links": [],
                 "locales": {
@@ -407,6 +413,7 @@
             {
                 "id": "buildmax",
                 "title": "Buildmax",
+                "badge": "Construction Management",
                 "logoUrl": "images/portfolio/buildmax.png",
                 "locales": {
                     "en": {

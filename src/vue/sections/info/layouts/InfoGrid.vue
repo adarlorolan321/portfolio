@@ -1,13 +1,17 @@
 <template>
     <div class="row gx-5">
-        <div v-for="item in props.items" class="col-12 col-md-6 item-container">
+        <RevealOnScroll v-for="(item, index) in props.items"
+                        :key="item['locales']?.['title'] ?? index"
+                        tag="div"
+                        class="col-12 col-md-6 item-container"
+                        :delay="index * 60">
             <InfoItem :item="item"
                       :highlighted-header="true"
                       :small-description="false"
                       :description-with-progress-bar="true"
                       :icon-color-style="item['formattedPercentage'] ? 'transparent' : 'solid'"
                       class="info-item"/>
-        </div>
+        </RevealOnScroll>
     </div>
 </template>
 

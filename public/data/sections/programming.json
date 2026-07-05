@@ -1,0 +1,144 @@
+{
+    "locales": {
+        "en": {
+            "description": "Languages and frameworks I use, with dynamically calculated years of experience."
+        },
+        "es": {
+            "description": "Lenguajes y frameworks que utilizo, con años de experiencia calculados dinámicamente."
+        },
+        "fr": {
+            "description": "Langages et frameworks que j'utilise, avec des années d'expérience calculées dynamiquement."
+        },
+        "zh": {
+            "description": "我使用的语言和框架，经验年限自动计算。"
+        }
+    },
+
+    "subcategories": [
+        {
+            "id": "programming",
+            "type": "grid",
+            "progress": "number",
+            "faIcon": "fa fa-code",
+            "locales": {
+                "en": {"title": null},
+                "es": {"title": null},
+                "fr": {"title": null},
+                "zh": {"title": null}
+            }
+        }
+    ],
+
+    "items": {
+        "programming": [
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-html5",
+                "value": 95,
+                "startYear": 2020,
+                "locales": {
+                    "en": {"title": "HTML 5"},
+                    "es": {"title": "HTML 5"},
+                    "fr": {"title": "HTML 5"},
+                    "zh": {"title": "HTML 5"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-css3-alt",
+                "value": 90,
+                "startYear": 2022,
+                "locales": {
+                    "en": {"title": "CSS 3"},
+                    "es": {"title": "CSS 3"},
+                    "fr": {"title": "CSS 3"},
+                    "zh": {"title": "CSS 3"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-sass",
+                "value": 65,
+                "startYear": 2023,
+                "locales": {
+                    "en": {"title": "Sass/Less"},
+                    "es": {"title": "Sass/Less"},
+                    "fr": {"title": "Sass/Less"},
+                    "zh": {"title": "Sass/Less"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-js-square",
+                "value": 85,
+                "startYear": 2022,
+                "locales": {
+                    "en": {"title": "JavaScript"},
+                    "es": {"title": "JavaScript"},
+                    "fr": {"title": "JavaScript"},
+                    "zh": {"title": "JavaScript"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-vuejs",
+                "value": 90,
+                "startYear": 2023,
+                "locales": {
+                    "en": {"title": "Vue 3"},
+                    "es": {"title": "Vue 3"},
+                    "fr": {"title": "Vue 3"},
+                    "zh": {"title": "Vue 3"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-laravel",
+                "value": 90,
+                "startYear": 2023,
+                "locales": {
+                    "en": {"title": "Laravel"},
+                    "es": {"title": "Laravel", "description": "Nanodegree de desarrollo Laravel (Udacity)"},
+                    "fr": {"title": "Laravel", "description": "Nanodegré en développement Laravel (Udacity)"},
+                    "zh": {"title": "Laravel", "description": "Laravel开发纳米学位毕业生（优达学城）"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-react",
+                "value": 85,
+                "startYear": 2023,
+                "locales": {
+                    "en": {"title": "React"},
+                    "es": {"title": "React"},
+                    "fr": {"title": "React"},
+                    "zh": {"title": "React"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-react",
+                "value": 80,
+                "startYear": 2024,
+                "locales": {
+                    "en": {"title": "Next.js"},
+                    "es": {"title": "Next.js"},
+                    "fr": {"title": "Next.js"},
+                    "zh": {"title": "Next.js"}
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": "fab fa-docker",
+                "value": 75,
+                "startYear": 2024,
+                "locales": {
+                    "en": {"title": "Docker"},
+                    "es": {"title": "Docker"},
+                    "fr": {"title": "Docker"},
+                    "zh": {"title": "Docker"}
+                }
+            }
+        ]
+    }
+}

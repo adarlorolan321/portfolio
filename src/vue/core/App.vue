@@ -2,6 +2,15 @@
     <!-- Feedbacks -->
     <FeedbackView ref="feedbackView"/>
 
+    <!-- Custom Cursor (desktop) -->
+    <CustomCursor />
+
+    <!-- Theme switch animation -->
+    <ThemeTransition />
+
+    <!-- Language switch animation -->
+    <LanguageTransition />
+
     <!-- App Content -->
     <div v-if="data.getLoadProgress() >= 100"
          v-show="!utils.isTouchDevice() || appDidLoad">
@@ -11,6 +20,9 @@
 
 <script setup>
 import FeedbackView from "./FeedbackView.vue"
+import CustomCursor from "../widgets/CustomCursor.vue"
+import ThemeTransition from "../widgets/ThemeTransition.vue"
+import LanguageTransition from "../widgets/LanguageTransition.vue"
 
 import {computed, onMounted, ref} from "vue"
 import {useData} from "../../composables/data.js"
@@ -45,7 +57,7 @@ const _startPreloading = async () => {
     clearInterval(intervalId)
     if(_isPreloaderEnabled.value) {
         feedbackView.value.setLoaderListeners(_onPreloaderShown, _onPreloadCompleted)
-        feedbackView.value.setLoader(data.getString('loading'), "images/icons/resume.ico")
+        feedbackView.value.setLoader(data.getString('loading'))
     }
     else {
         await _onPreloaderShown()

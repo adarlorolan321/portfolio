@@ -24,7 +24,7 @@ const _loaderListeners = {
 /**
  * @public
  * @param {String} message
- * @param {String} iconImagePath
+ * @param {String} [iconImagePath]
  */
 const setLoader = (message, iconImagePath) => {
     layout.setPageScrollingEnabled(false)

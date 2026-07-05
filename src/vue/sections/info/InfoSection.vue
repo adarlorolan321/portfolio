@@ -84,10 +84,35 @@ const _fetchAndParseItemsFor = (subcategory) => {
             item['formattedPercentage'] = typeof breakpoints !== 'string'
                 ? data.getString(parsedPercentage)
                 : parsedPercentage
+
+            if (breakpoints === 'number' && item['startYear']) {
+                item['experienceDescription'] = _formatExperienceDescription(item)
+            }
         }
     }
 
     return items
+}
+
+/**
+ * @param {Object} item
+ * @return {string}
+ * @private
+ */
+const _formatExperienceDescription = (item) => {
+    const years = utils.calculateExperienceYears(item['startYear'])
+    if (years === null) {
+        return item['locales']['description'] ?? ''
+    }
+
+    const experienceLabel = data.getString('experienceYears').replace('${years}', years)
+    const extra = item['locales']['description']
+
+    if (!extra) {
+        return experienceLabel
+    }
+
+    return `${experienceLabel}<br>${extra}`
 }
 </script>
 

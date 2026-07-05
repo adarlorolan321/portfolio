@@ -1,56 +1,60 @@
-/** Font Awesome webfonts path **/
-$fa-font-path:"@fortawesome/fontawesome-free/webfonts";
-
-/** Overriding Bootstrap's contrast ratio. **/
-$min-contrast-ratio: 2.5 !default;
-
-/** Typography **/
-$font-family-base: 'Lato', sans-serif;
-$headings-font-family: 'Saira', sans-serif;
-$custom-subheadings-font-family: 'Archivo', sans-serif;
-
-/** Layout Options **/
-$max-content-width: 2048px;
-$navigation-sidebar-breakpoint: "lg";
-$nav-sidebar-column-size: 290px;
-$nav-tabs-height: 60px;
-
-/** Main Colors **/
-$primary: #1cbdd0;
-$dark: #212529;
-$light: #fcfcfc;
-$white: white;
-
-/** Layout Colors **/
-$background-color: #f0f3f6;
-
-/** Navigation Colors **/
-$nav-background-color: $dark;
-$nav-item-lighten-color: lighten($primary, 30%);
-$nav-item-lighten-strong-color: lighten($primary, 40%);
-$nav-item-grayed-out-color: #6C757D;
-
-/** Text Colors **/
-$headings-color: $dark;
-$text-normal: black;
-$text-normal-contrast: white;
-$text-muted: #757575;
-
-/** Light Shades **/
-$light-1: #f8f9fa;
-$light-2: #e9ecef;
-$light-3: #dee2e6;
-$light-4: #ced4da;
-$light-5: #adb5bd;
-$light-6: #6c757d;
-$light-7: #495057;
-
-$light-shades-palette: (
-    $light-1,
-    $light-2,
-    $light-3,
-    $light-4,
-    $light-5,
-    $light-6,
-    $light-7,
-);
+/** Font Awesome webfonts path **/
+$fa-font-path:"@fortawesome/fontawesome-free/webfonts";
+
+/** Overriding Bootstrap's contrast ratio. **/
+$min-contrast-ratio: 2.5 !default;
+
+/** Typography **/
+$font-family-base: 'Inter', sans-serif;
+$headings-font-family: 'Inter', sans-serif;
+$custom-subheadings-font-family: 'Inter', sans-serif;
+
+/** Layout Options **/
+$max-content-width: 960px;
+$navigation-sidebar-breakpoint: "lg";
+$nav-sidebar-column-size: 290px;
+$nav-tabs-height: 60px;
+$nav-topbar-height: 56px;
+
+/** Main Colors (Bootstrap compile-time) **/
+$primary: #5eead4;
+$dark: #0a0a0a;
+$light: #fafafa;
+$white: white;
+
+/** Layout Colors **/
+$background-color: #0a0a0a;
+$surface-color: #141414;
+$border-color: #262626;
+
+/** Navigation Colors **/
+$nav-background-color: rgba(10, 10, 10, 0.85);
+$nav-item-lighten-color: $primary;
+$nav-item-lighten-strong-color: lighten($primary, 10%);
+$nav-item-grayed-out-color: #737373;
+
+/** Text Colors **/
+$headings-color: $light;
+$text-normal: #e5e5e5;
+$text-normal-contrast: $dark;
+$text-muted: #a3a3a3;
+
+/** Light Shades **/
+$light-1: #fafafa;
+$light-2: #e5e5e5;
+$light-3: #404040;
+$light-4: #525252;
+$light-5: #737373;
+$light-6: #a3a3a3;
+$light-7: #d4d4d4;
+
+$light-shades-palette: (
+    $light-1,
+    $light-2,
+    $light-3,
+    $light-4,
+    $light-5,
+    $light-6,
+    $light-7,
+);
+

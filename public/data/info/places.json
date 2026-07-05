@@ -88,6 +88,24 @@
                 "name": "明多罗州立大学"
             }
         }
+    },
+    "csc": {
+        "logoUrl": null,
+        "faIcon": "fa-solid fa-certificate",
+        "locales": {
+            "en": {
+                "name": "Civil Service Commission"
+            },
+            "es": {
+                "name": "Comisión de Servicio Civil"
+            },
+            "fr": {
+                "name": "Commission du service civil"
+            },
+            "zh": {
+                "name": "公务员委员会"
+            }
+        }
     }
    
 }

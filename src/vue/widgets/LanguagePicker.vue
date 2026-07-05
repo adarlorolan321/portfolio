@@ -41,12 +41,8 @@
 import Dropdown from '/node_modules/bootstrap/js/src/dropdown'
 import {useLanguage} from "../../composables/language.js"
 import {computed} from "vue"
-import {useLayout} from "../../composables/layout.js"
-import {useData} from "../../composables/data.js"
 
-const data = useData()
 const language = useLanguage()
-const layout = useLayout()
 
 /**
  * @type {ComputedRef<Object>}
@@ -66,54 +62,61 @@ const availableLanguages = computed(() => {
  * @param {Object} lang
  * @private
  */
-const _onLanguageSelected = (lang) => {
-    const feedbackView = layout.getFeedbackView()
-    feedbackView.showActivitySpinner(data.getString('changingLanguage') + "...")
+const _onLanguageSelected = async (lang) => {
+    if (lang['id'] === selectedLanguage.value?.['id']) {
+        return
+    }
 
-    setTimeout(() => {
-        language.selectLanguage(lang)
-        feedbackView.hideActivitySpinner()
-    }, 300)
+    await language.selectLanguage(lang)
 }
 </script>
 
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
 
-$menu-background-color:lighten($nav-background-color, 5%);
-$menu-border-color:darken($nav-background-color, 1%);
-$menu-hover-background-color:lighten($nav-background-color, 10%);
-
 .dropdown-toggle {
-    border-width: 0;
-    opacity: 0.9;
-    background-color: transparent;
-    color: $white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.25rem 0.45rem;
+    opacity: 0.95;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-muted);
 
     &:hover {
         opacity: 1;
+        color: var(--color-primary);
+        border-color: rgba(var(--color-primary-rgb), 0.35);
     }
 }
 
 li {
     &:not(:last-child) {
-        border-bottom: 1px solid $menu-border-color;
+        border-bottom: 1px solid var(--color-border);
     }
 }
 
 .dropdown-menu {
-    padding: 1px;
-    border: 2px solid $menu-border-color;
-    background-color: $menu-background-color;
+    padding: 0.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-bg-elevated);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .dropdown-item {
-    padding: 10px 15px;
-    background-color: $menu-background-color;
-    color: $white;
+    display: flex;
+    align-items: center;
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--color-text);
 
     &:hover {
-        background-color: $menu-hover-background-color;
+        background-color: rgba(var(--color-primary-rgb), 0.08);
+        color: var(--color-heading);
     }
 }
 

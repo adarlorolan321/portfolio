@@ -1,0 +1,13 @@
+// Custom cursor — hide system pointer when active
+
+body.custom-cursor-enabled,
+body.custom-cursor-enabled * {
+    cursor: none !important;
+}
+
+@media (max-width: 991.98px), (prefers-reduced-motion: reduce) {
+    body.custom-cursor-enabled,
+    body.custom-cursor-enabled * {
+        cursor: auto !important;
+    }
+}

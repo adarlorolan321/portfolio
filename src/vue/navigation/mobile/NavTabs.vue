@@ -1,11 +1,13 @@
 <template>
     <div class="nav-tabs-wrapper">
         <nav class="nav-tabs">
-            <!-- Nav Tab Item -->
-            <button v-for="category in data.getCategories()" :class="_getNavTabClassList(category)" @click="_onLinkClicked(category)">
-                <!-- Item Content -->
+            <button v-for="category in data.getCategories()"
+                    :key="category['id']"
+                    type="button"
+                    :class="_getNavTabClassList(category)"
+                    @click="_onLinkClicked(category)">
                 <i class="nav-tab-button-icon" :class="category['faIcon']"/>
-                <span class="nav-tab-button-label">{{data.getString(category['id'])}}</span>
+                <span class="nav-tab-button-label">{{ data.getString(category['id']) }}</span>
             </button>
         </nav>
     </div>
@@ -26,7 +28,7 @@ const navigation = useNavigation()
 const _getNavTabClassList = (category) => {
     let classList = 'nav-tab-button'
 
-    if(navigation.isCategoryActive(category['id'])) {
+    if (navigation.isCategoryActive(category['id'])) {
         classList += ' nav-tab-button-selected'
     }
 
@@ -46,62 +48,70 @@ const _onLinkClicked = (category) => {
 @import "/src/scss/_theming.scss";
 
 .nav-tabs-wrapper {
-    height: $nav-tabs-height;
+    height: calc(#{$nav-tabs-height} + env(safe-area-inset-bottom, 0px));
     width: 100vw;
-    background-color: darken($nav-background-color, 1%);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background-color: var(--color-nav-bg);
+    border-top: 1px solid var(--color-border);
+    backdrop-filter: blur(12px);
 }
 
 .nav-tabs {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-
-    height: 100%;
+    height: $nav-tabs-height;
     width: 100%;
-    border-bottom: none;
 }
 
 .nav-tab-button {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    gap: 0.2rem;
+    min-width: 0;
+    padding: 0.35rem 0.25rem;
     cursor: pointer;
     background-color: transparent;
-    border-width: 0;
+    border: none;
+    transition: color 0.2s ease;
 }
 
 .nav-tab-button-icon {
-    @include generate-dynamic-styles-with-hash((
-        xxxl:   (font-size: 1rem),
-        sm:     (font-size: 0.9rem),
-    ));
-
-    color: $nav-item-grayed-out-color;
-    transition: color 0.2s;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-tab-button-label {
-    @include generate-dynamic-styles-with-hash((
-        xxxl:   (font-size: 0.7rem),
-        sm:     (font-size: 0.55rem),
-    ));
-
-    margin-top:0.3rem;
-    font-family: $headings-font-family;
-    text-transform: uppercase;
-    color: $light-2;
-    transition: color 0.2s;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.62rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+    color: var(--color-text-muted);
+    transition: color 0.2s ease;
 }
 
-.nav-tab-button:hover, .nav-tab-button-selected {
+.nav-tab-button:hover,
+.nav-tab-button-selected {
     .nav-tab-button-icon {
-        color: $nav-item-lighten-color;
+        color: var(--color-primary);
     }
 
     .nav-tab-button-label {
-        color: $nav-item-lighten-color;
+        color: var(--color-primary);
+    }
+}
+
+.nav-tab-button-selected {
+    .nav-tab-button-icon {
+        transform: translateY(-1px);
     }
 }
 </style>

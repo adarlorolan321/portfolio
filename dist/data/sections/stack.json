@@ -1,0 +1,35 @@
+{
+    "locales": {
+        "en": {
+            "description": "Technologies I use to build modern web applications."
+        },
+        "es": {
+            "description": "Tecnologías que uso para crear aplicaciones web modernas."
+        },
+        "fr": {
+            "description": "Technologies que j'utilise pour créer des applications web modernes."
+        },
+        "zh": {
+            "description": "我用于构建现代 Web 应用的技术栈。"
+        }
+    },
+    "items": [
+        {"label": "Vue 3", "faIcon": "fab fa-vuejs"},
+        {"label": "Laravel", "faIcon": "fab fa-laravel"},
+        {"label": "JavaScript", "faIcon": "fab fa-js"},
+        {"label": "TypeScript", "faIcon": "fab fa-js"},
+        {"label": "React", "faIcon": "fab fa-react"},
+        {"label": "Next.js", "faIcon": "fa-solid fa-n"},
+        {"label": "PHP", "faIcon": "fab fa-php"},
+        {"label": "MySQL", "faIcon": "fa-solid fa-database"},
+        {"label": "PostgreSQL", "faIcon": "fa-solid fa-database"},
+        {"label": "HTML5", "faIcon": "fab fa-html5"},
+        {"label": "CSS3", "faIcon": "fab fa-css3-alt"},
+        {"label": "Sass", "faIcon": "fab fa-sass"},
+        {"label": "Docker", "faIcon": "fab fa-docker"},
+        {"label": "Git", "faIcon": "fab fa-git-alt"},
+        {"label": "REST APIs", "faIcon": "fa-solid fa-plug"},
+        {"label": "Bootstrap", "faIcon": "fab fa-bootstrap"},
+        {"label": "Vite", "faIcon": "fa-solid fa-bolt"}
+    ]
+}

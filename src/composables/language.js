@@ -17,6 +17,20 @@ const _languageData = reactive({
     selectedLanguage: null
 })
 
+/** @type {((from: Object, to: Object, onApply: () => void) => Promise<void>)|null} */
+let _transitionHandler = null
+
+/**
+ * @param {(from: Object, to: Object, onApply: () => void) => Promise<void>} handler
+ */
+export function registerLanguageTransitionHandler(handler) {
+    _transitionHandler = handler
+}
+
+export function unregisterLanguageTransitionHandler() {
+    _transitionHandler = null
+}
+
 export function useLanguage() {
     /**
      * @param {Array} supportedLanguages
@@ -72,10 +86,30 @@ export function useLanguage() {
 
     /**
      * @param {Object} language
+     * @param {{animate?: boolean}} [options]
+     * @return {Promise<void>}
      */
-    const selectLanguage = (language) => {
-        _languageData.selectedLanguage = language
-        window.localStorage.setItem(constants.LOCAL_STORAGE_ITEMS.language, language['id'])
+    const selectLanguage = async (language, options = {}) => {
+        const {animate = true} = options
+        const previous = _languageData.selectedLanguage
+
+        if (previous?.['id'] === language['id']) {
+            return
+        }
+
+        const apply = () => {
+            _languageData.selectedLanguage = language
+            window.localStorage.setItem(constants.LOCAL_STORAGE_ITEMS.language, language['id'])
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+        if (animate && previous && _transitionHandler && !prefersReducedMotion) {
+            await _transitionHandler(previous, language, apply)
+            return
+        }
+
+        apply()
     }
 
     /**

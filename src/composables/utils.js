@@ -109,6 +109,55 @@ export function useUtils() {
     }
 
     /**
+     * @param {Number} startYear
+     * @return {Number|null}
+     */
+    const calculateExperienceYears = (startYear) => {
+        const year = Number(startYear)
+        if (isNaN(year)) {
+            return null
+        }
+
+        const currentYear = new Date().getFullYear()
+        return Math.max(1, currentYear - year + 1)
+    }
+
+    /**
+     * Full years of experience from a start date (YYYY/MM or YYYY/MM/DD).
+     * @param {String} stringDate
+     * @return {Number|null}
+     */
+    const calculateExperienceYearsFromDate = (stringDate) => {
+        const start = parseDate(stringDate)
+        if (!start) {
+            return null
+        }
+
+        const now = new Date()
+        let years = now.getFullYear() - start.getFullYear()
+
+        if (now.getMonth() < start.getMonth()
+            || (now.getMonth() === start.getMonth() && now.getDate() < start.getDate())) {
+            years--
+        }
+
+        return Math.max(1, years)
+    }
+
+    /**
+     * @param {String} template
+     * @param {Number|null} years
+     * @return {String}
+     */
+    const formatExperienceYearsInText = (template, years) => {
+        if (!template || years === null) {
+            return template ?? ''
+        }
+
+        return template.replace(/\$\{years\}/g, String(years))
+    }
+
+    /**
      * @param {Array} array
      * @return {Array}
      */
@@ -130,6 +179,9 @@ export function useUtils() {
         localizeDate,
         parseDate,
         parsePercentage,
+        calculateExperienceYears,
+        calculateExperienceYearsFromDate,
+        formatExperienceYearsInText,
         reverseArray
     }
 }

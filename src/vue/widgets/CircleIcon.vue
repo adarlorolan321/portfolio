@@ -128,7 +128,8 @@ const _getStyle = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $primary;
+    background-color: rgba(var(--color-primary-rgb), 0.12);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.28);
 }
 
 @include create-size-variant(

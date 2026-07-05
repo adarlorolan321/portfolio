@@ -29,7 +29,7 @@ const props = defineProps({
  * @type {ComputedRef<String>}
  */
 const badgeClassList = computed(() => {
-    return props.itemClass ? props.itemClass : 'bg-light text-dark'
+    return props.itemClass ? props.itemClass : 'tag-default'
 })
 </script>
 
@@ -39,6 +39,12 @@ const badgeClassList = computed(() => {
 .tag {
     &:not(:last-child) {
         margin-right: 0.3rem;
+    }
+
+    &.tag-default {
+        background-color: var(--color-bg-elevated);
+        border: 1px solid var(--color-border);
+        color: var(--color-text-muted);
     }
 }
 </style>

@@ -1,0 +1,49 @@
+{
+    "locales": {
+        "en": {
+            "title": "<span class='text-primary'>Certifications</span>",
+            "description": "Professional credentials and licenses I have earned."
+        },
+        "es": {
+            "title": "<span class='text-primary'>Certificaciones</span>",
+            "description": "Credenciales y licencias profesionales que he obtenido."
+        },
+        "fr": {
+            "title": "<span class='text-primary'>Certifications</span>",
+            "description": "Titres et accréditations professionnels que j'ai obtenus."
+        },
+        "zh": {
+            "title": "<span class='text-primary'>认证</span>",
+            "description": "我获得的专业证书和资质。"
+        }
+    },
+    "items": [
+        {
+            "id": "csc-professional",
+            "faIcon": "fa-solid fa-award",
+            "place": "@link{places.csc}",
+            "period": [
+                "2024/08",
+                "2024/08"
+            ],
+            "locales": {
+                "en": {
+                    "title": "Civil Service Eligibility Passer — Professional Level",
+                    "description": "Passed the Civil Service Professional Level examination."
+                },
+                "es": {
+                    "title": "Aprobado de Elegibilidad del Servicio Civil — Nivel Profesional",
+                    "description": "Aprobó el examen de Nivel Profesional del Servicio Civil."
+                },
+                "fr": {
+                    "title": "Réussite à l'éligibilité au service civil — Niveau professionnel",
+                    "description": "A réussi l'examen de niveau professionnel du service civil."
+                },
+                "zh": {
+                    "title": "公务员资格通过 — 专业级别",
+                    "description": "通过公务员专业级别考试。"
+                }
+            }
+        }
+    ]
+}

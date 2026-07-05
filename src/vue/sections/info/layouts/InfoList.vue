@@ -1,12 +1,16 @@
 <template>
     <div class="row">
-        <div v-for="item in props.items" class="col-12 item-container">
+        <RevealOnScroll v-for="(item, index) in props.items"
+                        :key="item['locales']?.['title'] ?? index"
+                        tag="div"
+                        class="col-12 item-container"
+                        :delay="index * 50">
             <InfoItem :item="item"
                       :highlighted-header="false"
                       :small-description="false"
                       :description-with-progress-bar="false"
                       :icon-color-style="'transparent'"/>
-        </div>
+        </RevealOnScroll>
     </div>
 </template>
 

@@ -4,10 +4,8 @@
  */
 export function useConstants() {
     /** @const **/
-    // const BASE_PATH =  'http://localhost:5175/'
-
-    const BASE_PATH =  'https://portfolio-rolan.netlify.app/'
-    // const BASE_PATH = import.meta.env.BASE_URL
+    // Use environment variable if available, otherwise fallback to default
+    const BASE_PATH = import.meta.env.VITE_BASE_URL || import.meta.env.BASE_URL || 'https://portfolio-rolan.netlify.app/'
 
     /** @const **/
     const BOOTSTRAP_BREAKPOINTS = {
@@ -29,7 +27,8 @@ export function useConstants() {
 
     /** @const **/
     const LOCAL_STORAGE_ITEMS = {
-        language: 'app.preferences.language'
+        language: 'app.preferences.language',
+        theme: 'app.preferences.theme'
     }
 
     /** @const **/

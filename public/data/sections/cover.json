@@ -1,37 +1,68 @@
-{
-   "locales": {
-        "en": {
-            "welcome": "Welcome to my <span class='text-primary'>Resume!</span>",
-            "welcomeShort": "Welcome!",
-            "bio": "Experienced software developer with over 3 years of hands-on experience building web applications and backend systems. Proficient in crafting clean, understandable code that facilitates easy maintenance and debugging. Skilled in collaborating with teams of all sizes on various projects and adaptable to both remote and office work environments."
-        },
-        "es": {
-            "welcome": "¡Bienvenido(a) a mi <span class='text-primary'>CV!</span>",
-            "welcomeShort": "¡Bienvenido(a)!",
-            "bio": "Desarrollador de software con más de 3 años de experiencia práctica en la creación de aplicaciones web y sistemas backend. Proficiente en la elaboración de código limpio y comprensible que facilita el mantenimiento y depuración. Hábil en la colaboración con equipos de todos los tamaños en diversos proyectos y adaptable tanto al trabajo remoto como presencial."
-        },
-        "fr": {
-            "welcome": "Bienvenue sur mon <span class='text-primary'>CV</span>!",
-            "welcomeShort": "Bienvenue!",
-            "bio": "Développeur logiciel expérimenté avec plus de 3 ans d'expérience pratique dans la création d'applications web et de systèmes backend. Compétent dans la rédaction de code propre et compréhensible, facilitant la maintenance et le débogage. Habile à collaborer avec des équipes de toutes tailles sur divers projets et adaptable au travail à distance comme au travail en bureau."
-        },
-        "zh": {
-            "welcome": "欢迎来到我的<span class='text-primary'>简历</span>！",
-            "welcomeShort": "欢迎!",
-            "bio": "作为一名经验丰富的软件开发人员，我拥有超过3年的实际经验，专注于构建Web应用程序和后端系统。擅长编写干净、易懂的代码，以便于维护和调试。能够与各类团队协作，适应远程和办公室工作环境，参与各类项目。"
-        }
-    },
-    "items": {
-        "socialCircles": [
-            "@link{profile.contact.instagram}",
-            "@link{profile.contact.facebook}",
-            "@link{profile.contact.linkedin}",
-            "@link{profile.contact.github}"
-        ],
-        "contactListItems": [
-            "@link{profile.contact.address}",
-            "@link{profile.contact.email}",
-            "@link{profile.contact.phone}"
-        ]
-    }
-}
+{
+    "devStartDate": "2022/06",
+    "locales": {
+        "en": {
+            "welcome": "Welcome to my <span class='text-primary'>Resume!</span>",
+            "welcomeShort": "Welcome!",
+            "bio": "Experienced software developer with over ${years} years of hands-on experience building web applications and backend systems. Proficient in crafting clean, understandable code that facilitates easy maintenance and debugging. Skilled in collaborating with teams of all sizes on various projects and adaptable to both remote and office work environments."
+        },
+        "es": {
+            "welcome": "¡Bienvenido(a) a mi <span class='text-primary'>CV!</span>",
+            "welcomeShort": "¡Bienvenido(a)!",
+            "bio": "Desarrollador de software con más de ${years} años de experiencia práctica en la creación de aplicaciones web y sistemas backend. Proficiente en la elaboración de código limpio y comprensible que facilita el mantenimiento y depuración. Hábil en la colaboración con equipos de todos los tamaños en diversos proyectos y adaptable tanto al trabajo remoto como presencial."
+        },
+        "fr": {
+            "welcome": "Bienvenue sur mon <span class='text-primary'>CV</span>!",
+            "welcomeShort": "Bienvenue!",
+            "bio": "Développeur logiciel expérimenté avec plus de ${years} ans d'expérience pratique dans la création d'applications web et de systèmes backend. Compétent dans la rédaction de code propre et compréhensible, facilitant la maintenance et le débogage. Habile à collaborer avec des équipes de toutes tailles sur divers projets et adaptable au travail à distance comme au travail en bureau."
+        },
+        "zh": {
+            "welcome": "欢迎来到我的<span class='text-primary'>简历</span>！",
+            "welcomeShort": "欢迎!",
+            "bio": "作为一名经验丰富的软件开发人员，我拥有超过${years}年的实际经验，专注于构建Web应用程序和后端系统。擅长编写干净、易懂的代码，以便于维护和调试。能够与各类团队协作，适应远程和办公室工作环境，参与各类项目。"
+        }
+    },
+    "stats": [
+        {
+            "dynamic": "experienceYears",
+            "locales": {
+                "en": {"label": "yrs shipping"},
+                "es": {"label": "años de experiencia"},
+                "fr": {"label": "ans d'expérience"},
+                "zh": {"label": "年开发经验"}
+            }
+        },
+        {
+            "value": "20+",
+            "locales": {
+                "en": {"label": "projects shipped"},
+                "es": {"label": "proyectos entregados"},
+                "fr": {"label": "projets livrés"},
+                "zh": {"label": "已交付项目"}
+            }
+        },
+        {
+            "value": "4",
+            "locales": {
+                "en": {"label": "companies"},
+                "es": {"label": "empresas"},
+                "fr": {"label": "entreprises"},
+                "zh": {"label": "合作公司"}
+            }
+        }
+    ],
+    "items": {
+        "socialCircles": [
+            "@link{profile.contact.github}",
+            "@link{profile.contact.linkedin}",
+            "@link{profile.contact.instagram}",
+            "@link{profile.contact.facebook}"
+        ],
+        "contactListItems": [
+            "@link{profile.contact.address}",
+            "@link{profile.contact.email}",
+            "@link{profile.contact.phone}"
+        ]
+    }
+}
+

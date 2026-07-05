@@ -108,4 +108,10 @@ const _onProjectOpened = (project) => {
 
 <style lang="scss" scoped>
 @import "/src/scss/_theming.scss";
+
+.gallery-section-row {
+    .col-12:first-child {
+        margin-bottom: 1.5rem;
+    }
+}
 </style>

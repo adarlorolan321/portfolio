@@ -1,0 +1,96 @@
+{
+    "locales": {
+        "en": {
+            "description": "What colleagues and mentors have said about working with me."
+        },
+        "es": {
+            "description": "Lo que colegas y mentores han dicho sobre trabajar conmigo."
+        },
+        "fr": {
+            "description": "Ce que collègues et mentors ont dit sur le fait de travailler avec moi."
+        },
+        "zh": {
+            "description": "同事和导师对与我共事的评价。"
+        }
+    },
+    "items": [
+        {
+            "id": "rec_1",
+            "initials": "TM",
+            "locales": {
+                "en": {
+                    "author": "Team Lead",
+                    "role": "The SVEN Group",
+                    "quote": "Rolan consistently delivers clean, maintainable code and brings a calm, solution-oriented mindset to every sprint. He's someone you can rely on when the deadline is tight."
+                },
+                "es": {
+                    "author": "Líder de Equipo",
+                    "role": "The SVEN Group",
+                    "quote": "Rolan entrega constantemente código limpio y mantenible, y aporta una mentalidad tranquila y orientada a soluciones en cada sprint. Es alguien en quien puedes confiar cuando el plazo es ajustado."
+                },
+                "fr": {
+                    "author": "Chef d'équipe",
+                    "role": "The SVEN Group",
+                    "quote": "Rolan livre constamment du code propre et maintenable, et apporte un état d'esprit calme et orienté solutions à chaque sprint. C'est quelqu'un sur qui on peut compter quand la deadline est serrée."
+                },
+                "zh": {
+                    "author": "团队负责人",
+                    "role": "The SVEN Group",
+                    "quote": "Rolan 始终交付干净、可维护的代码，并在每个冲刺中带来冷静、以解决方案为导向的思维。截止日期紧张时，他是可以依赖的人。"
+                }
+            }
+        },
+        {
+            "id": "rec_2",
+            "initials": "PM",
+            "locales": {
+                "en": {
+                    "author": "Project Manager",
+                    "role": "iNNsite",
+                    "quote": "A fast learner with strong full-stack skills. Rolan improved our Vue.js frontends and Laravel APIs noticeably — always proactive about code quality and team communication."
+                },
+                "es": {
+                    "author": "Gerente de Proyecto",
+                    "role": "iNNsite",
+                    "quote": "Aprende rápido y tiene sólidas habilidades full-stack. Rolan mejoró notablemente nuestros frontends Vue.js y APIs Laravel — siempre proactivo con la calidad del código y la comunicación del equipo."
+                },
+                "fr": {
+                    "author": "Chef de projet",
+                    "role": "iNNsite",
+                    "quote": "Apprend vite avec de solides compétences full-stack. Rolan a nettement amélioré nos frontends Vue.js et nos API Laravel — toujours proactif sur la qualité du code et la communication d'équipe."
+                },
+                "zh": {
+                    "author": "项目经理",
+                    "role": "iNNsite",
+                    "quote": "学习能力强，全栈技能扎实。Rolan 显著改进了我们的 Vue.js 前端和 Laravel API——在代码质量和团队沟通方面始终积极主动。"
+                }
+            }
+        },
+        {
+            "id": "rec_3",
+            "initials": "SD",
+            "locales": {
+                "en": {
+                    "author": "Senior Developer",
+                    "role": "Elephant in the Boardroom",
+                    "quote": "During his internship, Rolan picked up Vue.js and modern tooling faster than expected. Eager to learn, easy to mentor, and genuinely passionate about building software."
+                },
+                "es": {
+                    "author": "Desarrollador Senior",
+                    "role": "Elephant in the Boardroom",
+                    "quote": "Durante su pasantía, Rolan aprendió Vue.js y herramientas modernas más rápido de lo esperado. Ansioso por aprender, fácil de mentorizar y genuinamente apasionado por construir software."
+                },
+                "fr": {
+                    "author": "Développeur Senior",
+                    "role": "Elephant in the Boardroom",
+                    "quote": "Pendant son stage, Rolan a maîtrisé Vue.js et les outils modernes plus vite que prévu. Avide d'apprendre, facile à encadrer et sincèrement passionné par le développement logiciel."
+                },
+                "zh": {
+                    "author": "高级开发工程师",
+                    "role": "Elephant in the Boardroom",
+                    "quote": "实习期间，Rolan 比预期更快地掌握了 Vue.js 和现代工具链。乐于学习、易于指导，对构建软件充满热情。"
+                }
+            }
+        }
+    ]
+}

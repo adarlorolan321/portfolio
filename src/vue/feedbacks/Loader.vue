@@ -1,183 +1,156 @@
 <template>
-    <!-- Preloader -->
-    <div class="loader-full-screen" v-if="_isRunning()" :class="_getClassList()">
-        <div v-show="_didReachStep('logoTweenIn')" class="loader-full-screen-content">
-            <!-- Logo -->
-            <ImageView  :src="imageUrl"
-                        :alt="'Preloader Logo'"
-                        :ignore-on-image-count="true"
-                        ref="logo"
-                        class="img-fluid img-logo"/>
+    <div v-if="_isRunning()"
+         class="loader-full-screen"
+         :class="_getClassList()"
+         aria-live="polite"
+         aria-busy="true">
 
-            <!-- Progress Display -->
-            <div class="progress-display" :class="{'progress-display-expanded': _didReachStep('progressTweenIn')}">
-                <!-- Percentage -->
-                <p class="mt-2 mb-2 text-2">{{ message }}...</p>
+        <div class="loader-bg-grid" aria-hidden="true"/>
+        <div class="loader-bg-glow loader-bg-glow-1" aria-hidden="true"/>
+        <div class="loader-bg-glow loader-bg-glow-2" aria-hidden="true"/>
 
-                <!-- Progress Bar -->
-                <ProgressBar ref="progressBar"
-                             :percentage="totalPercentage"/>
+        <div v-show="_didReachStep('logoTweenIn')" class="loader-content">
+            <LoaderIcon size="md" :progress="totalPercentage"/>
+
+            <p class="loader-message">
+                {{ message }}<span class="loader-dots">{{ loadingDots }}</span>
+            </p>
+
+            <div class="loader-progress" :class="{'loader-progress-visible': _didReachStep('progressTweenIn')}">
+                <div class="loader-progress-track">
+                    <div class="loader-progress-fill" :style="{ width: `${totalPercentage}%` }"/>
+                </div>
+                <span class="loader-progress-value">{{ totalPercentage }}%</span>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import {onMounted, ref} from "vue"
-import ProgressBar from "../widgets/ProgressBar.vue"
-import ImageView from "../widgets/ImageView.vue"
+import {computed, onMounted, ref} from "vue"
+import LoaderIcon from "../widgets/LoaderIcon.vue"
 
 const emit = defineEmits(['willShow', 'shown', 'completed', 'willHide', 'hidden'])
 
-/**
- * @const
- * @type {number}
- */
-const TIMEOUT_INTERVAL = 1/60
+const TIMEOUT_INTERVAL = 1 / 60
 
-/**
- * @const {Array}
- */
 const ANIMATION_STEPS = [
-    {id: 0, label: "startingUp", duration: null},
-    {id: 1, label: "logoTweenIn", duration:0.5},
-    {id: 2, label: "progressTweenIn", duration:0.3},
-    {id: 3, label: "loading", minDuration:0.4},
-    {id: 4, label: "waiting", duration:0.3},
-    {id: 5, label: "disappearing", duration:1.2},
+    {id: 0, label: "startingUp", duration: 0.15},
+    {id: 1, label: "logoTweenIn", duration: 0.45},
+    {id: 2, label: "progressTweenIn", duration: 0.25},
+    {id: 3, label: "loading", minDuration: 0.4},
+    {id: 4, label: "waiting", duration: 0.25},
+    {id: 5, label: "disappearing", duration: 0.55},
 ]
 
-/** Parameters **/
 const message = ref('')
-const imageUrl = ref('')
 const taskProgressPercentage = ref(0)
-
-/** Control Variables **/
-const logo = ref(null)
 const totalPercentage = ref(0)
 const currentStepId = ref(-1)
+const dotFrame = ref(0)
 
 let elapsedTime = 0
 let intervalId = null
 
-/**
- * @private
- */
+const loadingDots = computed(() => {
+    return '.'.repeat((dotFrame.value % 3) + 1)
+})
+
 onMounted(() => {
     _stop()
 })
 
-/**
- * @private
- */
 const _stop = () => {
     clearInterval(intervalId)
     intervalId = null
     currentStepId.value = -1
     elapsedTime = 0
     totalPercentage.value = 0
+    dotFrame.value = 0
 }
 
 /**
  * @param {String} _message
- * @param {String} _imageUrl
+ * @param {String} [_imageUrl]
  */
 const run = (_message, _imageUrl) => {
     message.value = _message
-    imageUrl.value = _imageUrl
-
     currentStepId.value = 0
     intervalId = setInterval(_update, TIMEOUT_INTERVAL * 1000)
 }
 
-/**
- * @param {Number} progressPercentage
- */
 const setTaskProgress = (progressPercentage) => {
     taskProgressPercentage.value = progressPercentage
 }
 
-/**
- * @private
- */
 const _update = () => {
     const currentStep = ANIMATION_STEPS[currentStepId.value]
     elapsedTime += TIMEOUT_INTERVAL
+    dotFrame.value++
 
     let didFinishStep = false
-    switch (currentStep.label) {
-        case 'startingUp':
-            didFinishStep = logo.value.isLoaded();
-            break
 
-        case 'loading':
-            const durationPercentage = Math.min(Math.max(100*elapsedTime/currentStep.minDuration, 0), 100)
+    switch (currentStep.label) {
+        case 'loading': {
+            const durationPercentage = Math.min(Math.max(100 * elapsedTime / currentStep.minDuration, 0), 100)
             totalPercentage.value = Math.round(Math.min(durationPercentage, taskProgressPercentage.value))
             didFinishStep = totalPercentage.value >= 100
             break
-
+        }
         default:
             didFinishStep = elapsedTime >= currentStep.duration
     }
 
-    if(didFinishStep) {
+    if (didFinishStep) {
         _nextStep()
     }
 }
 
-/**
- * @private
- */
 const _nextStep = () => {
     currentStepId.value++
     elapsedTime = 0
 
-    if(currentStepId.value >= ANIMATION_STEPS.length) {
+    if (currentStepId.value >= ANIMATION_STEPS.length) {
         emit('hidden')
         _stop()
         return
     }
 
     switch (ANIMATION_STEPS[currentStepId.value].label) {
-        case 'logoTweenIn':     emit('willShow'); break
-        case 'loading':         emit('shown'); break
-        case 'waiting':         emit('completed'); break
-        case 'disappearing':    emit('willHide'); break
+        case 'logoTweenIn':
+            emit('willShow')
+            break
+        case 'loading':
+            emit('shown')
+            break
+        case 'waiting':
+            emit('completed')
+            break
+        case 'disappearing':
+            emit('willHide')
+            break
     }
 }
 
-/**
- * @param {String} animationStepLabel
- * @return {boolean}
- * @private
- */
 const _didReachStep = (animationStepLabel) => {
     const step = ANIMATION_STEPS.find(step => step.label === animationStepLabel)
     return step && currentStepId.value >= step.id
 }
 
-/**
- * @return {boolean}
- * @private
- */
 const _isRunning = () => {
     return currentStepId.value >= 0 && currentStepId.value < ANIMATION_STEPS.length
 }
 
-/**
- * @return {string}
- * @private
- */
 const _getClassList = () => {
-    if(!_isRunning()) {
+    if (!_isRunning()) {
         return 'd-none'
     }
-    else if(!_didReachStep('disappearing')) {
-        return 'loader-full-screen-show'
+
+    if (!_didReachStep('disappearing')) {
+        return 'loader-full-screen-visible'
     }
-    else {
-        return 'loader-full-screen-transition'
-    }
+
+    return 'loader-full-screen-exiting'
 }
 
 defineExpose({
@@ -187,66 +160,158 @@ defineExpose({
 </script>
 
 <style lang="scss" scoped>
-@import "/src/scss/_theming.scss";
-
 .loader-full-screen {
     position: fixed;
-
+    inset: 0;
+    z-index: 9999;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: #0a0a0a;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.45s ease, visibility 0.45s ease;
 
-    z-index: 999;
-    background-color: $nav-background-color;
-    width: 100vw;
-    height: 125vh;
-    top: -125vh;
-
-    &-show {
-        top: -12.5vh;
-        left: 0;
-    }
-}
-
-.loader-full-screen-transition {
-    transition: 1.2s top cubic-bezier(0.68, -0.35, 0.365, 1.85);
-}
-
-.loader-full-screen-content {
-    color: $text-normal-contrast;
-    text-align: center;
-    animation: appear 0.2s ease-out forwards;
-
-    .img-logo {
-        max-height: min(65px, 20vh);
-        aspect-ratio: 1/1;
-        animation: popIn 0.3s ease-out forwards;
+    &-visible {
+        opacity: 1;
+        visibility: visible;
     }
 
-    .progress-display {
+    &-exiting {
         opacity: 0;
-        margin-top: -30px;
-        overflow: hidden;
-        transition: 0.3s all ease-out;
-
-        &-expanded {
-            opacity: 1;
-            margin-top: 0;
-        }
-
-        p {
-            font-family: 'Arial', serif;
-        }
+        visibility: visible;
+        transition: opacity 0.55s ease, visibility 0.55s ease;
     }
 }
 
-@keyframes popIn {
+.loader-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(94, 234, 212, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(94, 234, 212, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 65% at 50% 45%, black 15%, transparent 75%);
+}
+
+.loader-bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+
+    &-1 {
+        top: -10%;
+        right: -5%;
+        width: 320px;
+        height: 320px;
+        background: rgba(94, 234, 212, 0.12);
+        animation: loaderGlowFloat 14s ease-in-out infinite;
+    }
+
+    &-2 {
+        bottom: -8%;
+        left: 10%;
+        width: 260px;
+        height: 260px;
+        background: rgba(56, 189, 248, 0.08);
+        animation: loaderGlowFloat 18s ease-in-out infinite reverse;
+    }
+}
+
+.loader-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem;
+    animation: loaderContentIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.loader-message {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    color: #a3a3a3;
+}
+
+.loader-dots {
+    display: inline-block;
+    min-width: 1.25rem;
+    text-align: left;
+}
+
+.loader-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: min(16rem, 72vw);
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    &-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loader-progress-track {
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+    background-color: #262626;
+    border-radius: 999px;
+}
+
+.loader-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #0d9488 0%, #5eead4 100%);
+    box-shadow: 0 0 12px rgba(94, 234, 212, 0.45);
+    transition: width 0.2s ease;
+}
+
+.loader-progress-value {
+    font-family: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #5eead4;
+    letter-spacing: 0.06em;
+}
+
+@keyframes loaderContentIn {
     from {
-        opacity:0;
-        transform: scale(0.2) translateY(-100%);
+        opacity: 0;
+        transform: scale(0.92) translateY(12px);
     }
     to {
-        opacity:1
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes loaderGlowFloat {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-12px, 10px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .loader-bg-glow {
+        animation: none;
+    }
+
+    .loader-content {
+        animation: none;
     }
 }
 </style>
