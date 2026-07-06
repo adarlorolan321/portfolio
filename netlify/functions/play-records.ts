@@ -58,10 +58,11 @@ const parsePlayRecord = async (req: Request) => {
 export default async (req: Request) => {
   if (req.method === "GET") {
     const url = new URL(req.url);
+    const sortByScore = url.searchParams.get("sort") === "score";
     const records = await db
       .select()
       .from(playRecords)
-      .orderBy(desc(playRecords.createdAt))
+      .orderBy(sortByScore ? desc(playRecords.score) : desc(playRecords.createdAt))
       .limit(readLimit(url));
 
     return json({ records });

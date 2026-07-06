@@ -88,6 +88,8 @@ import {computed, nextTick, onMounted, onUnmounted, ref} from "vue"
 
 const STORAGE_KEY = 'app.play.typingBestWpm'
 
+const emit = defineEmits(['completed'])
+
 /**
  * @property {Object} content
  */
@@ -335,6 +337,10 @@ const onInput = () => {
         stopTimer()
         state.value = 'done'
         saveBest()
+        emit('completed', {
+            message: prompt.value,
+            score: calcWpm(prompt.value.length, finishedAt.value - startedAt.value),
+        })
     }
 }
 

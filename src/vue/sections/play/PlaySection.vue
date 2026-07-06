@@ -2,7 +2,13 @@
     <SectionTemplate :section-data="props.sectionData">
         <div class="play-arcade">
             <RevealOnScroll class="play-arcade__main">
-                <TypingSprint :content="props.sectionData.content"/>
+                <div class="play-arcade__game-row">
+                    <TypingSprint :content="props.sectionData.content"
+                                    @completed="onGameCompleted"/>
+                    <PlayLeaderboard :records="leaderboard"
+                                     :locales="locales"
+                                     :loading="leaderboardLoading"/>
+                </div>
             </RevealOnScroll>
 
             <div class="play-arcade__soon">
@@ -23,8 +29,10 @@
 </template>
 
 <script setup>
-import {computed} from "vue"
+import {computed, onMounted, ref} from "vue"
+import {loadPlayRecords, savePlayRecord} from "../../../composables/playRecords.js"
 import SectionTemplate from "../_templates/SectionTemplate.vue"
+import PlayLeaderboard from "./PlayLeaderboard.vue"
 import TypingSprint from "./TypingSprint.vue"
 
 /**
@@ -33,6 +41,9 @@ import TypingSprint from "./TypingSprint.vue"
 const props = defineProps({
     sectionData: Object
 })
+
+const leaderboard = ref([])
+const leaderboardLoading = ref(true)
 
 /**
  * @type {import('vue').ComputedRef<Object>}
@@ -50,6 +61,39 @@ const soonCabinets = computed(() => {
         {id: 'snake', title: locales.value.snakeTitle}
     ]
 })
+
+/**
+ * @return {Promise<void>}
+ */
+const refreshLeaderboard = async () => {
+    leaderboardLoading.value = true
+
+    try {
+        leaderboard.value = await loadPlayRecords(10, 'score')
+    } catch {
+        leaderboard.value = []
+    } finally {
+        leaderboardLoading.value = false
+    }
+}
+
+/**
+ * @param {{message: string, score: number}} payload
+ * @return {Promise<void>}
+ */
+const onGameCompleted = async (payload) => {
+    try {
+        await savePlayRecord(payload)
+    } catch {
+        // API unavailable in plain Vite dev — local best score still works.
+    }
+
+    await refreshLeaderboard()
+}
+
+onMounted(() => {
+    refreshLeaderboard()
+})
 </script>
 
 <style lang="scss" scoped>
@@ -59,6 +103,13 @@ const soonCabinets = computed(() => {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+}
+
+.play-arcade__game-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
 }
 
 .play-arcade__soon {
@@ -112,6 +163,12 @@ const soonCabinets = computed(() => {
     font-size: 1.1rem;
     letter-spacing: 0.12em;
     color: #6d4f82;
+}
+
+@include media-breakpoint-down(lg) {
+    .play-arcade__game-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 @include media-breakpoint-down(sm) {

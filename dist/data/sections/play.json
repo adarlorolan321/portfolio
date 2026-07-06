@@ -12,7 +12,10 @@
             "stageClear": "STAGE CLEAR!",
             "comingSoon": "COMING SOON",
             "memoryTitle": "STACK MEMORY",
-            "snakeTitle": "SNAKE.EXE"
+            "snakeTitle": "SNAKE.EXE",
+            "highScores": "HIGH SCORES",
+            "loadingScores": "LOADING...",
+            "noScores": "NO SCORES YET — BE THE FIRST!"
         },
         "es": {
             "description": "Tómate un descanso. Escribe el comando antes de que cierre la ventana de deploy.",
@@ -26,7 +29,10 @@
             "stageClear": "¡NIVEL LISTO!",
             "comingSoon": "PRÓXIMAMENTE",
             "memoryTitle": "MEMORIA STACK",
-            "snakeTitle": "SNAKE.EXE"
+            "snakeTitle": "SNAKE.EXE",
+            "highScores": "PUNTUACIONES",
+            "loadingScores": "CARGANDO...",
+            "noScores": "SIN PUNTUACIONES — ¡SÉ EL PRIMERO!"
         },
         "fr": {
             "description": "Petite pause. Tapez la commande avant la fin du déploiement.",
@@ -40,7 +46,10 @@
             "stageClear": "NIVEAU OK!",
             "comingSoon": "BIENTÔT",
             "memoryTitle": "MÉMOIRE STACK",
-            "snakeTitle": "SNAKE.EXE"
+            "snakeTitle": "SNAKE.EXE",
+            "highScores": "MEILLEURS SCORES",
+            "loadingScores": "CHARGEMENT...",
+            "noScores": "AUCUN SCORE — SOYEZ LE PREMIER!"
         },
         "zh": {
             "description": "休息一下。在部署窗口关闭前输入这条命令。",
@@ -54,7 +63,10 @@
             "stageClear": "过关!",
             "comingSoon": "即将推出",
             "memoryTitle": "技术栈记忆",
-            "snakeTitle": "SNAKE.EXE"
+            "snakeTitle": "SNAKE.EXE",
+            "highScores": "高分榜",
+            "loadingScores": "加载中...",
+            "noScores": "暂无记录 — 来当第一!"
         }
     },
     "prompts": [
