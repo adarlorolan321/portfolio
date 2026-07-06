@@ -46,6 +46,7 @@ import ThreadsSection from "../sections/threads/ThreadsSection.vue"
 import TimelineSection from "../sections/timeline/TimelineSection.vue"
 import StackSection from "../sections/stack/StackSection.vue"
 import RecommendationsSection from "../sections/recommendations/RecommendationsSection.vue"
+import PlaySection from "../sections/play/PlaySection.vue"
 
 const data = useData()
 const navigation = useNavigation()
@@ -59,7 +60,7 @@ const scrollPositions = {}
 /**
  * @type {Object}
  */
-const SECTION_VUE_COMPONENTS = {DefaultSection, ContactSection, CoverSection, GallerySection, InfoSection, ThreadsSection, TimelineSection, StackSection, RecommendationsSection}
+const SECTION_VUE_COMPONENTS = {DefaultSection, ContactSection, CoverSection, GallerySection, InfoSection, ThreadsSection, TimelineSection, StackSection, RecommendationsSection, PlaySection}
 
 /**
  * @param {String} componentName

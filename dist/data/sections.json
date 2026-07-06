@@ -1,94 +1,101 @@
-{
-    "categories": [
-        {
-            "id": "home",
-            "faIcon": "fa-solid fa-terminal"
-        },
-        {
-            "id": "background",
-            "faIcon": "fa-solid fa-folder-tree"
-        },
-        {
-            "id": "showcase",
-            "faIcon": "fa-solid fa-laptop-code"
-        },
-        {
-            "id": "more",
-            "faIcon": "fa-solid fa-ellipsis"
-        }
-    ],
-    "sections": [
-        {
-            "id": "about",
-            "categoryId": "home",
-            "component": "CoverSection",
-            "jsonPath": "data/sections/cover.json",
-            "faIcon": "fa-solid fa-user-gear",
-            "cover": true
-        },
-        {
-            "id": "education",
-            "categoryId": "background",
-            "component": "TimelineSection",
-            "jsonPath": "data/sections/education.json",
-            "faIcon": "fa-solid fa-graduation-cap"
-        },
-        {
-            "id": "experience",
-            "categoryId": "background",
-            "component": "TimelineSection",
-            "jsonPath": "data/sections/experience.json",
-            "faIcon": "fa-solid fa-laptop-code"
-        },
-        {
-            "id": "certifications",
-            "categoryId": "background",
-            "component": "TimelineSection",
-            "jsonPath": "data/sections/certifications.json",
-            "faIcon": "fa-solid fa-award"
-        },
-        {
-            "id": "stack",
-            "categoryId": "showcase",
-            "component": "StackSection",
-            "jsonPath": "data/sections/stack.json",
-            "faIcon": "fa-solid fa-layer-group"
-        },
-        {
-            "id": "programming",
-            "categoryId": "showcase",
-            "component": "InfoSection",
-            "jsonPath": "data/sections/programming.json",
-            "faIcon": "fa-solid fa-code"
-        },
-        {
-            "id": "skills",
-            "categoryId": "showcase",
-            "component": "InfoSection",
-            "jsonPath": "data/sections/skills.json",
-            "faIcon": "fa-solid fa-microchip"
-        },
-        {
-            "id": "portfolio",
-            "categoryId": "showcase",
-            "component": "GallerySection",
-            "jsonPath": "data/sections/portfolio.json",
-            "faIcon": "fa-solid fa-code-branch"
-        },
-        {
-            "id": "recommendations",
-            "categoryId": "more",
-            "component": "RecommendationsSection",
-            "jsonPath": "data/sections/recommendations.json",
-            "faIcon": "fa-solid fa-comments"
-        },
-        {
-            "id": "contact",
-            "categoryId": "more",
-            "component": "ContactSection",
-            "jsonPath": "data/sections/contact.json",
-            "faIcon": "fa-solid fa-paper-plane"
-        }
-    ]
-}
+{
+    "categories": [
+        {
+            "id": "home",
+            "faIcon": "fa-solid fa-terminal"
+        },
+        {
+            "id": "background",
+            "faIcon": "fa-solid fa-folder-tree"
+        },
+        {
+            "id": "showcase",
+            "faIcon": "fa-solid fa-laptop-code"
+        },
+        {
+            "id": "more",
+            "faIcon": "fa-solid fa-ellipsis"
+        }
+    ],
+    "sections": [
+        {
+            "id": "about",
+            "categoryId": "home",
+            "component": "CoverSection",
+            "jsonPath": "data/sections/cover.json",
+            "faIcon": "fa-solid fa-user-gear",
+            "cover": true
+        },
+        {
+            "id": "education",
+            "categoryId": "background",
+            "component": "TimelineSection",
+            "jsonPath": "data/sections/education.json",
+            "faIcon": "fa-solid fa-graduation-cap"
+        },
+        {
+            "id": "experience",
+            "categoryId": "background",
+            "component": "TimelineSection",
+            "jsonPath": "data/sections/experience.json",
+            "faIcon": "fa-solid fa-laptop-code"
+        },
+        {
+            "id": "certifications",
+            "categoryId": "background",
+            "component": "TimelineSection",
+            "jsonPath": "data/sections/certifications.json",
+            "faIcon": "fa-solid fa-award"
+        },
+        {
+            "id": "stack",
+            "categoryId": "showcase",
+            "component": "StackSection",
+            "jsonPath": "data/sections/stack.json",
+            "faIcon": "fa-solid fa-layer-group"
+        },
+        {
+            "id": "programming",
+            "categoryId": "showcase",
+            "component": "InfoSection",
+            "jsonPath": "data/sections/programming.json",
+            "faIcon": "fa-solid fa-code"
+        },
+        {
+            "id": "skills",
+            "categoryId": "showcase",
+            "component": "InfoSection",
+            "jsonPath": "data/sections/skills.json",
+            "faIcon": "fa-solid fa-microchip"
+        },
+        {
+            "id": "portfolio",
+            "categoryId": "showcase",
+            "component": "GallerySection",
+            "jsonPath": "data/sections/portfolio.json",
+            "faIcon": "fa-solid fa-code-branch"
+        },
+        {
+            "id": "recommendations",
+            "categoryId": "more",
+            "component": "RecommendationsSection",
+            "jsonPath": "data/sections/recommendations.json",
+            "faIcon": "fa-solid fa-comments"
+        },
+        {
+            "id": "play",
+            "categoryId": "more",
+            "component": "PlaySection",
+            "jsonPath": "data/sections/play.json",
+            "faIcon": "fa-solid fa-gamepad"
+        },
+        {
+            "id": "contact",
+            "categoryId": "more",
+            "component": "ContactSection",
+            "jsonPath": "data/sections/contact.json",
+            "faIcon": "fa-solid fa-paper-plane"
+        }
+    ]
+}
 

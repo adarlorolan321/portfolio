@@ -1,0 +1,74 @@
+{
+    "locales": {
+        "en": {
+            "description": "Take a short break. Type the command before the deploy window closes.",
+            "gameTitle": "TYPING SPRINT",
+            "pressStart": "PRESS START",
+            "wpm": "WPM",
+            "accuracy": "ACC",
+            "best": "BEST",
+            "time": "TIME",
+            "tryAgain": "TRY AGAIN",
+            "stageClear": "STAGE CLEAR!",
+            "comingSoon": "COMING SOON",
+            "memoryTitle": "STACK MEMORY",
+            "snakeTitle": "SNAKE.EXE"
+        },
+        "es": {
+            "description": "Tómate un descanso. Escribe el comando antes de que cierre la ventana de deploy.",
+            "gameTitle": "SPRINT DE TYPING",
+            "pressStart": "PULSA START",
+            "wpm": "PPM",
+            "accuracy": "PREC",
+            "best": "TOP",
+            "time": "TIEMPO",
+            "tryAgain": "OTRA VEZ",
+            "stageClear": "¡NIVEL LISTO!",
+            "comingSoon": "PRÓXIMAMENTE",
+            "memoryTitle": "MEMORIA STACK",
+            "snakeTitle": "SNAKE.EXE"
+        },
+        "fr": {
+            "description": "Petite pause. Tapez la commande avant la fin du déploiement.",
+            "gameTitle": "SPRINT CLAVIER",
+            "pressStart": "APPUYER START",
+            "wpm": "MPM",
+            "accuracy": "PREC",
+            "best": "TOP",
+            "time": "TEMPS",
+            "tryAgain": "REJOUER",
+            "stageClear": "NIVEAU OK!",
+            "comingSoon": "BIENTÔT",
+            "memoryTitle": "MÉMOIRE STACK",
+            "snakeTitle": "SNAKE.EXE"
+        },
+        "zh": {
+            "description": "休息一下。在部署窗口关闭前输入这条命令。",
+            "gameTitle": "打字冲刺",
+            "pressStart": "按 START",
+            "wpm": "字/分",
+            "accuracy": "准确",
+            "best": "最佳",
+            "time": "时间",
+            "tryAgain": "再来",
+            "stageClear": "过关!",
+            "comingSoon": "即将推出",
+            "memoryTitle": "技术栈记忆",
+            "snakeTitle": "SNAKE.EXE"
+        }
+    },
+    "prompts": [
+        "npm run build",
+        "git push origin main",
+        "docker compose up -d",
+        "php artisan migrate",
+        "npm install vue@latest",
+        "git checkout -b feature/ui",
+        "composer install --no-dev",
+        "npm run dev -- --host",
+        "npx vite build",
+        "git commit -m \"fix: pipeline\"",
+        "php artisan queue:work",
+        "npm run lint -- --fix"
+    ]
+}
